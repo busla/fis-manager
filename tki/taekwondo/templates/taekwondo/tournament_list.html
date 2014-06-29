@@ -1,0 +1,18 @@
+{% extends "taekwondo/base.html" %}
+
+{% block content %}
+{% block content_title %}<h2>Mót</h2>{% endblock content_title %}
+    <div class="container marketing">
+    <div class="row">
+    {% for tournament in tournament_list %}
+        <div class="col-lg-4"><img class="img-thumbnail" src="{{ tournament.image.url }}" alt="Generic placeholder image">
+        <h2>{{ tournament.title }}</h2>
+        <p><a class="btn btn-default" href="{% url 'tournament-detail' tournament.slug %}" role="button">Meira &raquo;</a></p>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row">
+    {% endif %}
+    {% endfor %}
+    </div>
+{% endblock content %}

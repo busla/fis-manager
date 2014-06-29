@@ -1,0 +1,7 @@
+{% extends "taekwondo/base.html" %}
+
+{% block content %}
+    <h1>{{ news_detail.title }}</h1>
+    <img src="{{ news_detail.image.url }}" />
+    <p>{{ news_detail.body }}</p>
+{% endblock content %}

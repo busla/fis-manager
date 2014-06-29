@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'taekwondo',
+    'django_summernote',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -88,5 +89,15 @@ FIXTURE_DIRS = (
    os.path.join(BASE_DIR, 'fixtures'),
 )
 
-#python manage.py dumpdata --format=json taekwondo > ~/code/tki/fixtures/initial_data.json
-#python manage.py sqlclear taekwondo | python manage.py dbshell
+SUMMERNOTE_CONFIG = {
+    # Using SummernoteWidget - iframe mode
+
+
+    # Change editor size
+    'width': '75%',
+    'height': '480',
+
+
+
+
+}

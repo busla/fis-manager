@@ -11,5 +11,8 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^clubs/', include('taekwondo.urls.clubs'))
+    url(r'^felog/', include('taekwondo.urls.clubs')),
+    url(r'^frettir/', include('taekwondo.urls.news')),
+    url(r'^mot/', include('taekwondo.urls.tournaments')),
+    (r'^summernote/', include('django_summernote.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

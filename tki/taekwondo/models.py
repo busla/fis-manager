@@ -38,6 +38,7 @@ class Membership(models.Model):
 
 class Tournament(models.Model):
     title = models.CharField(max_length=200)
+    image = models.FileField(upload_to='tournaments/images/%Y/%m/%d', max_length=100, blank=True)
     description = models.TextField()
     date = models.DateField()
     slug = models.SlugField()
@@ -66,3 +67,7 @@ class News(models.Model):
 
     def __str__(self):
         return '%s' % self.title
+
+class NewsFile(models.Model):
+    attachment = models.FileField(upload_to='news/attachments/%Y/%m/%d', max_length=100, blank=True)
+    tournament = models.ForeignKey('News')

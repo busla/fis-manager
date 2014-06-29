@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from taekwondo.models import Club, Tournament, Member, Membership, TournamentFile, ClubFile, News
 
 class TournamentFileInline(admin.TabularInline):
@@ -14,15 +15,15 @@ class TournamentAdmin(admin.ModelAdmin):
     inlines = [TournamentFileInline]
     prepopulated_fields = {"slug": ("title",)}
 
-class ClubAdmin(admin.ModelAdmin):
+class ClubAdmin(SummernoteModelAdmin):
     inlines = [ClubFileInline]
     prepopulated_fields = {"slug": ("name",)}
 
-class MemberAdmin(admin.ModelAdmin):
+class MemberAdmin(SummernoteModelAdmin):
     inlines = [MembershipInline]
     prepopulated_fields = {"slug": ("name",)}
     
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(SummernoteModelAdmin):
     model = News
     search_fields = ["title"]
     prepopulated_fields = {"slug": ("title",)}
