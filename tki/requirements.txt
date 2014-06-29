@@ -1,0 +1,17 @@
+Django==1.6.5
+Pillow==2.4.0
+South==0.8.4
+beautifulsoup4==4.3.2
+chardet==2.2.1
+django-appconf==0.6
+django-blog-zinnia==0.14.1
+django-bootstrap3==4.6.0
+django-contrib-comments==1.5
+django-csvimport==1.0
+django-mptt==0.6.1
+django-tagging==0.3.2
+django-treenav==0.9.0
+django-xmlrpc==0.1.5
+pyparsing==2.0.2
+pytz==2014.3
+six==1.7.2
