@@ -1,0 +1,508 @@
+[
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "admin", 
+        "model": "logentry", 
+        "name": "log entry"
+    }, 
+    "pk": 1
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "auth", 
+        "model": "permission", 
+        "name": "permission"
+    }, 
+    "pk": 2
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "auth", 
+        "model": "group", 
+        "name": "group"
+    }, 
+    "pk": 3
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "auth", 
+        "model": "user", 
+        "name": "user"
+    }, 
+    "pk": 4
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "contenttypes", 
+        "model": "contenttype", 
+        "name": "content type"
+    }, 
+    "pk": 5
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "sessions", 
+        "model": "session", 
+        "name": "session"
+    }, 
+    "pk": 6
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "taekwondo", 
+        "model": "member", 
+        "name": "member"
+    }, 
+    "pk": 7
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "taekwondo", 
+        "model": "club", 
+        "name": "club"
+    }, 
+    "pk": 8
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "taekwondo", 
+        "model": "membership", 
+        "name": "membership"
+    }, 
+    "pk": 9
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "taekwondo", 
+        "model": "tournament", 
+        "name": "tournament"
+    }, 
+    "pk": 10
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "taekwondo", 
+        "model": "tournamentfile", 
+        "name": "tournament file"
+    }, 
+    "pk": 11
+},
+{
+    "model": "contenttypes.contenttype", 
+    "fields": {
+        "app_label": "taekwondo", 
+        "model": "clubfile", 
+        "name": "club file"
+    }, 
+    "pk": 12
+},
+{
+    "model": "sessions.session", 
+    "fields": {
+        "expire_date": "2014-07-12T22:31:18.988Z", 
+        "session_data": "Y2E3NTM0ZWQxNzcyZDQ5MWY2ZGJhYjVkYmZhOWVlZGMxMDhiYjdiNjp7Il9hdXRoX3VzZXJfaWQiOjEsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0="
+    }, 
+    "pk": "udd2s8t8hrolu86ptrvlogshog8hthl7"
+},
+{
+    "model": "taekwondo.member", 
+    "fields": {
+        "photo": "members/photos/4897216645_297ab77afc_b.jpg", 
+        "ssn": "1908815989", 
+        "slug": "jon-levy-gudmundarson-selmuson", 
+        "name": "J\u00f3n Levy Gu\u00f0mundarson Selmuson"
+    }, 
+    "pk": 1
+},
+{
+    "model": "taekwondo.club", 
+    "fields": {
+        "logo": "clubs/logos/logo.png", 
+        "website": "http://www.afturelding.is/taekwondo", 
+        "name": "Afturelding", 
+        "description": "", 
+        "slug": "afturelding", 
+        "email": ""
+    }, 
+    "pk": 1
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 1, 
+        "codename": "add_logentry", 
+        "name": "Can add log entry"
+    }, 
+    "pk": 1
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 1, 
+        "codename": "change_logentry", 
+        "name": "Can change log entry"
+    }, 
+    "pk": 2
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 1, 
+        "codename": "delete_logentry", 
+        "name": "Can delete log entry"
+    }, 
+    "pk": 3
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 2, 
+        "codename": "add_permission", 
+        "name": "Can add permission"
+    }, 
+    "pk": 4
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 2, 
+        "codename": "change_permission", 
+        "name": "Can change permission"
+    }, 
+    "pk": 5
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 2, 
+        "codename": "delete_permission", 
+        "name": "Can delete permission"
+    }, 
+    "pk": 6
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 3, 
+        "codename": "add_group", 
+        "name": "Can add group"
+    }, 
+    "pk": 7
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 3, 
+        "codename": "change_group", 
+        "name": "Can change group"
+    }, 
+    "pk": 8
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 3, 
+        "codename": "delete_group", 
+        "name": "Can delete group"
+    }, 
+    "pk": 9
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 4, 
+        "codename": "add_user", 
+        "name": "Can add user"
+    }, 
+    "pk": 10
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 4, 
+        "codename": "change_user", 
+        "name": "Can change user"
+    }, 
+    "pk": 11
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 4, 
+        "codename": "delete_user", 
+        "name": "Can delete user"
+    }, 
+    "pk": 12
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 5, 
+        "codename": "add_contenttype", 
+        "name": "Can add content type"
+    }, 
+    "pk": 13
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 5, 
+        "codename": "change_contenttype", 
+        "name": "Can change content type"
+    }, 
+    "pk": 14
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 5, 
+        "codename": "delete_contenttype", 
+        "name": "Can delete content type"
+    }, 
+    "pk": 15
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 6, 
+        "codename": "add_session", 
+        "name": "Can add session"
+    }, 
+    "pk": 16
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 6, 
+        "codename": "change_session", 
+        "name": "Can change session"
+    }, 
+    "pk": 17
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 6, 
+        "codename": "delete_session", 
+        "name": "Can delete session"
+    }, 
+    "pk": 18
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 7, 
+        "codename": "add_member", 
+        "name": "Can add member"
+    }, 
+    "pk": 19
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 7, 
+        "codename": "change_member", 
+        "name": "Can change member"
+    }, 
+    "pk": 20
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 7, 
+        "codename": "delete_member", 
+        "name": "Can delete member"
+    }, 
+    "pk": 21
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 8, 
+        "codename": "add_club", 
+        "name": "Can add club"
+    }, 
+    "pk": 22
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 8, 
+        "codename": "change_club", 
+        "name": "Can change club"
+    }, 
+    "pk": 23
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 8, 
+        "codename": "delete_club", 
+        "name": "Can delete club"
+    }, 
+    "pk": 24
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 9, 
+        "codename": "add_membership", 
+        "name": "Can add membership"
+    }, 
+    "pk": 25
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 9, 
+        "codename": "change_membership", 
+        "name": "Can change membership"
+    }, 
+    "pk": 26
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 9, 
+        "codename": "delete_membership", 
+        "name": "Can delete membership"
+    }, 
+    "pk": 27
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 10, 
+        "codename": "add_tournament", 
+        "name": "Can add tournament"
+    }, 
+    "pk": 28
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 10, 
+        "codename": "change_tournament", 
+        "name": "Can change tournament"
+    }, 
+    "pk": 29
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 10, 
+        "codename": "delete_tournament", 
+        "name": "Can delete tournament"
+    }, 
+    "pk": 30
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 11, 
+        "codename": "add_tournamentfile", 
+        "name": "Can add tournament file"
+    }, 
+    "pk": 31
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 11, 
+        "codename": "change_tournamentfile", 
+        "name": "Can change tournament file"
+    }, 
+    "pk": 32
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 11, 
+        "codename": "delete_tournamentfile", 
+        "name": "Can delete tournament file"
+    }, 
+    "pk": 33
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 12, 
+        "codename": "add_clubfile", 
+        "name": "Can add club file"
+    }, 
+    "pk": 34
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 12, 
+        "codename": "change_clubfile", 
+        "name": "Can change club file"
+    }, 
+    "pk": 35
+},
+{
+    "model": "auth.permission", 
+    "fields": {
+        "content_type": 12, 
+        "codename": "delete_clubfile", 
+        "name": "Can delete club file"
+    }, 
+    "pk": 36
+},
+{
+    "model": "auth.user", 
+    "fields": {
+        "groups": [], 
+        "first_name": "", 
+        "user_permissions": [], 
+        "last_login": "2014-06-28T22:31:18.861Z", 
+        "is_staff": true, 
+        "is_superuser": true, 
+        "last_name": "", 
+        "date_joined": "2014-06-28T22:28:13.637Z", 
+        "username": "nonni", 
+        "password": "pbkdf2_sha256$12000$pcyMqYdE8B7f$WBsHIWps+dlsMY664bNEEz8pEcgLUESq8WjUiVhi6UI=", 
+        "email": "", 
+        "is_active": true
+    }, 
+    "pk": 1
+},
+{
+    "model": "admin.logentry", 
+    "fields": {
+        "content_type": 7, 
+        "user": 1, 
+        "object_repr": "J\u00f3n Levy Gu\u00f0mundarson Selmuson", 
+        "change_message": "", 
+        "object_id": "1", 
+        "action_time": "2014-06-28T22:32:38.725Z", 
+        "action_flag": 1
+    }, 
+    "pk": 1
+},
+{
+    "model": "admin.logentry", 
+    "fields": {
+        "content_type": 8, 
+        "user": 1, 
+        "object_repr": "Afturelding", 
+        "change_message": "", 
+        "object_id": "1", 
+        "action_time": "2014-06-28T22:33:14.907Z", 
+        "action_flag": 1
+    }, 
+    "pk": 2
+}
+]

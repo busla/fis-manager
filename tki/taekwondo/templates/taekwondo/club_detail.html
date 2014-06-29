@@ -1,0 +1,10 @@
+{% extends "taekwondo/base.html" %}
+
+{% block content %}
+    <h1>{{ club_detail.name }}</h1>
+    <img src="{{ club_detail.logo.url }}" />
+    <p>{{ club_detail.description }}</p>
+{% for member in club_detail.members.all %}
+    {{ member.name }}
+{% endfor %}
+{% endblock content %}
