@@ -7,7 +7,8 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 			<meta name="description" content="A Bootstrap based app landing page template">
 			<meta name="author" content="">
-			<link rel="shortcut icon" href="{% static 'taekwondo/assets/ico/favicon.ico' %}">
+			{% block link %}
+            <link rel="shortcut icon" href="{% static 'taekwondo/assets/ico/favicon.ico' %}">
 
 			<title>Taekwondo samband Íslands</title>
 
@@ -21,7 +22,7 @@
 			<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 			<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
 			<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
-
+            {% endblock link %}
 			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -40,20 +41,19 @@
 							<span class="icon-bar"></span>
 						</button>
 						<a class="navbar-brand" href="#topWrap">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
-							</span>
-							TKÍ
+
+                                <img src="{% static 'taekwondo/custom/tki.png' %}"">
+
+
 						</a>
 					</div>
 					<div class="collapse navbar-collapse appiNav">
 						<ul class="nav navbar-nav">
-							<li><a href="#featureWrap">Features</a></li>
-							<li><a href="#productWrap">The App</a></li>
-							<li><a href="#pricingWrap">Pricing</a></li>
-							<li><a href="#testimonialsWrap">Testimonials</a></li>
-							<li><a href="#contactWrap">Contact Us</a></li>
+							<li><a href="frettir/">Fréttir</a></li>
+							<li><a href="#productWrap">Félög</a></li>
+							<li><a href="#pricingWrap">Fræðsluefni</a></li>
+							<li><a href="#testimonialsWrap">Um sambandið</a></li>
+							<li><a href="#contactWrap">Hafa samband</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>

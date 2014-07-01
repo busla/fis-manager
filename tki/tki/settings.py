@@ -34,12 +34,17 @@ INSTALLED_APPS = (
     'suit',
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
+    'django.contrib.comments',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'taekwondo',
     'django_summernote',
+    'tagging',
+    'mptt',
+    'zinnia',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -52,7 +57,10 @@ MIDDLEWARE_CLASSES = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
-    'django.core.context_processors.request',
+  'django.contrib.auth.context_processors.auth',
+  'django.core.context_processors.i18n',
+  'django.core.context_processors.request',
+  'zinnia.context_processors.version',  # Optional
 )
 
 ROOT_URLCONF = 'tki.urls'
@@ -100,7 +108,7 @@ SUMMERNOTE_CONFIG = {
 
 
     # Change editor size
-    'width': '75%',
+    'width': '100%',
     'height': '480',
 
 
