@@ -1,199 +1,199 @@
 [
 {
   "fields": {
-    "name": "J\u00f3n Levy Gu\u00f0mundarson Selmuson", 
+    "photo": "members/photos/4897216645_297ab77afc_b.jpg", 
     "ssn": "1908815989", 
     "slug": "jon-levy-gudmundarson-selmuson", 
-    "photo": "members/photos/4897216645_297ab77afc_b.jpg"
+    "name": "J\u00f3n Levy Gu\u00f0mundarson Selmuson"
   }, 
-  "model": "taekwondo.member", 
-  "pk": 1
+  "pk": 1, 
+  "model": "taekwondo.member"
 },
 {
   "fields": {
-    "name": "Afturelding", 
-    "website": "http://www.afturelding.is/taekwondo", 
-    "email": "", 
     "slug": "afturelding", 
+    "website": "http://www.afturelding.is/taekwondo", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/logo.png"
+    "logo": "clubs/logos/logo.png", 
+    "name": "Afturelding", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 1
+  "pk": 1, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "name": "\u00c1rmann", 
-    "website": "http://www.armenningar.is/", 
-    "email": "", 
     "slug": "armann", 
+    "website": "http://www.armenningar.is/", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/\u00c1rmannsmerki_vektor.jpg"
+    "logo": "clubs/logos/\u00c1rmannsmerki_vektor.jpg", 
+    "name": "\u00c1rmann", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 2
+  "pk": 2, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "name": "Keflav\u00edk", 
-    "website": "http://www.keflavik.is/", 
-    "email": "", 
     "slug": "keflavik", 
+    "website": "http://www.keflavik.is/", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/kef.jpg"
+    "logo": "clubs/logos/kef.jpg", 
+    "name": "Keflav\u00edk", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 3
+  "pk": 3, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "name": "KR", 
-    "website": "http://www.kr.is/", 
-    "email": "", 
     "slug": "kr", 
+    "website": "http://www.kr.is/", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/kr.png"
+    "logo": "clubs/logos/kr.png", 
+    "name": "KR", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 4
+  "pk": 4, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "name": "Selfoss", 
-    "website": "http://www.selfoss.is/", 
-    "email": "", 
     "slug": "selfoss", 
+    "website": "http://www.selfoss.is/", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/selfoss.JPG"
+    "logo": "clubs/logos/selfoss.JPG", 
+    "name": "Selfoss", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 5
+  "pk": 5, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "name": "Einherjar", 
-    "website": "http://www.einherjar.is/", 
-    "email": "", 
     "slug": "einherjar", 
+    "website": "http://www.einherjar.is/", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/sporttkd.jpg"
+    "logo": "clubs/logos/sporttkd.jpg", 
+    "name": "Einherjar", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 6
+  "pk": 6, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "name": "\u00cdR", 
-    "website": "http://www.ir.is/", 
-    "email": "", 
     "slug": "ir", 
+    "website": "http://www.ir.is/", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/ir.jpg"
+    "logo": "clubs/logos/ir.jpg", 
+    "name": "\u00cdR", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 7
+  "pk": 7, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "name": "\u00de\u00f3r Akureyri", 
-    "website": "http://www.thor.is/", 
-    "email": "", 
     "slug": "thor-akureyri", 
+    "website": "http://www.thor.is/", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/thorak_stort.jpg"
+    "logo": "clubs/logos/thorak_stort.jpg", 
+    "name": "\u00de\u00f3r Akureyri", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 8
+  "pk": 8, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "name": "Fram", 
-    "website": "http://www.fram.is/", 
-    "email": "", 
     "slug": "fram", 
+    "website": "http://www.fram.is/", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/framlogo.jpg"
+    "logo": "clubs/logos/framlogo.jpg", 
+    "name": "Fram", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 9
+  "pk": 9, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "name": "Grindav\u00edk", 
-    "website": "http://www.grindavik.is/", 
-    "email": "", 
     "slug": "grindavik", 
+    "website": "http://www.grindavik.is/", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/grindavik.png"
+    "logo": "clubs/logos/grindavik.png", 
+    "name": "Grindav\u00edk", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 10
+  "pk": 10, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "name": "HK", 
-    "website": "http://www.hk.is/", 
-    "email": "", 
     "slug": "hk", 
+    "website": "http://www.hk.is/", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/hk.jpg"
+    "logo": "clubs/logos/hk.jpg", 
+    "name": "HK", 
+    "email": ""
   }, 
-  "model": "taekwondo.club", 
-  "pk": 11
+  "pk": 11, 
+  "model": "taekwondo.club"
 },
 {
   "fields": {
-    "title": "\u00cdslandsmeistaram\u00f3ti\u00f0 \u00ed Sparring 2014", 
+    "date": "2014-06-29", 
+    "slug": "islandsmeistaramotid-i-sparring-2014", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
     "image": "tournaments/images/2014/06/29/hjolasmidjan.jpg", 
-    "slug": "islandsmeistaramotid-i-sparring-2014", 
-    "date": "2014-06-29"
+    "title": "\u00cdslandsmeistaram\u00f3ti\u00f0 \u00ed Sparring 2014"
   }, 
-  "model": "taekwondo.tournament", 
-  "pk": 1
+  "pk": 1, 
+  "model": "taekwondo.tournament"
 },
 {
   "fields": {
-    "title": "Bikarm\u00f3t II 2014", 
+    "date": "2014-06-29", 
+    "slug": "bikarmot-ii-2014", 
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
     "image": "tournaments/images/2014/06/29/carpentry.jpg", 
-    "slug": "bikarmot-ii-2014", 
-    "date": "2014-06-29"
+    "title": "Bikarm\u00f3t II 2014"
   }, 
-  "model": "taekwondo.tournament", 
-  "pk": 2
+  "pk": 2, 
+  "model": "taekwondo.tournament"
 },
 {
   "fields": {
-    "title": "Nor\u00f0urlandam\u00f3ti\u00f0 hefst um helgina", 
     "posted": "2014-06-29", 
     "slug": "nordurlandamotid-hefst-um-helgina", 
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
     "image": "news/images/2014/06/29/4897216645_297ab77afc_b_1.jpg", 
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est."
+    "title": "Nor\u00f0urlandam\u00f3ti\u00f0 hefst um helgina"
   }, 
-  "model": "taekwondo.news", 
-  "pk": 1
+  "pk": 1, 
+  "model": "taekwondo.news"
 },
 {
   "fields": {
-    "title": "Tveir f\u00e1 svart belti", 
     "posted": "2014-06-29", 
     "slug": "tveir-fa-svart-belti", 
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
     "image": "news/images/2014/06/29/arduino.jpg", 
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est."
+    "title": "Tveir f\u00e1 svart belti"
   }, 
-  "model": "taekwondo.news", 
-  "pk": 2
+  "pk": 2, 
+  "model": "taekwondo.news"
 },
 {
   "fields": {
-    "title": "Ritv\u00e9lin tengist Arduino", 
     "posted": "2014-06-29", 
     "slug": "ritvelin-tengist-arduino", 
+    "body": "undefined", 
     "image": "news/images/2014/06/29/4897216645_297ab77afc_b_2.jpg", 
-    "body": "undefined"
+    "title": "Ritv\u00e9lin tengist Arduino"
   }, 
-  "model": "taekwondo.news", 
-  "pk": 3
+  "pk": 3, 
+  "model": "taekwondo.news"
 }
 ]

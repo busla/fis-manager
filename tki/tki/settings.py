@@ -67,6 +67,7 @@ ROOT_URLCONF = 'tki.urls'
 
 WSGI_APPLICATION = 'tki.wsgi.application'
 
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
@@ -91,7 +92,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-SITE_ID = 1
+SITE_ID = 2
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 

@@ -7,7 +7,7 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 			<meta name="description" content="A Bootstrap based app landing page template">
 			<meta name="author" content="">
-			{% block link %}
+
             <link rel="shortcut icon" href="{% static 'taekwondo/assets/ico/favicon.ico' %}">
 
 			<title>Taekwondo samband Íslands</title>
@@ -22,7 +22,7 @@
 			<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 			<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
 			<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
-            {% endblock link %}
+
 			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -71,169 +71,23 @@
 			</div>
 			</div>
 
-	<div id="featureWrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4 text-center feature">
-					<i class="fa fa-tablet icon"></i>
-					<h3>Responsive Bootstrap Template</h3>
-					<p>
-					Lorem ipsum dolizzle sit tellivizzle, boom shackalack adipiscing elit. Nullam mofo velizzle, get down get down stuff, sure cool, dizzle vizzle, arcu. Yo mamma izzle tortizzle.
-					</p>
-				</div>
-				<div class="col-sm-4 text-center feature">
-					<i class="fa fa-pencil icon"></i>
-					<h3>Easy to Customize</h3>
-					<p>
-					Lorem ipsum dolizzle sit tellivizzle, boom shackalack adipiscing elit. Nullam mofo velizzle, get down get down stuff, sure cool, dizzle vizzle, arcu. Yo mamma izzle tortizzle.
-					</p>
-				</div>
-				<div class="col-sm-4 text-center feature">
-					<i class="fa fa-star icon"></i>
-					<h3>Ideal for Apps or Software</h3>
-					<p>
-					Lorem ipsum dolizzle sit tellivizzle, boom shackalack adipiscing elit. Nullam mofo velizzle, get down get down stuff, sure cool, dizzle vizzle, arcu. Yo mamma izzle tortizzle.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div> <!-- /featureWrap -->
+
+
+
 	
-	<div id="productWrap" class="altWrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h2 class="sectionTitle">Modern &amp; clean landing page theme</h2>
-					<h3 class="sectionTitle">Lorem ipsum dolizzle sit tellivizzle, boom shackalack adipiscing elit. Nullam mofo velizzle, sure cool.</h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-5 col-md-offset-1">
-					<div class="imgWrap">
-						<img class="img-responsive" src="taekwondo/assets/img/tablet.png"/>
-                        {% block content %}{% endblock content %}
-					</div>
-				</div>
-				<div class="col-md-5">
-					<div class="productFeatures clearfix">
-						<div class="col-xs-2 icon">
-							<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-trophy fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-						<div class="col-xs-10">
-							<h3>Amazing features</h3>
-							<p>Vestibulum tellivizzle i saw beyonces tizzles and my pizzle went crizzle primis gangsta faucibus fizzle luctizzle izzle stuff posuere mammasay mammasa mamma oo sa Daahng dawg.</p>
-						</div>
-						<div class="col-xs-2 icon">
-							<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-						<div class="col-xs-10">
-							<h3>Fully customizeable</h3>
-							<p>Vestibulum tellivizzle i saw beyonces tizzles and my pizzle went crizzle primis gangsta faucibus fizzle luctizzle izzle stuff posuere mammasay mammasa mamma oo sa Daahng dawg.</p>
-						</div>
-						<div class="col-xs-2 icon">
-							<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-bars fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-						<div class="col-xs-10">
-							<h3>Clean &amp; functional layout</h3>
-							<p>Vestibulum tellivizzle i saw beyonces tizzles and my pizzle went crizzle primis gangsta faucibus fizzle luctizzle izzle stuff posuere mammasay mammasa mamma oo sa Daahng dawg.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> <!-- /productWrap -->
-	
-	<div id="pricingWrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h2 class="sectionTitle">Ready to get started?</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<ul class="priceTable">
-						<li class="title">Basic Plan</li>
-						<li class="description">For basic people</li>
-						<li class="price">$9.99</li>
-						<ul class="features">
-							<li>Phasellizzle brizzle</li>
-							<li>Crizzle aliquizzle</li>
-							<li>And a lot more gizzle</li>
-						</ul>
-						<li class="call">
-							<a class="btn btn-success btn-lg" href="#">Buy Now</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-sm-4">
-					<ul class="priceTable alt">
-						<li class="title">Super Plan</li>
-						<li class="description">For super people</li>
-						<li class="price">$19.99</li>
-						<ul class="features">
-							<li>Phasellizzle brizzle</li>
-							<li>Crizzle aliquizzle</li>
-							<li>And a lot more gizzle</li>
-						</ul>
-						<li class="call">
-							<a class="btn btn-success btn-lg" href="#">Buy Now</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-sm-4">
-					<ul class="priceTable">
-						<li class="title">Awesome Plan</li>
-						<li class="description">For awesome people</li>
-						<li class="price">$29.99</li>
-						<ul class="features">
-							<li>Phasellizzle brizzle</li>
-							<li>Crizzle aliquizzle</li>
-							<li>And a lot more gizzle</li>
-						</ul>
-						<li class="call">
-							<a class="btn btn-success btn-lg" href="#">Buy Now</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div> <!-- /pricingWrap -->
+
 	
 	<div id="testimonialsWrap" class="altWrap">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h2 class="sectionTitle">What people say</h2>
+					<h2 class="sectionTitle">Fréttir</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<div class="flexslider">
-						<ul class="slides">
-							<li>
-								<div class="quote">"Etizzle laoreet doggy dope nisl. Dang pulvinizzle, ipsizzle dawg."</div>
-								<div class="author">Martin Nizzle</div>
-							</li>
-							<li>
-								<div class="quote">"Crazy tellus urna, yo mamma check out this, eleifend you son of a bizzle."</div>
-								<div class="author">Jennifer Aliquizzle</div>
-							</li>
-							<li>
-								<div class="quote">"Praesent i saw beyonces tizzles and my pizzle went crizzle turpizzle."</div>
-								<div class="author">William Lorizzle</div>
-							</li>
-						</ul>
-					</div>
+					    {% block content %}{% endblock content %}
+                        {% block sidebar %}{% endblock sidebar %}
 				</div>
 			</div>
 		</div>
