@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models import permalink
 
 
+
 class Member(models.Model):
     name = models.CharField(max_length=200)
     ssn = models.CharField(max_length=11)
@@ -71,3 +72,4 @@ class News(models.Model):
 class NewsFile(models.Model):
     attachment = models.FileField(upload_to='news/attachments/%Y/%m/%d', max_length=100, blank=True)
     tournament = models.ForeignKey('News')
+

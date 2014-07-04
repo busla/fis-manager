@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'tagging',
     'mptt',
     'zinnia',
+    
 )
 
 MIDDLEWARE_CLASSES = (
