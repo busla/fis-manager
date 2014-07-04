@@ -10,5 +10,14 @@
     {% trans "No categories yet." %}
   </li>
   {% endfor %}
+  <li>
+    <a href="{% url 'club-list' %}">Félög</a>
+  </li>
+  <li>
+    <a href="{% url 'tournament-list' %}">Mót</a>  
+  </li>
+  <li>
+    <a href="{% url 'tournament-list' %}">Iðkendur</a>  
+  </li>
 </ul>
 

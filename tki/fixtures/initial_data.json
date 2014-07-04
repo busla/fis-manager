@@ -1,199 +1,2041 @@
 [
 {
-  "fields": {
-    "photo": "members/photos/4897216645_297ab77afc_b.jpg", 
-    "ssn": "1908815989", 
-    "slug": "jon-levy-gudmundarson-selmuson", 
-    "name": "J\u00f3n Levy Gu\u00f0mundarson Selmuson"
-  }, 
-  "pk": 1, 
-  "model": "taekwondo.member"
+    "model": "sites.site",
+    "fields": {
+        "name": "example.com",
+        "domain": "example.com"
+    },
+    "pk": 1
 },
 {
-  "fields": {
-    "slug": "afturelding", 
-    "website": "http://www.afturelding.is/taekwondo", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/logo.png", 
-    "name": "Afturelding", 
-    "email": ""
-  }, 
-  "pk": 1, 
-  "model": "taekwondo.club"
+    "model": "sites.site",
+    "fields": {
+        "name": "localhost",
+        "domain": "localhost:8000"
+    },
+    "pk": 2
 },
 {
-  "fields": {
-    "slug": "armann", 
-    "website": "http://www.armenningar.is/", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/\u00c1rmannsmerki_vektor.jpg", 
-    "name": "\u00c1rmann", 
-    "email": ""
-  }, 
-  "pk": 2, 
-  "model": "taekwondo.club"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "logentry",
+        "name": "log entry",
+        "app_label": "admin"
+    },
+    "pk": 1
 },
 {
-  "fields": {
-    "slug": "keflavik", 
-    "website": "http://www.keflavik.is/", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/kef.jpg", 
-    "name": "Keflav\u00edk", 
-    "email": ""
-  }, 
-  "pk": 3, 
-  "model": "taekwondo.club"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "permission",
+        "name": "permission",
+        "app_label": "auth"
+    },
+    "pk": 2
 },
 {
-  "fields": {
-    "slug": "kr", 
-    "website": "http://www.kr.is/", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/kr.png", 
-    "name": "KR", 
-    "email": ""
-  }, 
-  "pk": 4, 
-  "model": "taekwondo.club"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "group",
+        "name": "group",
+        "app_label": "auth"
+    },
+    "pk": 3
 },
 {
-  "fields": {
-    "slug": "selfoss", 
-    "website": "http://www.selfoss.is/", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/selfoss.JPG", 
-    "name": "Selfoss", 
-    "email": ""
-  }, 
-  "pk": 5, 
-  "model": "taekwondo.club"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "user",
+        "name": "user",
+        "app_label": "auth"
+    },
+    "pk": 4
 },
 {
-  "fields": {
-    "slug": "einherjar", 
-    "website": "http://www.einherjar.is/", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/sporttkd.jpg", 
-    "name": "Einherjar", 
-    "email": ""
-  }, 
-  "pk": 6, 
-  "model": "taekwondo.club"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "site",
+        "name": "site",
+        "app_label": "sites"
+    },
+    "pk": 5
 },
 {
-  "fields": {
-    "slug": "ir", 
-    "website": "http://www.ir.is/", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/ir.jpg", 
-    "name": "\u00cdR", 
-    "email": ""
-  }, 
-  "pk": 7, 
-  "model": "taekwondo.club"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "comment",
+        "name": "comment",
+        "app_label": "comments"
+    },
+    "pk": 6
 },
 {
-  "fields": {
-    "slug": "thor-akureyri", 
-    "website": "http://www.thor.is/", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/thorak_stort.jpg", 
-    "name": "\u00de\u00f3r Akureyri", 
-    "email": ""
-  }, 
-  "pk": 8, 
-  "model": "taekwondo.club"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "commentflag",
+        "name": "comment flag",
+        "app_label": "comments"
+    },
+    "pk": 7
 },
 {
-  "fields": {
-    "slug": "fram", 
-    "website": "http://www.fram.is/", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/framlogo.jpg", 
-    "name": "Fram", 
-    "email": ""
-  }, 
-  "pk": 9, 
-  "model": "taekwondo.club"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "contenttype",
+        "name": "content type",
+        "app_label": "contenttypes"
+    },
+    "pk": 8
 },
 {
-  "fields": {
-    "slug": "grindavik", 
-    "website": "http://www.grindavik.is/", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/grindavik.png", 
-    "name": "Grindav\u00edk", 
-    "email": ""
-  }, 
-  "pk": 10, 
-  "model": "taekwondo.club"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "session",
+        "name": "session",
+        "app_label": "sessions"
+    },
+    "pk": 9
 },
 {
-  "fields": {
-    "slug": "hk", 
-    "website": "http://www.hk.is/", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "logo": "clubs/logos/hk.jpg", 
-    "name": "HK", 
-    "email": ""
-  }, 
-  "pk": 11, 
-  "model": "taekwondo.club"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "member",
+        "name": "member",
+        "app_label": "taekwondo"
+    },
+    "pk": 10
 },
 {
-  "fields": {
-    "date": "2014-06-29", 
-    "slug": "islandsmeistaramotid-i-sparring-2014", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "image": "tournaments/images/2014/06/29/hjolasmidjan.jpg", 
-    "title": "\u00cdslandsmeistaram\u00f3ti\u00f0 \u00ed Sparring 2014"
-  }, 
-  "pk": 1, 
-  "model": "taekwondo.tournament"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "club",
+        "name": "club",
+        "app_label": "taekwondo"
+    },
+    "pk": 11
 },
 {
-  "fields": {
-    "date": "2014-06-29", 
-    "slug": "bikarmot-ii-2014", 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "image": "tournaments/images/2014/06/29/carpentry.jpg", 
-    "title": "Bikarm\u00f3t II 2014"
-  }, 
-  "pk": 2, 
-  "model": "taekwondo.tournament"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "membership",
+        "name": "membership",
+        "app_label": "taekwondo"
+    },
+    "pk": 12
 },
 {
-  "fields": {
-    "posted": "2014-06-29", 
-    "slug": "nordurlandamotid-hefst-um-helgina", 
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "image": "news/images/2014/06/29/4897216645_297ab77afc_b_1.jpg", 
-    "title": "Nor\u00f0urlandam\u00f3ti\u00f0 hefst um helgina"
-  }, 
-  "pk": 1, 
-  "model": "taekwondo.news"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "tournament",
+        "name": "tournament",
+        "app_label": "taekwondo"
+    },
+    "pk": 13
 },
 {
-  "fields": {
-    "posted": "2014-06-29", 
-    "slug": "tveir-fa-svart-belti", 
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.", 
-    "image": "news/images/2014/06/29/arduino.jpg", 
-    "title": "Tveir f\u00e1 svart belti"
-  }, 
-  "pk": 2, 
-  "model": "taekwondo.news"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "tournamentfile",
+        "name": "tournament file",
+        "app_label": "taekwondo"
+    },
+    "pk": 14
 },
 {
-  "fields": {
-    "posted": "2014-06-29", 
-    "slug": "ritvelin-tengist-arduino", 
-    "body": "undefined", 
-    "image": "news/images/2014/06/29/4897216645_297ab77afc_b_2.jpg", 
-    "title": "Ritv\u00e9lin tengist Arduino"
-  }, 
-  "pk": 3, 
-  "model": "taekwondo.news"
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "clubfile",
+        "name": "club file",
+        "app_label": "taekwondo"
+    },
+    "pk": 15
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "news",
+        "name": "news",
+        "app_label": "taekwondo"
+    },
+    "pk": 16
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "newsfile",
+        "name": "news file",
+        "app_label": "taekwondo"
+    },
+    "pk": 17
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "attachment",
+        "name": "attachment",
+        "app_label": "django_summernote"
+    },
+    "pk": 18
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "tag",
+        "name": "tag",
+        "app_label": "tagging"
+    },
+    "pk": 19
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "taggeditem",
+        "name": "tagged item",
+        "app_label": "tagging"
+    },
+    "pk": 20
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "entry",
+        "name": "entry",
+        "app_label": "zinnia"
+    },
+    "pk": 21
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "category",
+        "name": "category",
+        "app_label": "zinnia"
+    },
+    "pk": 22
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "model": "author",
+        "name": "author",
+        "app_label": "zinnia"
+    },
+    "pk": 23
+},
+{
+    "model": "sessions.session",
+    "fields": {
+        "expire_date": "2014-07-17T13:29:47.499Z",
+        "session_data": "Y2E3NTM0ZWQxNzcyZDQ5MWY2ZGJhYjVkYmZhOWVlZGMxMDhiYjdiNjp7Il9hdXRoX3VzZXJfaWQiOjEsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0="
+    },
+    "pk": "crcroxehnwxmoftkzota1k0glfg9feci"
+},
+{
+    "model": "taekwondo.member",
+    "fields": {
+        "photo": "members/photos/4897216645_297ab77afc_b.jpg",
+        "slug": "jon-levy-gudmundarson-selmuson",
+        "name": "J\u00f3n Levy Gu\u00f0mundarson Selmuson",
+        "ssn": "1908815989"
+    },
+    "pk": 1
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "Afturelding",
+        "slug": "afturelding",
+        "website": "http://www.afturelding.is/taekwondo",
+        "email": "",
+        "logo": "clubs/logos/logo.png"
+    },
+    "pk": 1
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "\u00c1rmann",
+        "slug": "armann",
+        "website": "http://www.armenningar.is/",
+        "email": "",
+        "logo": "clubs/logos/\u00c1rmannsmerki_vektor.jpg"
+    },
+    "pk": 2
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "Keflav\u00edk",
+        "slug": "keflavik",
+        "website": "http://www.keflavik.is/",
+        "email": "",
+        "logo": "clubs/logos/kef.jpg"
+    },
+    "pk": 3
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "KR",
+        "slug": "kr",
+        "website": "http://www.kr.is/",
+        "email": "",
+        "logo": "clubs/logos/kr.png"
+    },
+    "pk": 4
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "Selfoss",
+        "slug": "selfoss",
+        "website": "http://www.selfoss.is/",
+        "email": "",
+        "logo": "clubs/logos/selfoss.JPG"
+    },
+    "pk": 5
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "Einherjar",
+        "slug": "einherjar",
+        "website": "http://www.einherjar.is/",
+        "email": "",
+        "logo": "clubs/logos/sporttkd.jpg"
+    },
+    "pk": 6
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "\u00cdR",
+        "slug": "ir",
+        "website": "http://www.ir.is/",
+        "email": "",
+        "logo": "clubs/logos/ir.jpg"
+    },
+    "pk": 7
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "\u00de\u00f3r Akureyri",
+        "slug": "thor-akureyri",
+        "website": "http://www.thor.is/",
+        "email": "",
+        "logo": "clubs/logos/thorak_stort.jpg"
+    },
+    "pk": 8
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "Fram",
+        "slug": "fram",
+        "website": "http://www.fram.is/",
+        "email": "",
+        "logo": "clubs/logos/framlogo.jpg"
+    },
+    "pk": 9
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "Grindav\u00edk",
+        "slug": "grindavik",
+        "website": "http://www.grindavik.is/",
+        "email": "",
+        "logo": "clubs/logos/grindavik.png"
+    },
+    "pk": 10
+},
+{
+    "model": "taekwondo.club",
+    "fields": {
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "name": "HK",
+        "slug": "hk",
+        "website": "http://www.hk.is/",
+        "email": "",
+        "logo": "clubs/logos/hk.jpg"
+    },
+    "pk": 11
+},
+{
+    "model": "taekwondo.tournament",
+    "fields": {
+        "title": "\u00cdslandsmeistaram\u00f3ti\u00f0 \u00ed Sparring 2014",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "date": "2014-06-29",
+        "slug": "islandsmeistaramotid-i-sparring-2014",
+        "image": "tournaments/images/2014/06/29/hjolasmidjan.jpg"
+    },
+    "pk": 1
+},
+{
+    "model": "taekwondo.tournament",
+    "fields": {
+        "title": "Bikarm\u00f3t II 2014",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "date": "2014-06-29",
+        "slug": "bikarmot-ii-2014",
+        "image": "tournaments/images/2014/06/29/carpentry.jpg"
+    },
+    "pk": 2
+},
+{
+    "model": "taekwondo.news",
+    "fields": {
+        "title": "Nor\u00f0urlandam\u00f3ti\u00f0 hefst um helgina",
+        "slug": "nordurlandamotid-hefst-um-helgina",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "posted": "2014-06-29",
+        "image": "news/images/2014/06/29/4897216645_297ab77afc_b_1.jpg"
+    },
+    "pk": 1
+},
+{
+    "model": "taekwondo.news",
+    "fields": {
+        "title": "Tveir f\u00e1 svart belti",
+        "slug": "tveir-fa-svart-belti",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+        "posted": "2014-06-29",
+        "image": "news/images/2014/06/29/arduino.jpg"
+    },
+    "pk": 2
+},
+{
+    "model": "taekwondo.news",
+    "fields": {
+        "title": "Ritv\u00e9lin tengist Arduino",
+        "slug": "ritvelin-tengist-arduino",
+        "body": "undefined",
+        "posted": "2014-06-29",
+        "image": "news/images/2014/06/29/4897216645_297ab77afc_b_2.jpg"
+    },
+    "pk": 3
+},
+{
+    "model": "zinnia.category",
+    "fields": {
+        "level": 0,
+        "description": "",
+        "tree_id": 2,
+        "rght": 2,
+        "title": "Fr\u00e9ttir",
+        "slug": "frettir",
+        "lft": 1,
+        "parent": null
+    },
+    "pk": 1
+},
+{
+    "model": "zinnia.category",
+    "fields": {
+        "level": 0,
+        "description": "",
+        "tree_id": 1,
+        "rght": 2,
+        "title": "Fr\u00e6\u00f0sla",
+        "slug": "fraedsla",
+        "lft": 1,
+        "parent": null
+    },
+    "pk": 2
+},
+{
+    "model": "zinnia.category",
+    "fields": {
+        "level": 0,
+        "description": "",
+        "tree_id": 3,
+        "rght": 2,
+        "title": "Taekwondo",
+        "slug": "taekwondo",
+        "lft": 1,
+        "parent": null
+    },
+    "pk": 3
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 1,
+        "codename": "add_logentry",
+        "name": "Can add log entry"
+    },
+    "pk": 1
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 1,
+        "codename": "change_logentry",
+        "name": "Can change log entry"
+    },
+    "pk": 2
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 1,
+        "codename": "delete_logentry",
+        "name": "Can delete log entry"
+    },
+    "pk": 3
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 2,
+        "codename": "add_permission",
+        "name": "Can add permission"
+    },
+    "pk": 4
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 2,
+        "codename": "change_permission",
+        "name": "Can change permission"
+    },
+    "pk": 5
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 2,
+        "codename": "delete_permission",
+        "name": "Can delete permission"
+    },
+    "pk": 6
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 3,
+        "codename": "add_group",
+        "name": "Can add group"
+    },
+    "pk": 7
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 3,
+        "codename": "change_group",
+        "name": "Can change group"
+    },
+    "pk": 8
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 3,
+        "codename": "delete_group",
+        "name": "Can delete group"
+    },
+    "pk": 9
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 4,
+        "codename": "add_user",
+        "name": "Can add user"
+    },
+    "pk": 10
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 4,
+        "codename": "change_user",
+        "name": "Can change user"
+    },
+    "pk": 11
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 4,
+        "codename": "delete_user",
+        "name": "Can delete user"
+    },
+    "pk": 12
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 5,
+        "codename": "add_site",
+        "name": "Can add site"
+    },
+    "pk": 13
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 5,
+        "codename": "change_site",
+        "name": "Can change site"
+    },
+    "pk": 14
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 5,
+        "codename": "delete_site",
+        "name": "Can delete site"
+    },
+    "pk": 15
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 6,
+        "codename": "add_comment",
+        "name": "Can add comment"
+    },
+    "pk": 16
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 6,
+        "codename": "change_comment",
+        "name": "Can change comment"
+    },
+    "pk": 17
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 6,
+        "codename": "delete_comment",
+        "name": "Can delete comment"
+    },
+    "pk": 18
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 6,
+        "codename": "can_moderate",
+        "name": "Can moderate comments"
+    },
+    "pk": 19
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 7,
+        "codename": "add_commentflag",
+        "name": "Can add comment flag"
+    },
+    "pk": 20
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 7,
+        "codename": "change_commentflag",
+        "name": "Can change comment flag"
+    },
+    "pk": 21
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 7,
+        "codename": "delete_commentflag",
+        "name": "Can delete comment flag"
+    },
+    "pk": 22
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 8,
+        "codename": "add_contenttype",
+        "name": "Can add content type"
+    },
+    "pk": 23
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 8,
+        "codename": "change_contenttype",
+        "name": "Can change content type"
+    },
+    "pk": 24
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 8,
+        "codename": "delete_contenttype",
+        "name": "Can delete content type"
+    },
+    "pk": 25
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 9,
+        "codename": "add_session",
+        "name": "Can add session"
+    },
+    "pk": 26
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 9,
+        "codename": "change_session",
+        "name": "Can change session"
+    },
+    "pk": 27
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 9,
+        "codename": "delete_session",
+        "name": "Can delete session"
+    },
+    "pk": 28
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 10,
+        "codename": "add_member",
+        "name": "Can add member"
+    },
+    "pk": 29
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 10,
+        "codename": "change_member",
+        "name": "Can change member"
+    },
+    "pk": 30
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 10,
+        "codename": "delete_member",
+        "name": "Can delete member"
+    },
+    "pk": 31
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 11,
+        "codename": "add_club",
+        "name": "Can add club"
+    },
+    "pk": 32
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 11,
+        "codename": "change_club",
+        "name": "Can change club"
+    },
+    "pk": 33
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 11,
+        "codename": "delete_club",
+        "name": "Can delete club"
+    },
+    "pk": 34
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 12,
+        "codename": "add_membership",
+        "name": "Can add membership"
+    },
+    "pk": 35
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 12,
+        "codename": "change_membership",
+        "name": "Can change membership"
+    },
+    "pk": 36
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 12,
+        "codename": "delete_membership",
+        "name": "Can delete membership"
+    },
+    "pk": 37
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 13,
+        "codename": "add_tournament",
+        "name": "Can add tournament"
+    },
+    "pk": 38
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 13,
+        "codename": "change_tournament",
+        "name": "Can change tournament"
+    },
+    "pk": 39
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 13,
+        "codename": "delete_tournament",
+        "name": "Can delete tournament"
+    },
+    "pk": 40
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 14,
+        "codename": "add_tournamentfile",
+        "name": "Can add tournament file"
+    },
+    "pk": 41
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 14,
+        "codename": "change_tournamentfile",
+        "name": "Can change tournament file"
+    },
+    "pk": 42
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 14,
+        "codename": "delete_tournamentfile",
+        "name": "Can delete tournament file"
+    },
+    "pk": 43
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 15,
+        "codename": "add_clubfile",
+        "name": "Can add club file"
+    },
+    "pk": 44
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 15,
+        "codename": "change_clubfile",
+        "name": "Can change club file"
+    },
+    "pk": 45
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 15,
+        "codename": "delete_clubfile",
+        "name": "Can delete club file"
+    },
+    "pk": 46
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 16,
+        "codename": "add_news",
+        "name": "Can add news"
+    },
+    "pk": 47
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 16,
+        "codename": "change_news",
+        "name": "Can change news"
+    },
+    "pk": 48
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 16,
+        "codename": "delete_news",
+        "name": "Can delete news"
+    },
+    "pk": 49
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 17,
+        "codename": "add_newsfile",
+        "name": "Can add news file"
+    },
+    "pk": 50
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 17,
+        "codename": "change_newsfile",
+        "name": "Can change news file"
+    },
+    "pk": 51
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 17,
+        "codename": "delete_newsfile",
+        "name": "Can delete news file"
+    },
+    "pk": 52
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 18,
+        "codename": "add_attachment",
+        "name": "Can add attachment"
+    },
+    "pk": 53
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 18,
+        "codename": "change_attachment",
+        "name": "Can change attachment"
+    },
+    "pk": 54
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 18,
+        "codename": "delete_attachment",
+        "name": "Can delete attachment"
+    },
+    "pk": 55
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 19,
+        "codename": "add_tag",
+        "name": "Can add tag"
+    },
+    "pk": 56
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 19,
+        "codename": "change_tag",
+        "name": "Can change tag"
+    },
+    "pk": 57
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 19,
+        "codename": "delete_tag",
+        "name": "Can delete tag"
+    },
+    "pk": 58
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 20,
+        "codename": "add_taggeditem",
+        "name": "Can add tagged item"
+    },
+    "pk": 59
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 20,
+        "codename": "change_taggeditem",
+        "name": "Can change tagged item"
+    },
+    "pk": 60
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 20,
+        "codename": "delete_taggeditem",
+        "name": "Can delete tagged item"
+    },
+    "pk": 61
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 21,
+        "codename": "add_entry",
+        "name": "Can add entry"
+    },
+    "pk": 62
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 21,
+        "codename": "change_entry",
+        "name": "Can change entry"
+    },
+    "pk": 63
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 21,
+        "codename": "delete_entry",
+        "name": "Can delete entry"
+    },
+    "pk": 64
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 21,
+        "codename": "can_view_all",
+        "name": "Can view all entries"
+    },
+    "pk": 65
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 21,
+        "codename": "can_change_status",
+        "name": "Can change status"
+    },
+    "pk": 66
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 21,
+        "codename": "can_change_author",
+        "name": "Can change author(s)"
+    },
+    "pk": 67
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 4,
+        "codename": "add_author",
+        "name": "Can add author"
+    },
+    "pk": 68
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 4,
+        "codename": "change_author",
+        "name": "Can change author"
+    },
+    "pk": 69
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 4,
+        "codename": "delete_author",
+        "name": "Can delete author"
+    },
+    "pk": 70
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 22,
+        "codename": "add_category",
+        "name": "Can add category"
+    },
+    "pk": 71
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 22,
+        "codename": "change_category",
+        "name": "Can change category"
+    },
+    "pk": 72
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "content_type": 22,
+        "codename": "delete_category",
+        "name": "Can delete category"
+    },
+    "pk": 73
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "is_staff": true,
+        "username": "nonni",
+        "email": "",
+        "date_joined": "2014-07-03T13:29:30.433Z",
+        "groups": [],
+        "is_active": true,
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$exrp8ocF8sRf$3W2ApwcQSjtix4hfTOazjhKRhqwEVEo9wii4ZNdWoUo=",
+        "last_login": "2014-07-03T13:29:47.497Z",
+        "first_name": "",
+        "is_superuser": true,
+        "last_name": ""
+    },
+    "pk": 1
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "is_staff": false,
+        "username": "ernah",
+        "email": "",
+        "date_joined": "2014-07-03T20:37:55.137Z",
+        "groups": [],
+        "is_active": true,
+        "user_permissions": [],
+        "password": "!pOReJ1FMU0bSHT2UK7K2ByqBT7TLPzfuSfuq0Kja",
+        "last_login": "2014-07-03T20:37:55.137Z",
+        "first_name": "",
+        "is_superuser": false,
+        "last_name": ""
+    },
+    "pk": 2
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "is_staff": false,
+        "username": "helgi",
+        "email": "",
+        "date_joined": "2014-07-03T20:37:57.385Z",
+        "groups": [],
+        "is_active": true,
+        "user_permissions": [],
+        "password": "!wFNsAfOUoQPYgAGm7dU2svXId44AbaRzBv7XY9Ck",
+        "last_login": "2014-07-03T20:37:57.385Z",
+        "first_name": "",
+        "is_superuser": false,
+        "last_name": ""
+    },
+    "pk": 3
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "is_staff": false,
+        "username": "Armann",
+        "email": "",
+        "date_joined": "2014-07-03T20:37:58.281Z",
+        "groups": [],
+        "is_active": true,
+        "user_permissions": [],
+        "password": "!uKrl8dyn8Z9dXgwCwVkDypyYKNJcMfH0iWb5lS8u",
+        "last_login": "2014-07-03T20:37:58.281Z",
+        "first_name": "",
+        "is_superuser": false,
+        "last_name": ""
+    },
+    "pk": 4
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "is_staff": false,
+        "username": "Sigga-Stefania",
+        "email": "",
+        "date_joined": "2014-07-03T20:37:59.241Z",
+        "groups": [],
+        "is_active": true,
+        "user_permissions": [],
+        "password": "!9XxHzbVFzIgqCEHAYBUJJ1qeR7EeAImwiyAeZGlW",
+        "last_login": "2014-07-03T20:37:59.241Z",
+        "first_name": "",
+        "is_superuser": false,
+        "last_name": ""
+    },
+    "pk": 5
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "is_staff": false,
+        "username": "Rikki",
+        "email": "",
+        "date_joined": "2014-07-03T20:38:00.177Z",
+        "groups": [],
+        "is_active": true,
+        "user_permissions": [],
+        "password": "!BtbwfoY7NNbggxfxJry9AqJsshWSMkxHRmc2IITs",
+        "last_login": "2014-07-03T20:38:00.177Z",
+        "first_name": "",
+        "is_superuser": false,
+        "last_name": ""
+    },
+    "pk": 6
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "is_staff": false,
+        "username": "Hulda",
+        "email": "",
+        "date_joined": "2014-07-03T20:38:00.993Z",
+        "groups": [],
+        "is_active": true,
+        "user_permissions": [],
+        "password": "!tuVcEYp9Exnc3sm2w4OELxBFkjoHdLsDoosClOjG",
+        "last_login": "2014-07-03T20:38:00.993Z",
+        "first_name": "",
+        "is_superuser": false,
+        "last_name": ""
+    },
+    "pk": 7
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "is_staff": false,
+        "username": "levy",
+        "email": "",
+        "date_joined": "2014-07-03T20:38:01.777Z",
+        "groups": [],
+        "is_active": true,
+        "user_permissions": [],
+        "password": "!QeUUVMIVnDkh6HF9HPT9I0QSnKFfnATy1J7zwDsV",
+        "last_login": "2014-07-03T20:38:01.777Z",
+        "first_name": "",
+        "is_superuser": false,
+        "last_name": ""
+    },
+    "pk": 8
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "is_staff": false,
+        "username": "admin",
+        "email": "",
+        "date_joined": "2014-07-03T20:38:02.641Z",
+        "groups": [],
+        "is_active": true,
+        "user_permissions": [],
+        "password": "!R2AVEzYbhOR3MRLtmeaXM7Yy1O9BAR5BFoaPViJR",
+        "last_login": "2014-07-03T20:38:02.641Z",
+        "first_name": "",
+        "is_superuser": false,
+        "last_name": ""
+    },
+    "pk": 9
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "is_staff": false,
+        "username": "Gudrunhv",
+        "email": "",
+        "date_joined": "2014-07-03T20:38:03.580Z",
+        "groups": [],
+        "is_active": true,
+        "user_permissions": [],
+        "password": "!zDnVLDNq73NhRVUy4ckzAsZhal42kqYGPWBcdEsK",
+        "last_login": "2014-07-03T20:38:03.580Z",
+        "first_name": "",
+        "is_superuser": false,
+        "last_name": ""
+    },
+    "pk": 10
+},
+{
+    "model": "zinnia.entry",
+    "fields": {
+        "pingback_count": 0,
+        "pingback_enabled": true,
+        "slug": "sdlkfdjsf",
+        "tags": "",
+        "comment_enabled": true,
+        "title": "Svo er b\u00f6ggur h\u00e9r",
+        "image": "uploads/zinnia/drum-machine_2.jpg",
+        "comment_count": 0,
+        "authors": [
+            1
+        ],
+        "login_required": false,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam \r\nnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat \r\nvolutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation \r\nullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse \r\nmolestie consequat, vel illum dolore eu feugiat nulla facilisis at vero \r\neros et accumsan et iusto odio dignissim qui blandit praesent luptatum \r\nzzril delenit augue duis dolore te feugait nulla facilisi. Nam liber \r\ntempor cum soluta nobis eleifend option congue nihil imperdiet doming id\r\n quod mazim placerat facer possim assum. Typi non habent claritatem \r\ninsitam; est usus legentis in iis qui facit eorum claritatem. \r\nInvestigationes demonstraverunt lectores legere me lius quod ii legunt \r\nsaepius. Claritas est etiam processus dynamicus, qui sequitur mutationem\r\n consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc\r\n putamus parum claram, anteposuerit litterarum formas humanitatis per \r\nseacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis \r\nvidentur parum clari, fiant sollemnes in futurum.</p>",
+        "featured": false,
+        "creation_date": "2014-07-03T13:33:21Z",
+        "detail_template": "entry_detail.html",
+        "trackback_enabled": true,
+        "end_publication": null,
+        "related": [],
+        "categories": [
+            1
+        ],
+        "last_update": "2014-07-04T09:40:11.407Z",
+        "password": "",
+        "trackback_count": 0,
+        "excerpt": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in...",
+        "content_template": "zinnia/_entry_detail.html",
+        "start_publication": null,
+        "sites": [
+            1
+        ],
+        "status": 2
+    },
+    "pk": 1
+},
+{
+    "model": "zinnia.entry",
+    "fields": {
+        "pingback_count": 0,
+        "pingback_enabled": true,
+        "slug": "thetta-er-titill",
+        "tags": "",
+        "comment_enabled": true,
+        "title": "\u00deetta er titill",
+        "image": "uploads/zinnia/drum-machine_1.jpg",
+        "comment_count": 0,
+        "authors": [
+            1
+        ],
+        "login_required": false,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam \r\nnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat \r\nvolutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation \r\nullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse \r\nmolestie consequat, vel illum dolore eu feugiat nulla facilisis at vero \r\neros et accumsan et iusto odio dignissim qui blandit praesent luptatum \r\nzzril delenit augue duis dolore te feugait nulla facilisi. Nam liber \r\ntempor cum soluta nobis eleifend option congue nihil imperdiet doming id\r\n quod mazim placerat facer possim assum. Typi non habent claritatem \r\ninsitam; est usus legentis in iis qui facit eorum claritatem. \r\nInvestigationes demonstraverunt lectores legere me lius quod ii legunt \r\nsaepius. Claritas est etiam processus dynamicus, qui sequitur mutationem\r\n consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc\r\n putamus parum claram, anteposuerit litterarum formas humanitatis per \r\nseacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis \r\nvidentur parum clari, fiant sollemnes in futurum.</p>",
+        "featured": false,
+        "creation_date": "2014-07-03T14:06:47Z",
+        "detail_template": "entry_detail.html",
+        "trackback_enabled": true,
+        "end_publication": null,
+        "related": [],
+        "categories": [
+            1
+        ],
+        "last_update": "2014-07-04T09:40:04.155Z",
+        "password": "",
+        "trackback_count": 0,
+        "excerpt": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in...",
+        "content_template": "zinnia/_entry_detail.html",
+        "start_publication": null,
+        "sites": [
+            1
+        ],
+        "status": 2
+    },
+    "pk": 2
+},
+{
+    "model": "zinnia.entry",
+    "fields": {
+        "pingback_count": 0,
+        "pingback_enabled": true,
+        "slug": "zinnia-bogg",
+        "tags": "",
+        "comment_enabled": true,
+        "title": "\u00dev\u00edl\u00edk fr\u00e9tt!",
+        "image": "uploads/zinnia/4897216645_297ab77afc_b_2.jpg",
+        "comment_count": 0,
+        "authors": [
+            1
+        ],
+        "login_required": false,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam \r\nnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat \r\nvolutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation \r\nullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse \r\nmolestie consequat, vel illum dolore eu feugiat nulla facilisis at vero \r\neros et accumsan et iusto odio dignissim qui blandit praesent luptatum \r\nzzril delenit augue duis dolore te feugait nulla facilisi. Nam liber \r\ntempor cum soluta nobis eleifend option congue nihil imperdiet doming id\r\n quod mazim placerat facer possim assum. Typi non habent claritatem \r\ninsitam; est usus legentis in iis qui facit eorum claritatem. \r\nInvestigationes demonstraverunt lectores legere me lius quod ii legunt \r\nsaepius. Claritas est etiam processus dynamicus, qui sequitur mutationem\r\n consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc\r\n putamus parum claram, anteposuerit litterarum formas humanitatis per \r\nseacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis \r\nvidentur parum clari, fiant sollemnes in futurum.</p>",
+        "featured": false,
+        "creation_date": "2014-07-03T14:09:31Z",
+        "detail_template": "entry_detail.html",
+        "trackback_enabled": true,
+        "end_publication": null,
+        "related": [],
+        "categories": [
+            1
+        ],
+        "last_update": "2014-07-04T09:39:57.647Z",
+        "password": "",
+        "trackback_count": 0,
+        "excerpt": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in...",
+        "content_template": "zinnia/_entry_detail.html",
+        "start_publication": null,
+        "sites": [
+            1
+        ],
+        "status": 2
+    },
+    "pk": 3
+},
+{
+    "model": "zinnia.entry",
+    "fields": {
+        "pingback_count": 0,
+        "pingback_enabled": true,
+        "slug": "graduveitingar",
+        "tags": "",
+        "comment_enabled": true,
+        "title": "Gr\u00e1\u00f0uveitingar",
+        "image": "",
+        "comment_count": 0,
+        "authors": [
+            1
+        ],
+        "login_required": false,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam \r\nnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat \r\nvolutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation \r\nullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse \r\nmolestie consequat, vel illum dolore eu feugiat nulla facilisis at vero \r\neros et accumsan et iusto odio dignissim qui blandit praesent luptatum \r\nzzril delenit augue duis dolore te feugait nulla facilisi. Nam liber \r\ntempor cum soluta nobis eleifend option congue nihil imperdiet doming id\r\n quod mazim placerat facer possim assum. Typi non habent claritatem \r\ninsitam; est usus legentis in iis qui facit eorum claritatem. \r\nInvestigationes demonstraverunt lectores legere me lius quod ii legunt \r\nsaepius. Claritas est etiam processus dynamicus, qui sequitur mutationem\r\n consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc\r\n putamus parum claram, anteposuerit litterarum formas humanitatis per \r\nseacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis \r\nvidentur parum clari, fiant sollemnes in futurum.</p>",
+        "featured": false,
+        "creation_date": "2014-07-04T11:04:52Z",
+        "detail_template": "entry_detail.html",
+        "trackback_enabled": true,
+        "end_publication": null,
+        "related": [],
+        "categories": [
+            3
+        ],
+        "last_update": "2014-07-04T11:05:42.339Z",
+        "password": "",
+        "trackback_count": 0,
+        "excerpt": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in...",
+        "content_template": "zinnia/_entry_detail.html",
+        "start_publication": null,
+        "sites": [
+            1
+        ],
+        "status": 2
+    },
+    "pk": 4
+},
+{
+    "model": "zinnia.entry",
+    "fields": {
+        "pingback_count": 0,
+        "pingback_enabled": true,
+        "slug": "motahald",
+        "tags": "",
+        "comment_enabled": true,
+        "title": "M\u00f3tahald",
+        "image": "",
+        "comment_count": 0,
+        "authors": [
+            1
+        ],
+        "login_required": false,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam \r\nnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat \r\nvolutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation \r\nullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse \r\nmolestie consequat, vel illum dolore eu feugiat nulla facilisis at vero \r\neros et accumsan et iusto odio dignissim qui blandit praesent luptatum \r\nzzril delenit augue duis dolore te feugait nulla facilisi. Nam liber \r\ntempor cum soluta nobis eleifend option congue nihil imperdiet doming id\r\n quod mazim placerat facer possim assum. Typi non habent claritatem \r\ninsitam; est usus legentis in iis qui facit eorum claritatem. \r\nInvestigationes demonstraverunt lectores legere me lius quod ii legunt \r\nsaepius. Claritas est etiam processus dynamicus, qui sequitur mutationem\r\n consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc\r\n putamus parum claram, anteposuerit litterarum formas humanitatis per \r\nseacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis \r\nvidentur parum clari, fiant sollemnes in futurum.</p>",
+        "featured": false,
+        "creation_date": "2014-07-04T11:05:42Z",
+        "detail_template": "entry_detail.html",
+        "trackback_enabled": true,
+        "end_publication": null,
+        "related": [],
+        "categories": [
+            2
+        ],
+        "last_update": "2014-07-04T11:06:03.543Z",
+        "password": "",
+        "trackback_count": 0,
+        "excerpt": "",
+        "content_template": "zinnia/_entry_detail.html",
+        "start_publication": null,
+        "sites": [
+            1
+        ],
+        "status": 2
+    },
+    "pk": 5
+},
+{
+    "model": "zinnia.entry",
+    "fields": {
+        "pingback_count": 0,
+        "pingback_enabled": true,
+        "slug": "svartbeltisprof",
+        "tags": "",
+        "comment_enabled": true,
+        "title": "Svartbeltispr\u00f3f",
+        "image": "",
+        "comment_count": 0,
+        "authors": [
+            1
+        ],
+        "login_required": false,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam \r\nnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat \r\nvolutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation \r\nullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse \r\nmolestie consequat, vel illum dolore eu feugiat nulla facilisis at vero \r\neros et accumsan et iusto odio dignissim qui blandit praesent luptatum \r\nzzril delenit augue duis dolore te feugait nulla facilisi. Nam liber \r\ntempor cum soluta nobis eleifend option congue nihil imperdiet doming id\r\n quod mazim placerat facer possim assum. Typi non habent claritatem \r\ninsitam; est usus legentis in iis qui facit eorum claritatem. \r\nInvestigationes demonstraverunt lectores legere me lius quod ii legunt \r\nsaepius. Claritas est etiam processus dynamicus, qui sequitur mutationem\r\n consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc\r\n putamus parum claram, anteposuerit litterarum formas humanitatis per \r\nseacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis \r\nvidentur parum clari, fiant sollemnes in futurum.</p>",
+        "featured": false,
+        "creation_date": "2014-07-04T11:06:03Z",
+        "detail_template": "entry_detail.html",
+        "trackback_enabled": true,
+        "end_publication": null,
+        "related": [],
+        "categories": [
+            2
+        ],
+        "last_update": "2014-07-04T11:06:17.256Z",
+        "password": "",
+        "trackback_count": 0,
+        "excerpt": "",
+        "content_template": "zinnia/_entry_detail.html",
+        "start_publication": null,
+        "sites": [
+            1
+        ],
+        "status": 2
+    },
+    "pk": 6
+},
+{
+    "model": "zinnia.entry",
+    "fields": {
+        "pingback_count": 0,
+        "pingback_enabled": true,
+        "slug": "hvad-er-taekwondo",
+        "tags": "",
+        "comment_enabled": true,
+        "title": "Hva\u00f0 er Taekwondo?",
+        "image": "",
+        "comment_count": 0,
+        "authors": [
+            1
+        ],
+        "login_required": false,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam \r\nnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat \r\nvolutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation \r\nullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse \r\nmolestie consequat, vel illum dolore eu feugiat nulla facilisis at vero \r\neros et accumsan et iusto odio dignissim qui blandit praesent luptatum \r\nzzril delenit augue duis dolore te feugait nulla facilisi. Nam liber \r\ntempor cum soluta nobis eleifend option congue nihil imperdiet doming id\r\n quod mazim placerat facer possim assum. Typi non habent claritatem \r\ninsitam; est usus legentis in iis qui facit eorum claritatem. \r\nInvestigationes demonstraverunt lectores legere me lius quod ii legunt \r\nsaepius. Claritas est etiam processus dynamicus, qui sequitur mutationem\r\n consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc\r\n putamus parum claram, anteposuerit litterarum formas humanitatis per \r\nseacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis \r\nvidentur parum clari, fiant sollemnes in futurum.</p>",
+        "featured": false,
+        "creation_date": "2014-07-04T11:06:17Z",
+        "detail_template": "entry_detail.html",
+        "trackback_enabled": true,
+        "end_publication": null,
+        "related": [],
+        "categories": [
+            3
+        ],
+        "last_update": "2014-07-04T11:06:33.633Z",
+        "password": "",
+        "trackback_count": 0,
+        "excerpt": "",
+        "content_template": "zinnia/_entry_detail.html",
+        "start_publication": null,
+        "sites": [
+            1
+        ],
+        "status": 2
+    },
+    "pk": 7
+},
+{
+    "model": "zinnia.entry",
+    "fields": {
+        "pingback_count": 0,
+        "pingback_enabled": true,
+        "slug": "olympiuleikarnir",
+        "tags": "",
+        "comment_enabled": true,
+        "title": "\u00d3lymp\u00eduleikarnir",
+        "image": "",
+        "comment_count": 0,
+        "authors": [
+            1
+        ],
+        "login_required": false,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam \r\nnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat \r\nvolutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation \r\nullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse \r\nmolestie consequat, vel illum dolore eu feugiat nulla facilisis at vero \r\neros et accumsan et iusto odio dignissim qui blandit praesent luptatum \r\nzzril delenit augue duis dolore te feugait nulla facilisi. Nam liber \r\ntempor cum soluta nobis eleifend option congue nihil imperdiet doming id\r\n quod mazim placerat facer possim assum. Typi non habent claritatem \r\ninsitam; est usus legentis in iis qui facit eorum claritatem. \r\nInvestigationes demonstraverunt lectores legere me lius quod ii legunt \r\nsaepius. Claritas est etiam processus dynamicus, qui sequitur mutationem\r\n consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc\r\n putamus parum claram, anteposuerit litterarum formas humanitatis per \r\nseacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis \r\nvidentur parum clari, fiant sollemnes in futurum.</p>",
+        "featured": false,
+        "creation_date": "2014-07-04T11:06:33Z",
+        "detail_template": "entry_detail.html",
+        "trackback_enabled": true,
+        "end_publication": null,
+        "related": [],
+        "categories": [
+            3
+        ],
+        "last_update": "2014-07-04T11:08:38.095Z",
+        "password": "",
+        "trackback_count": 0,
+        "excerpt": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in...",
+        "content_template": "zinnia/_entry_detail.html",
+        "start_publication": null,
+        "sites": [
+            1
+        ],
+        "status": 2
+    },
+    "pk": 8
+},
+{
+    "model": "zinnia.entry",
+    "fields": {
+        "pingback_count": 0,
+        "pingback_enabled": true,
+        "slug": "byrja-ad-aefa",
+        "tags": "",
+        "comment_enabled": true,
+        "title": "Byrja a\u00f0 \u00e6fa",
+        "image": "",
+        "comment_count": 0,
+        "authors": [
+            1
+        ],
+        "login_required": false,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam \r\nnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat \r\nvolutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation \r\nullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse \r\nmolestie consequat, vel illum dolore eu feugiat nulla facilisis at vero \r\neros et accumsan et iusto odio dignissim qui blandit praesent luptatum \r\nzzril delenit augue duis dolore te feugait nulla facilisi. Nam liber \r\ntempor cum soluta nobis eleifend option congue nihil imperdiet doming id\r\n quod mazim placerat facer possim assum. Typi non habent claritatem \r\ninsitam; est usus legentis in iis qui facit eorum claritatem. \r\nInvestigationes demonstraverunt lectores legere me lius quod ii legunt \r\nsaepius. Claritas est etiam processus dynamicus, qui sequitur mutationem\r\n consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc\r\n putamus parum claram, anteposuerit litterarum formas humanitatis per \r\nseacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis \r\nvidentur parum clari, fiant sollemnes in futurum.</p>",
+        "featured": false,
+        "creation_date": "2014-07-04T11:07:00Z",
+        "detail_template": "entry_detail.html",
+        "trackback_enabled": true,
+        "end_publication": null,
+        "related": [],
+        "categories": [
+            3
+        ],
+        "last_update": "2014-07-04T11:08:30.733Z",
+        "password": "",
+        "trackback_count": 0,
+        "excerpt": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in...",
+        "content_template": "zinnia/_entry_detail.html",
+        "start_publication": null,
+        "sites": [
+            1
+        ],
+        "status": 2
+    },
+    "pk": 9
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T13:30:36.301Z",
+        "object_repr": "H\u00e9r er svo ein fr\u00e9tt: published",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "change_message": ""
+    },
+    "pk": 1
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T13:30:51.666Z",
+        "object_repr": "Hva\u00f0 me\u00f0 \u00feessa fr\u00e9tt?: published",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "2",
+        "change_message": ""
+    },
+    "pk": 2
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T13:31:06.731Z",
+        "object_repr": "Hva\u00f0 me\u00f0 \u00feessa fr\u00e9tt?: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "2",
+        "change_message": "Changed image."
+    },
+    "pk": 3
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T13:32:07.322Z",
+        "object_repr": "H\u00e9r er svo ein fr\u00e9tt: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "change_message": "Changed content."
+    },
+    "pk": 4
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T13:32:15.581Z",
+        "object_repr": "H\u00e9r er svo ein fr\u00e9tt: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "change_message": "No fields changed."
+    },
+    "pk": 5
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T13:32:47.131Z",
+        "object_repr": "Hva\u00f0 me\u00f0 \u00feessa fr\u00e9tt?: published",
+        "action_flag": 3,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "2",
+        "change_message": ""
+    },
+    "pk": 6
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T13:32:47.134Z",
+        "object_repr": "H\u00e9r er svo ein fr\u00e9tt: published",
+        "action_flag": 3,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "change_message": ""
+    },
+    "pk": 7
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T13:32:58.994Z",
+        "object_repr": "localhost:8000",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 5,
+        "object_id": "2",
+        "change_message": ""
+    },
+    "pk": 8
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T13:33:28.590Z",
+        "object_repr": " sdlkfdjsf : draft",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "change_message": ""
+    },
+    "pk": 9
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T13:38:03.933Z",
+        "object_repr": " sdlkfdjsf : draft",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "change_message": "Changed content."
+    },
+    "pk": 10
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T14:07:09.740Z",
+        "object_repr": "\u00deetta er titill: draft",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "2",
+        "change_message": ""
+    },
+    "pk": 11
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T14:08:27.813Z",
+        "object_repr": "\u00deetta er titill: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "2",
+        "change_message": "Changed status."
+    },
+    "pk": 12
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T14:09:45.485Z",
+        "object_repr": "Zinnia b\u00f6gg: published",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "3",
+        "change_message": ""
+    },
+    "pk": 13
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T14:15:08.719Z",
+        "object_repr": "Svo er b\u00f6ggur h\u00e9r: draft",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "change_message": "Changed title, content and image."
+    },
+    "pk": 14
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T14:15:28.144Z",
+        "object_repr": "\u00dev\u00edl\u00edk fr\u00e9tt!: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "3",
+        "change_message": "Changed title, content and image."
+    },
+    "pk": 15
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-03T14:15:38.880Z",
+        "object_repr": "Svo er b\u00f6ggur h\u00e9r: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "change_message": "Changed status."
+    },
+    "pk": 16
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T09:39:57.860Z",
+        "object_repr": "\u00dev\u00edl\u00edk fr\u00e9tt!: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "3",
+        "change_message": "Changed categories."
+    },
+    "pk": 17
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T09:40:04.174Z",
+        "object_repr": "\u00deetta er titill: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "2",
+        "change_message": "Changed categories."
+    },
+    "pk": 18
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T09:40:11.430Z",
+        "object_repr": "Svo er b\u00f6ggur h\u00e9r: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "change_message": "Changed categories."
+    },
+    "pk": 19
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T10:39:52.889Z",
+        "object_repr": "Fr\u00e6\u00f0sla",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 22,
+        "object_id": "2",
+        "change_message": ""
+    },
+    "pk": 20
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T10:40:18.989Z",
+        "object_repr": "Taekwondo",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 22,
+        "object_id": "3",
+        "change_message": ""
+    },
+    "pk": 21
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T10:40:30.895Z",
+        "object_repr": "Fr\u00e9ttir",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 22,
+        "object_id": "1",
+        "change_message": "Breytti title."
+    },
+    "pk": 22
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T11:05:42.533Z",
+        "object_repr": "Gr\u00e1\u00f0uveitingar: published",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "4",
+        "change_message": ""
+    },
+    "pk": 23
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T11:06:03.559Z",
+        "object_repr": "M\u00f3tahald: draft",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "5",
+        "change_message": ""
+    },
+    "pk": 24
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T11:06:17.272Z",
+        "object_repr": "Svartbeltispr\u00f3f: draft",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "6",
+        "change_message": ""
+    },
+    "pk": 25
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T11:06:33.648Z",
+        "object_repr": "Hva\u00f0 er Taekwondo?: draft",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "7",
+        "change_message": ""
+    },
+    "pk": 26
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T11:07:00.265Z",
+        "object_repr": "\u00d3lymp\u00eduleikarnir: draft",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "8",
+        "change_message": ""
+    },
+    "pk": 27
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T11:07:16.867Z",
+        "object_repr": "Byrja a\u00f0 \u00e6fa: draft",
+        "action_flag": 1,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "9",
+        "change_message": ""
+    },
+    "pk": 28
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T11:08:30.759Z",
+        "object_repr": "Byrja a\u00f0 \u00e6fa: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "9",
+        "change_message": "Breytti status."
+    },
+    "pk": 29
+},
+{
+    "model": "admin.logentry",
+    "fields": {
+        "action_time": "2014-07-04T11:08:38.112Z",
+        "object_repr": "\u00d3lymp\u00eduleikarnir: published",
+        "action_flag": 2,
+        "user": 1,
+        "content_type": 21,
+        "object_id": "8",
+        "change_message": "Breytti status."
+    },
+    "pk": 30
 }
 ]
