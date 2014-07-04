@@ -1,4 +1,6 @@
-{% load staticfiles %}
+{% load i18n staticfiles %}
+{% load zinnia_tags i18n %}
+
 <!DOCTYPE html>
 	<html lang="en">
 		<head>
@@ -48,13 +50,9 @@
 						</a>
 					</div>
 					<div class="collapse navbar-collapse appiNav">
-						<ul class="nav navbar-nav">
-							<li><a href="frettir/">Fréttir</a></li>
-							<li><a href="#productWrap">Félög</a></li>
-							<li><a href="#pricingWrap">Fræðsluefni</a></li>
-							<li><a href="#testimonialsWrap">Um sambandið</a></li>
-							<li><a href="#contactWrap">Hafa samband</a></li>
-						</ul>
+						
+						{% get_categories "zinnia/tags/menu_categories.html" %}
+						
 					</div><!--/.nav-collapse -->
 				</div>
 			</div>
@@ -80,15 +78,14 @@
 	<div id="testimonialsWrap" class="altWrap">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12">
-					<h2 class="sectionTitle">Fréttir</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-xs-6">
 					    {% block content %}{% endblock content %}
+                        
+				</div>
+				<div class="col-xs-6">
                         {% block sidebar %}{% endblock sidebar %}
 				</div>
+
 			</div>
 		</div>
 	</div> <!-- /testimonialsWrap -->
