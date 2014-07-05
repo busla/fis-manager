@@ -1,8 +1,10 @@
 from django.contrib import admin
 from django.contrib.comments import Comment
 from django_summernote.admin import SummernoteModelAdmin
-from taekwondo.models import Club, Tournament, Member, Membership, TournamentFile, ClubFile, News
+from taekwondo.models import Club, Tournament, Member, Membership, TournamentFile, ClubFile, News, TournamentRegistration
 
+class TournamentRegistrationAdmin(admin.ModelAdmin):
+    model = TournamentRegistration
 
 class TournamentFileInline(admin.TabularInline):
     model = TournamentFile
@@ -12,6 +14,10 @@ class ClubFileInline(admin.TabularInline):
 
 class MembershipInline(admin.TabularInline):
     model = Membership
+
+class MembershipAdmin(admin.ModelAdmin):
+    inlines = [MembershipInline]
+    list_display = ('member', 'club', 'date_joined', 'date_left')
     
 class TournamentAdmin(admin.ModelAdmin):
     inlines = [TournamentFileInline]
@@ -23,6 +29,7 @@ class ClubAdmin(SummernoteModelAdmin):
 
 class MemberAdmin(SummernoteModelAdmin):
     inlines = [MembershipInline]
+    list_display = ('name', 'active_club')
     search_fields = ["name"]
     prepopulated_fields = {"slug": ("name",)}
     
@@ -33,6 +40,7 @@ class NewsAdmin(SummernoteModelAdmin):
 
 admin.site.register(Club, ClubAdmin)
 admin.site.register(Tournament, TournamentAdmin)
-admin.site.register(Membership)
+admin.site.register(TournamentRegistration, TournamentRegistrationAdmin)
+admin.site.register(Membership, MembershipAdmin)
 admin.site.register(Member, MemberAdmin)
 admin.site.register(News, NewsAdmin)

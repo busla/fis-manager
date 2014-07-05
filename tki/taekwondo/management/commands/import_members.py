@@ -16,7 +16,10 @@ class Command(BaseCommand):
             metavar = "FILE"
         ),
     )
-    
+    def felix_import(self, _ssn, _name, _club):
+        c = Club.objects.filter(name__startswith=_club).values('name')
+        print(c)
+
     def handle(self, *args, **options):
         if options['filename'] == None :
             raise CommandError("Option `--file=...` must be specified.")
@@ -30,9 +33,10 @@ class Command(BaseCommand):
 
 
         for student in students:
-            m = Member(name = student[1], ssn=student[2], slug=slugify(student[1]))
-            m.save()
-        
+            self.felix_import(student[2], student[1], student[3])
+            #m = Member(name = student[1], ssn=student[2], slug=slugify(student[1]))
+            #m.save()
+            
         self.stdout.write('Successfully imported members from "%s"' % options['filename'])
 
 

@@ -8,9 +8,22 @@ class Member(models.Model):
     ssn = models.CharField(max_length=11, primary_key=True)
     photo = models.ImageField(upload_to='members/photos', height_field=None, width_field=None, max_length=100, blank=True)
     slug = models.SlugField()
-    
+
     def __str__(self):
         return '%s' % self.name
+
+    def _get_active_club(self):
+        try:
+            ac = self.membership_set.all()[0].club
+        except IndexError:
+            ac = None
+        return ac
+    
+    active_club = property(_get_active_club)
+
+    
+        #obj, created = self.membership_set.get_or_create(name=_name, pk=_ssn, club__
+        #          defaults={'birthday': date(1940, 10, 9)})
 
 class Club(models.Model):
     name = models.CharField(max_length=200)
@@ -73,3 +86,10 @@ class NewsFile(models.Model):
     attachment = models.FileField(upload_to='news/attachments/%Y/%m/%d', max_length=100, blank=True)
     tournament = models.ForeignKey('News')
 
+class TournamentRegistration(models.Model):
+    member = models.ForeignKey(Member)
+    tournament = models.ForeignKey(Tournament)
+    registration_date = models.DateTimeField(auto_now=True, auto_now_add=True)
+
+    def __str__(self):
+        return '%s - %s' % (self.member, self.tournament)
