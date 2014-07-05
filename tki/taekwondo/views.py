@@ -14,6 +14,14 @@ class ClubDetail(DetailView):
     queryset = Club.objects.select_related('members').all()
     context_object_name = 'club_detail'
 
+class MemberList(ListView):
+    model = Member
+    context_object_name = 'member_list'
+
+class MemberDetail(DetailView):
+    queryset = Member.objects.all()
+    context_object_name = 'member_detail'
+
 class TournamentList(ListView):
     model = Tournament
     context_object_name = 'tournament_list'

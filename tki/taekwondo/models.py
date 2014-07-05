@@ -5,7 +5,7 @@ from django.db.models import permalink
 
 class Member(models.Model):
     name = models.CharField(max_length=200)
-    ssn = models.CharField(max_length=11)
+    ssn = models.CharField(max_length=11, primary_key=True)
     photo = models.ImageField(upload_to='members/photos', height_field=None, width_field=None, max_length=100, blank=True)
     slug = models.SlugField()
     

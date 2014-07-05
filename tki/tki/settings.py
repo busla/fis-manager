@@ -45,6 +45,8 @@ INSTALLED_APPS = (
     'tagging',
     'mptt',
     'zinnia',
+    'zinnia_event',
+
     
 )
 
@@ -117,3 +119,5 @@ SUMMERNOTE_CONFIG = {
 
 
 }
+
+ZINNIA_ENTRY_BASE_MODEL = 'zinnia_event.models.EntryEvent'

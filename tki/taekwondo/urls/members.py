@@ -1,0 +1,14 @@
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
+from taekwondo.views import MemberList, MemberDetail
+from django.contrib import admin
+admin.autodiscover()
+
+urlpatterns = patterns('',
+    # Examples:
+    #url(r'^(?P<slug>[-_\w]+)/$', ClubDetail.as_view(), name='club-detail'),
+    url(r'^$', MemberList.as_view(), name='member-list'),
+    url(r'^(?P<slug>[-_\w]+)/$', MemberDetail.as_view(), name='member-detail'),
+)

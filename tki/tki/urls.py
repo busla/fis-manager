@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^felog/', include('taekwondo.urls.clubs')),
 
     url(r'^mot/', include('taekwondo.urls.tournaments')),
+    url(r'^idkendur/', include('taekwondo.urls.members')),
     url(r'^frettir/', include('zinnia.urls')),
     url(r'^athugasemdir/', include('django.contrib.comments.urls')),
     url(r'^', include('zinnia.urls.capabilities')),
