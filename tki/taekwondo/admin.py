@@ -6,6 +6,9 @@ from taekwondo.models import Club, Tournament, Member, Membership, TournamentFil
 class TournamentRegistrationAdmin(admin.ModelAdmin):
     model = TournamentRegistration
 
+class TournamentRegistrationInline(admin.TabularInline):
+    model = TournamentRegistration
+
 class TournamentFileInline(admin.TabularInline):
     model = TournamentFile
 
@@ -16,11 +19,10 @@ class MembershipInline(admin.TabularInline):
     model = Membership
 
 class MembershipAdmin(admin.ModelAdmin):
-    inlines = [MembershipInline]
     list_display = ('member', 'club', 'date_joined', 'date_left')
     
 class TournamentAdmin(admin.ModelAdmin):
-    inlines = [TournamentFileInline]
+    inlines = [TournamentFileInline, TournamentRegistrationInline]
     prepopulated_fields = {"slug": ("title",)}
 
 class ClubAdmin(SummernoteModelAdmin):

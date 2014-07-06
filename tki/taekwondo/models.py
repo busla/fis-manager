@@ -21,7 +21,7 @@ class Member(models.Model):
     
     active_club = property(_get_active_club)
 
-    
+
         #obj, created = self.membership_set.get_or_create(name=_name, pk=_ssn, club__
         #          defaults={'birthday': date(1940, 10, 9)})
 
@@ -30,7 +30,7 @@ class Club(models.Model):
     description = models.TextField(blank=True)
     logo = models.ImageField(upload_to='clubs/logos', height_field=None, width_field=None, max_length=100, blank=True)
     email = models.EmailField(max_length=254, blank=True)
-    website = models.URLField()
+    website = models.URLField(blank=True, null=True)
     members = models.ManyToManyField(Member, through='Membership', related_name='members')
     slug = models.SlugField()
     
@@ -44,8 +44,8 @@ class Club(models.Model):
 class Membership(models.Model):    
     club = models.ForeignKey(Club)
     member = models.ForeignKey(Member)
-    date_joined = models.DateField()
-    date_left = models.DateField()
+    date_joined = models.DateField(blank=True, null=True)
+    date_left = models.DateField(blank=True, null=True)
 
     def __str__(self):
         return '%s' % self.member
