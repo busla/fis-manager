@@ -5,7 +5,8 @@ from taekwondo.models import Club, Tournament, Member, Membership, TournamentFil
 
 class TournamentRegistrationAdmin(admin.ModelAdmin):
     model = TournamentRegistration
-
+    list_display = ('member', 'tournament')
+    
 class TournamentRegistrationInline(admin.TabularInline):
     model = TournamentRegistration
 

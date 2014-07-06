@@ -8,6 +8,7 @@ class Member(models.Model):
     ssn = models.CharField(max_length=11, primary_key=True)
     photo = models.ImageField(upload_to='members/photos', height_field=None, width_field=None, max_length=100, blank=True)
     slug = models.SlugField()
+    
 
     def __str__(self):
         return '%s' % self.name
@@ -20,7 +21,9 @@ class Member(models.Model):
         return ac
     
     active_club = property(_get_active_club)
-
+    
+    def __str__(self):
+        return '%s' % self.name
 
         #obj, created = self.membership_set.get_or_create(name=_name, pk=_ssn, club__
         #          defaults={'birthday': date(1940, 10, 9)})
