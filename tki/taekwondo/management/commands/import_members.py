@@ -10,7 +10,7 @@ from datetime import datetime
 class Command(BaseCommand):
     missing_clubs = set()
     help = 'Imports Taekwondo members from a Felix CSV file.'
-    club_list = Club.objects.all().values('id', 'name')
+    club_list = list(Club.objects.all())
     option_list = BaseCommand.option_list + (
         make_option(
             "-f", 
@@ -22,58 +22,41 @@ class Command(BaseCommand):
     ) 
     
     def create_membership(self, m, c):
-        if str(m.active_club) == c.get('name'):
+        if str(m.active_club) == c.name:
 
         #Membership.objects.filter(member=_member.pk, club__name=_member.active_club).exists():        
-            self.stdout.write(m.name + ' is already registered at ' + c.get('name'))
+            print(m.name + ' is already registered at ' + c.name)
         else:
-            ms = Membership(member=m, club_id=int(c.get('id')), date_joined=datetime.now())
+            ms = Membership(member=m, club_id=int(c.id), date_joined=datetime.now())
             ms.save()
-            self.stdout.write('Registering ' + m.name + ' to ' + c.get('name'))
+            print('Registering ' + m.name + ' to ' + c.name)
 
     def felix_import(self, _felix_ssn, _felix_member, _felix_club):
         #print(self.club_list)
-
+        club_exists = False
         m = Member(pk=_felix_ssn, name=_felix_member)
         m.save()
         #self.stdout.write(m.name + ' active club is: ' + str(m.active_club))
-        if not _felix_club in self.missing_clubs:
-            self.stdout.write('Club does not exist: ' + club.get('name')) 
-
-        for club in self.club_list:
-            #print(club.get('name'))
-            
-
-            #m = Member.objects.get(pk=int(_ssn))
-            if club.get('name') in _felix_club:
-                self.create_membership(m, club)
-                self.stdout.write('Club name in list: ' + club.get('name'))
-                break
-
-            elif club.get('name') not in _felix_club:
-                self.stdout.write('Club name not in list: ' + club.get('name')) 
-                
-
-
-            #_club_id = int(value('id')
-            #if _club:
-                #m = Member(name=_name, pk=_ssn)
-                #m.save()
-                
-                #if not Membership.objects.filter(club__id=_ssn):
-
-                
-                #ms = Membership(member=m, club=c)
-                #ms.save()
-            #print self.stdout.write('Saved to db: %s' % _club)
         
-            #self.stdout.write('Club does not exit: %s, adding now...' % _club)
-        #c = Club(name=_missing_club)
-        #c.save()
+        for item in self.club_list:
+            if item.name in _felix_club:
+                club_exists = True
 
+        if club_exists:
+            print('The club "%s" already exists, creating membership now... ' % _felix_club)
+            for item in self.club_list:
+                if item.name in _felix_club:
+                    c = item
+                    
 
-        #print(str(c)+_name)
-        #m = Membership.objects.create(member__name=_name, club__id=c['id'].get())
+        else:
+            print('The club "%s" does not exist, creating it now.... ' % _felix_club)
+            c = Club(name=_felix_club)
+            c.save()
+            
+            
+                
+        self.create_membership(m, c)
         
     def handle(self, *args, **options):
 
@@ -94,8 +77,8 @@ class Command(BaseCommand):
             #m = Member(name = student[1], ssn=student[2], slug=slugify(student[1]))
             #m.save()
         if self.missing_clubs:
-            self.stdout.write('Missing clubs: ' + str(self.missing_clubs))
+            print('Missing clubs: ' + self.missing_clubs)
             
-        self.stdout.write('Successfully imported %s members from "%s"' % (i, options['filename']))
+        print('Successfully imported %s members from "%s"' % (i, options['filename']))
 
 
