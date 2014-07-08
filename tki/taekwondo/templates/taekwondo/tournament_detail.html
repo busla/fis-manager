@@ -1,7 +1,9 @@
-{% extends "skeleton.html" %}
+{% extends "taekwondo/__l_right_sidebar.html" %}
 
-{% block content %}
-    <h1>{{ tournament_detail.title }}</h1>
-    <img src="{{ tournament_detail.image.url }}" />
-    <p>{{ tournament_detail.description|safe }}</p>
-{% endblock content %}
+{% block main_col %}
+    <div class="col-xs-12">
+        <h1>{{ tournament_detail.title }}</h1>
+        <img src="{{ tournament_detail.image_url|default_if_none:'http://res.cloudinary.com/demo/image/upload/w_100,h_100,c_thumb,g_face,r_20,d_avatar.png/non_existing_id.png' }}" />
+        <p>{{ tournament_detail.description|safe }}</p>
+    </div>
+{% endblock main_col %}

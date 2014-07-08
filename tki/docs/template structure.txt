@@ -1,0 +1,12 @@
+taekwondo
+    templates/
+        taekwondo/
+            __base
+            __l_right_sidebar
+            __l_left_sidebar
+            __l_bottom_sidebar
+            _navigation
+            _club_list
+            _club_detail
+            _member_list
+            _member_detail

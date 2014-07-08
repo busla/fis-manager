@@ -1,0 +1,19 @@
+{% extends "taekwondo/__base.html" %}
+
+
+{% block content%}
+
+<div id="productWrap" class="altWrap">
+    <div class="container"> 
+        <div class="row">
+            <div class="col-xs-8">
+                {% block main_col %}{% endblock main_col %}
+            </div>
+            <div class="col-xs-4">
+                {% block side_col %}{% endblock side_col %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}

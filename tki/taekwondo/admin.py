@@ -1,14 +1,28 @@
 from django.contrib import admin
 from django.contrib.comments import Comment
 from django_summernote.admin import SummernoteModelAdmin
-from taekwondo.models import Club, Tournament, Member, Membership, TournamentFile, ClubFile, News, TournamentRegistration
+from taekwondo.models import Club, Tournament, Member, Membership, TournamentFile, ClubFile, News, TournamentRegistration, TournamentResult, ResultRank
 
-class TournamentRegistrationAdmin(admin.ModelAdmin):
-    model = TournamentRegistration
-    list_display = ('member', 'tournament')
-    
+
 class TournamentRegistrationInline(admin.TabularInline):
     model = TournamentRegistration
+
+class TournamentRegistrationAdmin(admin.ModelAdmin):
+    list_display = ('member', 'tournament')
+
+class TournamentResultAdmin(admin.ModelAdmin):
+    search_fields = ['registration']
+    list_display = ('registration', 'rank')
+
+class TournamentResultInline(admin.TabularInline):
+    model = TournamentRegistration
+
+class ResultRankAdmin(admin.ModelAdmin):
+    list_display = ('title', 'rank')
+
+class ResultRankInline(admin.TabularInline):
+    model = TournamentResult
+    
 
 class TournamentFileInline(admin.TabularInline):
     model = TournamentFile
@@ -41,9 +55,12 @@ class NewsAdmin(SummernoteModelAdmin):
     search_fields = ["title"]
     prepopulated_fields = {"slug": ("title",)}
 
+
 admin.site.register(Club, ClubAdmin)
 admin.site.register(Tournament, TournamentAdmin)
 admin.site.register(TournamentRegistration, TournamentRegistrationAdmin)
+admin.site.register(TournamentResult, TournamentResultAdmin)
+admin.site.register(ResultRank, ResultRankAdmin)
 admin.site.register(Membership, MembershipAdmin)
 admin.site.register(Member, MemberAdmin)
 admin.site.register(News, NewsAdmin)

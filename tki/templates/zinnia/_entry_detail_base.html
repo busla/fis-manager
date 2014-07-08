@@ -69,7 +69,7 @@
     {% endblock entry-image %}
     {% block entry-content %}
     <div class="entry-content">
-      {{ object_content|safe }}
+      {{ object_content|striptags }}
     </div>
     {% endblock entry-content %}
     {% block continue-reading %}

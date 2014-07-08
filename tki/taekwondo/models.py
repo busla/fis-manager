@@ -22,8 +22,10 @@ class Member(models.Model):
     
     active_club = property(_get_active_club)
     
-    def __str__(self):
-        return '%s' % self.name
+    @property
+    def photo_url(self):
+        if self.photo and hasattr(self.photo, 'url'):
+            return self.photo.url
 
         #obj, created = self.membership_set.get_or_create(name=_name, pk=_ssn, club__
         #          defaults={'birthday': date(1940, 10, 9)})
@@ -39,6 +41,10 @@ class Club(models.Model):
     
     class Meta:
         ordering = ["-name"]
+    @property
+    def logo_url(self):
+        if self.logo and hasattr(self.logo, 'url'):
+            return self.logo.url        
 
     def __str__(self):
         return '%s' % self.name
@@ -55,26 +61,32 @@ class Membership(models.Model):
 
 class Tournament(models.Model):
     title = models.CharField(max_length=200)
-    image = models.FileField(upload_to='tournaments/images/%Y/%m/%d', max_length=100, blank=True)
+    image = models.FileField(upload_to='tournaments/images/%Y/%m', max_length=100, blank=True)
     description = models.TextField()
     date = models.DateField()
     slug = models.SlugField()
     
+    @property
+    def image_url(self):
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url        
+
+
     def __str__(self):
         return '%s' % self.title
 
 class TournamentFile(models.Model):
-    attachment = models.FileField(upload_to='tournaments/attachments/%Y/%m/%d', max_length=100, blank=True)
+    attachment = models.FileField(upload_to='tournaments/attachments/%Y/%m', max_length=100, blank=True)
     tournament = models.ForeignKey('Tournament')
 
 class ClubFile(models.Model):
-    attachment = models.FileField(upload_to='clubs/attachments/%Y/%m/%d', max_length=100, blank=True)
+    attachment = models.FileField(upload_to='clubs/attachments/%Y/%m', max_length=100, blank=True)
     club = models.ForeignKey('Club')
 
 class News(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
-    image = models.FileField(upload_to='news/images/%Y/%m/%d', max_length=100, blank=True)
+    image = models.FileField(upload_to='news/images/%Y/%m', max_length=100, blank=True)
     body = models.TextField()
     posted = models.DateField()
 
@@ -86,7 +98,7 @@ class News(models.Model):
         return '%s' % self.title
 
 class NewsFile(models.Model):
-    attachment = models.FileField(upload_to='news/attachments/%Y/%m/%d', max_length=100, blank=True)
+    attachment = models.FileField(upload_to='news/attachments/%Y/%m', max_length=100, blank=True)
     tournament = models.ForeignKey('News')
 
 class TournamentRegistration(models.Model):
@@ -96,3 +108,19 @@ class TournamentRegistration(models.Model):
 
     def __str__(self):
         return '%s - %s' % (self.member, self.tournament)
+
+
+class ResultRank(models.Model):
+    title = models.CharField(max_length=200)
+    rank = models.IntegerField()
+
+    def __str__(self):
+        return '%s - %s' % (self.title, self.rank)
+
+
+class TournamentResult(models.Model):
+    registration = models.ForeignKey(TournamentRegistration)
+    rank = models.ForeignKey(ResultRank)
+
+    def __str__(self):
+        return '%s - %s' % (self.registration, self.rank)

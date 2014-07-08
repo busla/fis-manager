@@ -1,21 +1,15 @@
-body {
-    margin-top: 125px; /* adjust this if the height of the menu bar changes */
+.logo {
+    max-height: 100px;
 }
 
-.navbar-fixed-top .nav {
-    padding: 15px 0;
+.sidebar {
+
+    background-color: #F2F2F2;
+
 }
 
-.navbar-fixed-top .navbar-brand {
-padding: 0 15px;
+#productWrap {
+    padding-top: 100px;
 }
 
-@media(min-width:768px) {
-    .navbar-fixed-top .nav {
-        padding: 15px 0;
-    }
-
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
-    }
-}
+main {display:block;}

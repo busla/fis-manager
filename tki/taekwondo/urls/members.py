@@ -9,6 +9,6 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     #url(r'^(?P<slug>[-_\w]+)/$', ClubDetail.as_view(), name='club-detail'),
-    url(r'^$', MemberList.as_view(), name='member-list'),
-    url(r'^(?P<slug>[-_\w]+)/$', MemberDetail.as_view(), name='member-detail'),
+    url(r'^$', MemberList.as_view(), name='member_list'),
+    url(r'^(?P<slug>[-_\w]+)/$', MemberDetail.as_view(), name='member_detail'),
 )

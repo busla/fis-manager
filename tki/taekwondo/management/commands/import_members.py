@@ -29,12 +29,12 @@ class Command(BaseCommand):
         else:
             ms = Membership(member=m, club_id=int(c.id), date_joined=datetime.now())
             ms.save()
-            print('Registering ' + m.name + ' to ' + c.name)
+            print(m.name + ' is now a member of ' + c.name)
 
     def felix_import(self, _felix_ssn, _felix_member, _felix_club):
         #print(self.club_list)
         club_exists = False
-        m = Member(pk=_felix_ssn, name=_felix_member)
+        m = Member(pk=_felix_ssn, name=_felix_member, slug=slugify(_felix_member))
         m.save()
         #self.stdout.write(m.name + ' active club is: ' + str(m.active_club))
         
@@ -51,7 +51,7 @@ class Command(BaseCommand):
 
         else:
             print('The club "%s" does not exist, creating it now.... ' % _felix_club)
-            c = Club(name=_felix_club)
+            c = Club(name=_felix_club, slug=slugify(_felix_club))
             c.save()
             
             

@@ -1,4 +1,3 @@
-
 {% load i18n %}
 
 <ul class="nav navbar-nav {% if not categories %}no-{% endif %}categories">
@@ -12,6 +11,9 @@
       {% trans "No categories yet." %}
     </li>
   {% endfor %}
+  <li><a href="{% url 'club_list' %}">Félög</a></li>
+  <li><a href="{% url 'tournament_list' %}">Mót</a></li>
+  <li><a href="{% url 'member_list' %}">Iðkendur</a></li>
   
   
-</ul>
+</ul><p>

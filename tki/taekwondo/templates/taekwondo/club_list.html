@@ -1,18 +1,30 @@
-{% extends "skeleton.html" %}
+{% extends "taekwondo/__l_right_sidebar.html" %}
+{% block main_col %}
+    <div class="col-xs-12">
+        <div class="row">
+        {% block content_title %}
+            <h1 class="sectionTitle">Félög</h1>
+        {% endblock content_title %}
 
-{% block content %}
-{% block content_title %}<h2 class="sectionTitle">Félög</h2>{% endblock content_title %}
-    <div class="container marketing">
-    <div class="row">
-    {% for club in club_list %}
-        <div class="col-lg-4"><img class="img-thumbnail" src="{{ club.logo.url }}" alt="Generic placeholder image">
-        <h2>{{ club.name }}</h2>
-        <p><a class="btn btn-default" href="{% url 'club-detail' club.slug %}" role="button">Meira &raquo;</a></p>
+         {% for club in club_list %}
+        
+            <div class="col-xs-4">
+                <div class="thumbnail">
+                  <img class="logo" src="{{ club.logo_url|default_if_none:'#' }}" alt="Do you have a logo for us?">
+                  <div class="caption">
+                    <h2>{{ club.name }}</h2>
+                    <p>
+                        <a href="{% url 'club_detail' club.slug %}" class="btn btn-primary" role="button">Meira</a>
+                    </p>
+                  </div>
+                </div>            
+            </div>
+            {% if forloop.counter|divisibleby:3 %}
+                        </div>
+                        <div class="row">
+            {% endif %}
+        {% endfor %}
         </div>
-        {% if forloop.counter|divisibleby:3 %}
-    </div>
-    <div class="row">
-    {% endif %}
-    {% endfor %}
-    </div>
-{% endblock content %}
+    </div>    
+{% endblock main_col %}
+
