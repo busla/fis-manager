@@ -9,8 +9,10 @@
             <div class="col-xs-8">
                 {% block main_col %}{% endblock main_col %}
             </div>
-            <div class="col-xs-4">
-                {% block side_col %}{% endblock side_col %}
+            <div class="col-xs-4 sidebar">
+                {% block side_col %}
+                    {% include 'taekwondo/_sidebar.html' %}
+                {% endblock side_col %}
             </div>
         </div>
     </div>

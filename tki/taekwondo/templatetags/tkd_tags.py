@@ -4,9 +4,8 @@ from django import template
 register = template.Library()
 
 @register.simple_tag
-def active(request, url):
-    
-    url_name = resolve(request.path).url_name
-    if url_name == url:
-        return "active"
-    return ""    
+def active(request, pattern):
+    import re
+    if re.search(pattern, request.path):
+        return 'active'
+    return ''

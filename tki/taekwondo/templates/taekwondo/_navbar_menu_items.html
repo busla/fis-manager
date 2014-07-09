@@ -1,6 +1,8 @@
 {% load i18n %}
 
-<ul class="nav navbar-nav {% if not categories %}no-{% endif %}categories">
+
+
+
   {% for category in categories %}
     <li{% if category.slug == context_category.slug %} class="active"{% endif %}>
       <a href="{{ category.get_absolute_url }}"
@@ -11,9 +13,6 @@
       {% trans "No categories yet." %}
     </li>
   {% endfor %}
-  <li><a href="{% url 'club_list' %}">Félög</a></li>
-  <li><a href="{% url 'tournament_list' %}">Mót</a></li>
-  <li><a href="{% url 'member_list' %}">Iðkendur</a></li>
+
   
   
-</ul><p>

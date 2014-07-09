@@ -1,5 +1,10 @@
 {% load staticfiles%}
 {% load zinnia_tags i18n %}
+{% load tkd_tags %}
+
+{% url 'club_list' as club_list_active %}
+{% url 'tournament_list' as tournament_list_active %}
+{% url 'member_list' as member_list_active %}
 
             <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="container">
@@ -12,13 +17,17 @@
                         </button>
                         <a class="navbar-brand" href="#topWrap">
                             <span class="brand-logo">
-                                <img src="{% static 'taekwondo/custom/tki-logo-cropped.png' %}"><p>{{ request.path }}</p>
+                                <img src="{% static 'taekwondo/custom/tki-logo-cropped.png' %}">
                             </span>
                         </a>
                     </div>
                     <div class="collapse navbar-collapse appiNav">
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav {% if not categories %}no-{% endif %}categories">
                             {% get_categories "taekwondo/_navbar_menu_items.html" %}
+                    
+                            <li class="{% active request club_list_active %}"><a href="{% url 'club_list' %}">Félög</a></li>
+                            <li class="{% active request tournament_list_active %}"><a href="{% url 'tournament_list' %}">Mót</a></li>
+                            <li class="{% active request member_list_active %}"><a href="{% url 'member_list' %}">Iðkendur</a></li>                            
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
