@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
-from taekwondo.models import Club, Member, Membership, Tournament, News
+from taekwondo.models import Club, Member, Membership, Tournament, News, TournamentResult, TournamentRegistration
 from django.http import HttpResponse
 
 def index(request):
@@ -29,7 +29,19 @@ class TournamentList(ListView):
 class TournamentDetail(DetailView):
     queryset = Tournament.objects.all()
     context_object_name = 'tournament_detail'
+'''
 
+    def get_queryset(self):
+        self.tournament = Tournament.objects.get(slug=self.kwargs['slug'])
+        return self.tournament
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(TournamentDetail, self).get_context_data(**kwargs)
+        # Add in the publisher
+        context['tournament'] = self.tournament
+        return context
+'''    
 class NewsList(ListView):
     queryset = News.objects.all()
     context_object_name = 'news_list'
@@ -37,3 +49,5 @@ class NewsList(ListView):
 class NewsDetail(DetailView):
     queryset = News.objects.all()
     context_object_name = 'news_detail'
+
+

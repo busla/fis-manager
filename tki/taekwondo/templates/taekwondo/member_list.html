@@ -8,12 +8,28 @@
         <div class="row">
         
             {% for member in member_list %}
-                <div class="col-xs-4"><img class="img-thumbnail" src="{{ member.photo_url|default_if_none:'http://res.cloudinary.com/demo/image/upload/w_100,h_100,c_thumb,g_face,r_20,d_avatar.png/non_existing_id.png' }}" alt="Generic placeholder image">
-                    <h2>{{ member.name }}</h2>
-                    <p>{{ member.active_club }}</p>
-                    <p>
-                        <a class="btn btn-default" href="{% url 'member_detail' member.slug%}" role="button">Meira &raquo;</a>
-                    </p>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="thumbnail">
+                                    <img class="img-thumbnail" src="{{ member.photo_url|default_if_none:'http://res.cloudinary.com/demo/image/upload/w_100,h_100,c_thumb,g_face,r_20,d_avatar.png/non_existing_id.png' }}" alt="Generic placeholder image">
+                                </div>            
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="thumbnail">
+                                    <img class="logo-thumb" src="{{ member.active_club.club.logo_url|default_if_none:'/media/clubs/logos/dummy_1.jpg' }}">
+                                </div>
+                            </div>
+                        </div>
+                      
+                      <div class="caption">
+                        <p>{{ member.name }}</p>
+                        <p>
+                            <a class="btn btn-primary" href="{% url 'member_detail' member.slug%}" role="button">Meira &raquo;</a>
+                        </p>
+                      </div>
+                    </div>            
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
                     </div>
@@ -23,3 +39,4 @@
         </div>
     </div>
 {% endblock main_col %}
+

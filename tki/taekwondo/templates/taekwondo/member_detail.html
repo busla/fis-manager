@@ -9,6 +9,9 @@
 
                 <p>{{ member_detail.ssn }}</p>
                 <p>{{ member_detail.active_club }}</p>
+                {% for result in member_detail.results %}
+                    <p>{{ result }}</p>
+                {% endfor %}    
             </div>
         
     

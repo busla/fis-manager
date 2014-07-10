@@ -33,23 +33,25 @@ class Command(BaseCommand):
 
     def felix_import(self, _felix_ssn, _felix_member, _felix_club):
         #print(self.club_list)
+        _club_list = list(Club.objects.all())
         club_exists = False
         m = Member(pk=_felix_ssn, name=_felix_member, slug=slugify(_felix_member))
         m.save()
         #self.stdout.write(m.name + ' active club is: ' + str(m.active_club))
         
-        for item in self.club_list:
+        for item in _club_list:
             if item.name in _felix_club:
                 club_exists = True
+                
 
         if club_exists:
             print('The club "%s" already exists, creating membership now... ' % _felix_club)
-            for item in self.club_list:
+            for item in _club_list:
                 if item.name in _felix_club:
                     c = item
                     
 
-        else:
+        elif not club_exists:
             print('The club "%s" does not exist, creating it now.... ' % _felix_club)
             c = Club(name=_felix_club, slug=slugify(_felix_club))
             c.save()

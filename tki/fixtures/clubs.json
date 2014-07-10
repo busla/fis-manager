@@ -190,17 +190,5 @@
     "website": ""
   },
   "pk": 16
-},
-{
-  "model": "taekwondo.club",
-  "fields": {
-    "email": "",
-    "slug": "",
-    "name": " club",
-    "logo": "",
-    "description": "",
-    "website": null
-  },
-  "pk": 17
 }
 ]

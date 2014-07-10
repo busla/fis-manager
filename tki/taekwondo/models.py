@@ -10,22 +10,39 @@ class Member(models.Model):
     slug = models.SlugField()
     
 
-    def __str__(self):
-        return '%s' % self.name
-
     def _get_active_club(self):
         try:
-            ac = self.membership_set.all()[0].club
+            ac = self.membership_set.all()[0]
         except IndexError:
             ac = None
         return ac
     
     active_club = property(_get_active_club)
     
+    def _get_active_membership(self):
+        
+        ac = Membership.objects.filter(member=self)#self.membership_set.all()[0]
+        return ac
+    
+    active_membership = property(_get_active_membership)
+    
+    class Meta:
+        ordering = ["name"]
+    
+    def _get_results(self):
+        res = TournamentResult.objects.filter(registration__member=self)
+        return res
+    
+    results = property(_get_results)    
+
     @property
     def photo_url(self):
         if self.photo and hasattr(self.photo, 'url'):
             return self.photo.url
+
+    def __str__(self):
+        return '%s' % self.name
+
 
         #obj, created = self.membership_set.get_or_create(name=_name, pk=_ssn, club__
         #          defaults={'birthday': date(1940, 10, 9)})
@@ -40,7 +57,8 @@ class Club(models.Model):
     slug = models.SlugField()
     
     class Meta:
-        ordering = ["-name"]
+        ordering = ["name"]
+
     @property
     def logo_url(self):
         if self.logo and hasattr(self.logo, 'url'):
@@ -57,7 +75,7 @@ class Membership(models.Model):
     date_left = models.DateField(blank=True, null=True)
 
     def __str__(self):
-        return '%s' % self.member
+        return '%s (%s)' % (self.member, self.club)
 
 class Tournament(models.Model):
     title = models.CharField(max_length=200)
@@ -69,8 +87,18 @@ class Tournament(models.Model):
     @property
     def image_url(self):
         if self.image and hasattr(self.image, 'url'):
-            return self.image.url        
+            return self.image.url    
 
+    def _get_registrations(self):
+        regs = TournamentRegistration.objects.filter(tournament=self)
+        return regs
+
+    def _get_results(self):
+        res = TournamentResult.objects.filter(registration__tournament=self)
+        return res
+    
+    registrations = property(_get_registrations)
+    results = property(_get_results)
 
     def __str__(self):
         return '%s' % self.title
@@ -103,9 +131,15 @@ class NewsFile(models.Model):
 
 class TournamentRegistration(models.Model):
     member = models.ForeignKey(Member)
+    membership = models.ForeignKey(Membership, blank=True, null=True)
     tournament = models.ForeignKey(Tournament)
     registration_date = models.DateTimeField(auto_now=True, auto_now_add=True)
 
+    def save(self):
+        _membership = Membership.objects.get(pk = self.member.active_membership)
+        self.membership = _membership
+        super(TournamentRegistration, self).save()
+    
     def __str__(self):
         return '%s - %s' % (self.member, self.tournament)
 

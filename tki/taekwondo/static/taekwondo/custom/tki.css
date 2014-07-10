@@ -1,5 +1,11 @@
 .logo {
     max-height: 100px;
+    max-width: 100px;
+}
+
+.logo-thumb {
+    max-height: 75px;
+    max-width: 75px;
 }
 
 .sidebar {
