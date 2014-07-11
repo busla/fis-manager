@@ -7,7 +7,7 @@
         <p>{{ tournament_detail.description|safe }}</p>
         <h2>Skráningar</h2>
         {% for registration in tournament_detail.registrations %}
-            <p>{{ registration.member }} - {{ registration.member.active_club }}</p>
+            <p>{{ registration.member.active_club }}</p>
         {% endfor %}
         <h2>Úrslit</h2>
         {% for result in tournament_detail.results %}
