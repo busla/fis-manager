@@ -2,12 +2,34 @@
 from django.core.management.base import BaseCommand, CommandError
 from django.template.defaultfilters import slugify
 from optparse import make_option
+import argparse
 from taekwondo.models import Club, Member, Membership, Tournament, News
 import csv, os
 from datetime import datetime    
 
 
 class Command(BaseCommand):
+    csv_header = [
+        'Nafn', 
+        'Kennitala', 
+        'Fæðingard.', 
+        'Aldur', 
+        'Hópur', 
+        'Hópaslóð', 
+        'Virkni', 
+        'Heimilisfang', 
+        'Póstfang', 
+        'Land', 
+        'Sími', 
+        'Netfang', 
+        'Upplýsingadálkur 1', 
+        'Upplýsingadálkur 2', 
+        'Upplýsingadálkur 3', 
+        'Nafn forráðamanns', 
+        'Kt. forráðam.', 
+        'Sími forráðam.',
+        ]
+
     missing_clubs = set()
     help = 'Imports Taekwondo members from a Felix CSV file.'
     club_list = list(Club.objects.all())
@@ -19,6 +41,12 @@ class Command(BaseCommand):
             help = "specify import file", 
             metavar = "FILE"
         ),
+        make_option(
+            "--felix", 
+            dest = "felix",
+            help = "'new' or 'old' Felix version", 
+            metavar = "STRING"
+        ),        
     ) 
     
     def create_membership(self, m, c):
@@ -59,7 +87,9 @@ class Command(BaseCommand):
             
                 
         self.create_membership(m, c)
-        
+    
+    #def felix2_import(self):
+
     def handle(self, *args, **options):
 
         if options['filename'] == None :
@@ -69,17 +99,27 @@ class Command(BaseCommand):
         if not os.path.isfile(options['filename']) :
             raise CommandError("File does not exist at the specified path.")
 
+        if options['felix'] == None :
+            raise CommandError("Option `--felix=...` must be specified (1/2).")
         
-        students = csv.reader(open(options['filename']))
+        elif options['felix'] == '1' :
+            students = csv.reader(open(options['filename']))
+            for i, student in enumerate(students):
+                self.felix_import(student[2], student[1], student[3])
 
+        elif options['felix'] == '2':
+            #with open(options['filename'], newline='', encoding='ISO-8859-1') as felix_file:
+            felix_lines = csv.reader(open(options['filename'], encoding='ISO-8859-1', newline=''), delimiter=';')
+            for i, row in enumerate(felix_lines):
+                #self.felix2_import(row[0])
+                
+                if sorted(row) == sorted(self.csv_header):
+                    print('This is our header:' + str(row))
 
-        for i, student in enumerate(students):
-            self.felix_import(student[2], student[1], student[3])
+            #students = csv.reader(open(options['filename']))
             
             #m = Member(name = student[1], ssn=student[2], slug=slugify(student[1]))
             #m.save()
-        if self.missing_clubs:
-            print('Missing clubs: ' + self.missing_clubs)
             
         print('Successfully imported %s members from "%s"' % (i, options['filename']))
 
