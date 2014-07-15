@@ -1,4 +1,4 @@
-# -*- coding: ISO-8859-1 -*-
+
 from django.core.management.base import BaseCommand, CommandError
 from django.template.defaultfilters import slugify
 from optparse import make_option
@@ -6,7 +6,7 @@ import argparse
 from taekwondo.models import Club, Member, Membership, Tournament, News
 import csv, os
 from datetime import datetime    
-
+from unidecode import unidecode
 
 class Command(BaseCommand):
     csv_header = [
@@ -29,6 +29,8 @@ class Command(BaseCommand):
         'Kt. forráðam.', 
         'Sími forráðam.',
         ]
+    
+        
 
     missing_clubs = set()
     help = 'Imports Taekwondo members from a Felix CSV file.'
@@ -63,7 +65,7 @@ class Command(BaseCommand):
         #print(self.club_list)
         _club_list = list(Club.objects.all())
         club_exists = False
-        m = Member(pk=_felix_ssn, name=_felix_member, slug=slugify(_felix_member))
+        m = Member(pk=_felix_ssn, name=_felix_member, slug=unidecode(_felix_member))
         m.save()
         #self.stdout.write(m.name + ' active club is: ' + str(m.active_club))
         
@@ -81,7 +83,7 @@ class Command(BaseCommand):
 
         elif not club_exists:
             print('The club "%s" does not exist, creating it now.... ' % _felix_club)
-            c = Club(name=_felix_club, slug=slugify(_felix_club))
+            c = Club(name=_felix_club, slug=unidecode(_felix_club))
             c.save()
             
             
@@ -89,6 +91,10 @@ class Command(BaseCommand):
         self.create_membership(m, c)
     
     #def felix2_import(self):
+    def get_club(self, club):
+        if not 'ÍSÍ' in club:
+            print('Fann ekki félag í línunni: ' + club)
+        return club.split('/')[-3]
 
     def handle(self, *args, **options):
 
@@ -108,13 +114,25 @@ class Command(BaseCommand):
                 self.felix_import(student[2], student[1], student[3])
 
         elif options['felix'] == '2':
+            start_matrix = False
             #with open(options['filename'], newline='', encoding='ISO-8859-1') as felix_file:
             felix_lines = csv.reader(open(options['filename'], encoding='ISO-8859-1', newline=''), delimiter=';')
             for i, row in enumerate(felix_lines):
                 #self.felix2_import(row[0])
                 
-                if sorted(row) == sorted(self.csv_header):
-                    print('This is our header:' + str(row))
+                
+                if start_matrix:
+                    print('%s, %s, %s' % (row[1].replace("-",''), row[0], self.get_club(row[5])))
+                    self.felix_import(row[1].replace("-",''), row[0], self.get_club(row[5]))
+
+                if not start_matrix:
+                    if (set(row) == set(self.csv_header)):
+                        start_matrix = True
+                        print('This is our header:' + str(row))
+
+
+
+
 
             #students = csv.reader(open(options['filename']))
             

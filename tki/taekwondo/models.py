@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import permalink
+from django.db.models import permalink, Count
 
 MALE = 1
 FEMALE = 2
@@ -65,6 +65,7 @@ class Member(models.Model):
 
 class Club(models.Model):
     name = models.CharField(max_length=200)
+    short_name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     logo = models.ImageField(upload_to='clubs/logos', height_field=None, width_field=None, max_length=100, blank=True)
     email = models.EmailField(max_length=254, blank=True)
@@ -80,6 +81,12 @@ class Club(models.Model):
         if self.logo and hasattr(self.logo, 'url'):
             return self.logo.url        
 
+    
+    def _felix_members(self):
+        q = Member.objects.filter(club=self).count()
+        return q
+
+    felix_members = property(_felix_members)
     def __str__(self):
         return '%s' % self.name
 
