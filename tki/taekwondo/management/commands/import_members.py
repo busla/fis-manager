@@ -52,8 +52,9 @@ class Command(BaseCommand):
     ) 
     
     def create_membership(self, m, c):
+        print('Trying to create membership using %s and %s' % (m.active_club, c.name))
+        
         if str(m.active_club) == c.name:
-
         #Membership.objects.filter(member=_member.pk, club__name=_member.active_club).exists():        
             print(m.name + ' is already registered at ' + c.name)
         else:
@@ -65,7 +66,7 @@ class Command(BaseCommand):
         #print(self.club_list)
         _club_list = list(Club.objects.all())
         club_exists = False
-        m = Member(pk=_felix_ssn, name=_felix_member, slug=unidecode(_felix_member))
+        m = Member(pk=_felix_ssn, name=_felix_member, slug=slugify(unidecode(_felix_member)))
         m.save()
         #self.stdout.write(m.name + ' active club is: ' + str(m.active_club))
         
@@ -83,7 +84,7 @@ class Command(BaseCommand):
 
         elif not club_exists:
             print('The club "%s" does not exist, creating it now.... ' % _felix_club)
-            c = Club(name=_felix_club, slug=unidecode(_felix_club))
+            c = Club(name=_felix_club, slug=slugify(unidecode(_felix_club)))
             c.save()
             
             

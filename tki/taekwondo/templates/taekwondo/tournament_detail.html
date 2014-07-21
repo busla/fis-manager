@@ -5,10 +5,40 @@
         <h1>{{ tournament_detail.title }}</h1>
         <img src="{{ tournament_detail.image_url|default_if_none:'http://res.cloudinary.com/demo/image/upload/w_100,h_100,c_thumb,g_face,r_20,d_avatar.png/non_existing_id.png' }}" />
         <p>{{ tournament_detail.description|safe }}</p>
+        
         <h2>Skráningar</h2>
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Nafn
+                </th>    
+                <th>
+                    Kennitala
+                </th>        
+
+                <th>
+                    Félag
+                </th>        
+            </tr>
+        </thead>
+        <tbody>
         {% for registration in tournament_detail.registrations %}
-            <p>{{ registration.member.active_club }}</p>
+            <tr>
+                <td>
+                    {{ registration.member }}
+                </td>
+                <td>
+                    {{ registration.member.ssn }}
+                </td>
+                <td>
+                    {{ registration.member.active_club }}
+                </td>
+
+            </tr>
+        </tbody>
         {% endfor %}
+        </table>
         <h2>Úrslit</h2>
         {% for result in tournament_detail.results %}
             <p>{{ result.registration.member }} ({{ result.registration.member.active_club }}) - {{ result.rank.title }} </p>

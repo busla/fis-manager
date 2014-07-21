@@ -1,0 +1,25 @@
+{% load staticfiles%}
+{% for member in club_detail.members.all %}
+    <div class="col-xs-4">
+        <div class="thumbnail">
+            <div class="row">
+                <div class="col-xs-12">
+                    
+                        <img class="img-thumbnail" src="{% static 'taekwondo/images//avatar.png' %}" alt="Generic placeholder image">
+                    
+                </div>
+            </div>
+          
+            <div class="caption">
+            <p>{{ member.name }}</p>
+            <p>
+                <a class="btn btn-primary" href="{% url 'member_detail' member.slug%}" role="button">Meira &raquo;</a>
+            </p>
+            </div>
+        </div>            
+    </div>
+    {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+    {% endif %}
+{% endfor %}

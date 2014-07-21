@@ -2,16 +2,25 @@
 
 {% block main_col %}
     <div class="col-xs-12">
-                <h1>{{ club_detail.name }}</h1>
-                <img src="{{ club_detail.logo_url|default_if_none:'#' }}" />
-                <p>{{ club_detail.description|safe }}</p>
-                    {% for member in club_detail.members.all %}
-                        <p>{{ member.name }}</p>
-                    {% endfor %}
+        <h1>{{ club_detail.name }}</h1>
+            <p>
+                {{ club_detail.description|safe }}    
+            </p>
+
+        <div class="row">
+        
+                {% include "taekwondo/_club_member_list.html" %}
             
+        </div>    
     </div>
 {% endblock main_col %}
     
 {% block side_col %}
-    Some text
+
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-responsive logo" src="{{ club_detail.logo_url|default_if_none:'#' }}" />    
+        </div>
+    </div>
+    
 {% endblock side_col %}

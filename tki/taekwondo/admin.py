@@ -60,7 +60,7 @@ class TournamentAdmin(admin.ModelAdmin):
 class ClubAdmin(SummernoteModelAdmin):
     inlines = [ClubFileInline]
     prepopulated_fields = {"slug": ("name",)}
-    list_display = ('name', 'felix_members')
+    #list_display = ('name', 'felix_members')
 
 class MemberAdmin(SummernoteModelAdmin):
     inlines = [MembershipInline]

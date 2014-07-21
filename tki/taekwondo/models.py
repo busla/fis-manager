@@ -16,7 +16,29 @@ CATEGORY_CHOICES = (
     (AGE, 'Aldur'),
     (WEIGHT, 'Þyngd'),
     (GRADE, 'Gráða'),
-)
+    )
+
+GRADE_CHOICES = (
+    (20, '10. geup'),
+    (19, '9. geup'),
+    (18, '8. geup'),
+    (17, '7. geup'),
+    (16, '6. geup'),
+    (15, '5. geup'),
+    (14, '4. geup'),
+    (13, '3. geup'),
+    (12, '2. geup'),
+    (11, '1. geup'),
+    (10, '1. dan'),
+    (9,  '2. dan'),
+    (8,  '3. dan'),
+    (7,  '4. dan'),
+    (6,  '5. dan'),
+    (5,  '6. dan'),
+    (4,  '7. dan'),
+    (3,  '8. dan'),
+    (2,  '9. dan'),
+    )
 
 class Member(models.Model):
     
@@ -83,7 +105,7 @@ class Club(models.Model):
 
     
     def _felix_members(self):
-        q = Member.objects.filter(club=self).count()
+        q = Membership.objects.filter(club=self).count()
         return q
 
     felix_members = property(_felix_members)
@@ -98,7 +120,7 @@ class Membership(models.Model):
     date_left = models.DateField(blank=True, null=True)
 
     def __str__(self):
-        return '%s (%s)' % (self.member, self.club)
+        return '%s' % (self.club)
 
 class PointSystem(models.Model):
     title = models.CharField(max_length=200)
@@ -190,13 +212,13 @@ class NewsFile(models.Model):
     tournament = models.ForeignKey('News')
 
 class TournamentRegistration(models.Model):
-    member = models.ForeignKey(Member)
-    club = models.ForeignKey(Club)
+    member = models.ForeignKey(Member, blank=True, null=True)
+    club = models.ForeignKey(Club, blank=True, null=True)
     membership = models.ForeignKey(Membership, blank=True, null=True)
     tournament = models.ForeignKey(Tournament)
     registration_date = models.DateTimeField(auto_now=True, auto_now_add=True)
     weight = models.IntegerField(blank=True, null=True)
-    grade = models.IntegerField(blank=True, null=True)
+    grade = models.IntegerField(blank=True, null=True, choices=GRADE_CHOICES)
 
     def age(self): # calculate age from member.ssn
         pass
