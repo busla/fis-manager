@@ -47,6 +47,7 @@ class Member(models.Model):
     photo = models.ImageField(upload_to='members/photos', height_field=None, width_field=None, max_length=100, blank=True)
     slug = models.SlugField()
     gender = models.IntegerField(choices=GENDER_CHOICES, blank=True, null=True)
+    address = models.CharField(max_length=200, blank=True, null=True)
 
     def _get_active_club(self):
         try:
@@ -85,6 +86,7 @@ class Member(models.Model):
         #obj, created = self.membership_set.get_or_create(name=_name, pk=_ssn, club__
         #          defaults={'birthday': date(1940, 10, 9)})
 
+
 class Club(models.Model):
     name = models.CharField(max_length=200)
     short_name = models.CharField(max_length=200)
@@ -94,7 +96,8 @@ class Club(models.Model):
     website = models.URLField(blank=True, null=True)
     members = models.ManyToManyField(Member, through='Membership', related_name='members')
     slug = models.SlugField()
-    
+
+
     class Meta:
         ordering = ["name"]
 
@@ -109,15 +112,28 @@ class Club(models.Model):
         return q
 
     felix_members = property(_felix_members)
+
     def __str__(self):
         return '%s' % self.name
 
+class ClubGroup(models.Model):
+    title = models.CharField(max_length=200)
+    age_min = models.IntegerField(blank=True, null=True)
+    age_max = models.IntegerField(blank=True, null=True)
+    date_from = models.DateField(blank=True, null=True)
+    date_to = models.DateField(blank=True, null=True)
+    club = models.ForeignKey(Club)
+
+    def __str__(self):
+        return '%s (%s)' % (self.title, self.date_from)
 
 class Membership(models.Model):    
     club = models.ForeignKey(Club)
     member = models.ForeignKey(Member)
     date_joined = models.DateField(blank=True, null=True)
     date_left = models.DateField(blank=True, null=True)
+    groups = models.ManyToManyField(ClubGroup, related_name='groups')
+
 
     def __str__(self):
         return '%s' % (self.club)
@@ -247,3 +263,64 @@ class TournamentResult(models.Model):
 
     def __str__(self):
         return '%s - %s' % (self.registration, self.rank)
+
+class Drill(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField(blank=True)
+
+    def __str__(self):
+        return '%s' % self.title
+
+class TimeSheet(models.Model):
+    date_from = models.DateTimeField(auto_now=False, auto_now_add=False)
+    date_to = models.DateTimeField(auto_now=False, auto_now_add=False)
+    total_minutes = models.IntegerField(blank=True, null=True)
+    drill = models.ManyToManyField(Drill, through='DrillMeta')
+    groups = models.ManyToManyField(ClubGroup)
+    
+    def __str__(self):
+        return '%s' % self.date_from
+
+class DrillMeta(models.Model):
+    drill = models.ForeignKey(Drill)
+    timesheet = models.ForeignKey(TimeSheet)
+    minutes = models.IntegerField(blank=True, null=True)
+    notes = models.TextField(blank=True, null=True)
+    review = models.TextField(blank=True, null=True)
+
+class AttendanceType(models.Model):
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return '%s' % self.title
+
+class Attendance(models.Model):
+    date = models.DateField(blank=True, null=True)
+    club = models.ForeignKey(Club, blank=True, null=True)
+    member = models.ManyToManyField(Member, through='AttendanceMeta')
+
+    def __str__(self):
+        return '%s - %s' % (self.member, self.date)
+
+class AttendanceMeta(models.Model):
+    member = models.ForeignKey(Member)
+    attendance = models.ForeignKey(Attendance)
+    label = models.ForeignKey(AttendanceType, blank=True, null=True)
+    notes = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return '%s - %s' % (self.member, self.label)
+
+class BeltExam(models.Model):
+    date = models.DateField(blank=True, null=True)
+    club = models.ForeignKey(Club, blank=True, null=True)
+    member = models.ManyToManyField(Member, through='BeltExamMeta')
+
+    def __str__(self):
+        return '%s - %s' % (self.club, self.date)
+
+class BeltExamMeta(models.Model):
+    member = models.ForeignKey(Member)
+    belt_exam = models.ForeignKey(BeltExam)
+    grade = models.IntegerField(blank=True, null=True, choices=GRADE_CHOICES)
+    notes = models.TextField(blank=True, null=True)

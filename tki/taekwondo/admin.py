@@ -3,6 +3,9 @@ from django.contrib.comments import Comment
 from django_summernote.admin import SummernoteModelAdmin
 from taekwondo.models import *
 
+class ClubGroupAdmin(admin.ModelAdmin):
+    model = ClubGroup
+
 class TournamentCategoryItemInline(admin.TabularInline):
     model = TournamentCategoryItem
 
@@ -36,7 +39,6 @@ class ResultRankAdmin(admin.ModelAdmin):
 
 class ResultRankInline(admin.TabularInline):
     model = TournamentResult
-    
 
 class TournamentFileInline(admin.TabularInline):
     model = TournamentFile
@@ -60,6 +62,7 @@ class TournamentAdmin(admin.ModelAdmin):
 class ClubAdmin(SummernoteModelAdmin):
     inlines = [ClubFileInline]
     prepopulated_fields = {"slug": ("name",)}
+    #filter_horizontal = ['groups']
     #list_display = ('name', 'felix_members')
 
 class MemberAdmin(SummernoteModelAdmin):
@@ -73,8 +76,32 @@ class NewsAdmin(SummernoteModelAdmin):
     search_fields = ["title"]
     prepopulated_fields = {"slug": ("title",)}
 
+class DrillMetaInline(admin.TabularInline):
+    model = DrillMeta
+
+class TimeSheetAdmin(admin.ModelAdmin):
+    inlines = [DrillMetaInline]
+
+class DrillAdmin(admin.ModelAdmin):
+    model = Drill
+
+class AttendanceMetaInline(admin.TabularInline):
+    model = AttendanceMeta
+
+class AttendanceAdmin(admin.ModelAdmin):
+    inlines = [AttendanceMetaInline]
+
+class AttendanceTypeAdmin(admin.ModelAdmin):
+    model = AttendanceType
+
+class BeltExamMetaInline(admin.TabularInline):
+    model = BeltExamMeta
+
+class BeltExamAdmin(admin.ModelAdmin):
+    inlines = [BeltExamMetaInline]
 
 admin.site.register(Club, ClubAdmin)
+admin.site.register(ClubGroup, ClubGroupAdmin)
 admin.site.register(PointSystem, PointSystemAdmin)
 admin.site.register(Tournament, TournamentAdmin)
 admin.site.register(TournamentRegistration, TournamentRegistrationAdmin)
@@ -84,3 +111,8 @@ admin.site.register(ResultRank, ResultRankAdmin)
 admin.site.register(Membership, MembershipAdmin)
 admin.site.register(Member, MemberAdmin)
 admin.site.register(News, NewsAdmin)
+admin.site.register(TimeSheet, TimeSheetAdmin)
+admin.site.register(Drill, DrillAdmin)
+admin.site.register(Attendance, AttendanceAdmin)
+admin.site.register(AttendanceType, AttendanceTypeAdmin)
+admin.site.register(BeltExam, BeltExamAdmin)

@@ -3,7 +3,7 @@
 {% block main_col %}
     <div class="col-xs-12">
         <h1>{{ tournament_detail.title }}</h1>
-        <img src="{{ tournament_detail.image_url|default_if_none:'http://res.cloudinary.com/demo/image/upload/w_100,h_100,c_thumb,g_face,r_20,d_avatar.png/non_existing_id.png' }}" />
+        <img class="img-responsive" src="{{ tournament_detail.image_url|default_if_none:'http://res.cloudinary.com/demo/image/upload/w_100,h_100,c_thumb,g_face,r_20,d_avatar.png/non_existing_id.png' }}" />
         <p>{{ tournament_detail.description|safe }}</p>
         
         <h2>Skráningar</h2>
@@ -26,24 +26,53 @@
         {% for registration in tournament_detail.registrations %}
             <tr>
                 <td>
-                    {{ registration.member }}
+                    <a href="{% url 'member_detail' registration.member.slug %}">{{ registration.member }}</a>
                 </td>
                 <td>
                     {{ registration.member.ssn }}
                 </td>
                 <td>
-                    {{ registration.member.active_club }}
+                    <a href="{% url 'club_detail' registration.club.slug %}">{{ registration.member.active_club }}</a>
                 </td>
 
             </tr>
-        </tbody>
+        </ tbody>
         {% endfor %}
         </table>
         <h2>Úrslit</h2>
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Nafn
+                </th>    
+                <th>
+                    Félag
+                </th>        
+
+                <th>
+                    Félag
+                </th>        
+            </tr>
+        </thead>
+        <tbody>
         {% for result in tournament_detail.results %}
-            <p>{{ result.registration.member }} ({{ result.registration.member.active_club }}) - {{ result.rank.title }} </p>
-            
+            <tr>
+                <td>
+                    <a href="{% url 'member_detail' result.registration.member.slug %}">{{ result.registration.member }}</a>
+                </td>
+                <td>
+                    <a href="{% url 'club_detail' result.registration.club.slug %}">{{ result.registration.member.active_club }}</a>
+                </td>
+                <td>
+                    {{ result.rank.title }}
+                </td>
+
+            </tr>
+        </ tbody>
         {% endfor %}
+        </table>
+        
         
     </div>
 {% endblock main_col %}

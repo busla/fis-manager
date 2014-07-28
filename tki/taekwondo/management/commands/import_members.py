@@ -62,11 +62,11 @@ class Command(BaseCommand):
             ms.save()
             print(m.name + ' is now a member of ' + c.name)
 
-    def felix_import(self, _felix_ssn, _felix_member, _felix_club):
+    def felix_import(self, _felix_ssn, _felix_member, _felix_club, _address):
         #print(self.club_list)
         _club_list = list(Club.objects.all())
         club_exists = False
-        m = Member(pk=_felix_ssn, name=_felix_member, slug=slugify(unidecode(_felix_member)))
+        m = Member(pk=_felix_ssn, address=_address, name=_felix_member, slug=slugify(unidecode(_felix_member)))
         m.save()
         #self.stdout.write(m.name + ' active club is: ' + str(m.active_club))
         
@@ -124,7 +124,7 @@ class Command(BaseCommand):
                 
                 if start_matrix:
                     print('%s, %s, %s' % (row[1].replace("-",''), row[0], self.get_club(row[5])))
-                    self.felix_import(row[1].replace("-",''), row[0], self.get_club(row[5]))
+                    self.felix_import(row[1].replace("-",''), row[0], self.get_club(row[5]), row[7])
 
                 if not start_matrix:
                     if (set(row) == set(self.csv_header)):

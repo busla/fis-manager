@@ -7,11 +7,52 @@
                 <img class="img-thumbnail" src="{{ member_detail.photo_url|default_if_none:'http://res.cloudinary.com/demo/image/upload/w_100,h_100,c_thumb,g_face,r_20,d_avatar.png/non_existing_id.png' }}" alt="Generic placeholder image">
                 <h1>{{ member_detail.name }}</h1>
 
-                <p>{{ member_detail.ssn }}</p>
+                <p>{{ member_detail.ssn }}  </p>
+                <p>{{ member_detail.address }}</p>
                 <p>{{ member_detail.active_club }}</p>
+
+                <h2>Árangur í keppni</h2>
+    
+                <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            Mót
+                        </th>    
+                        <th>
+                            Árangur
+                        </th>        
+
+                        <th>
+                            Stig
+                        </th>        
+                        <th>
+                            Keppti fyrir
+                        </th>        
+
+                    </tr>
+                </thead>
+                <tbody>
                 {% for result in member_detail.results %}
-                    <p>{{ result }}</p>
-                {% endfor %}    
+                    <tr>
+                        <td>
+                            <a href="{% url 'tournament_detail' result.registration.tournament.slug %}">{{ result.registration.tournament }}</a>
+                        </td>
+                        <td>
+                            <a href="#">{{ result.rank.title }}</a>
+                        </td>
+                        <td>
+                            {{ result.rank.rank }}
+                        </td>
+
+                        <td>
+                            {{ result.registration.club }}
+                        </td>
+
+                    </tr>
+                </ tbody>
+                {% endfor %}
+                </table>
             </div>
         
     
