@@ -46,6 +46,9 @@ class TournamentFileInline(admin.TabularInline):
 class TournamentDivisionInline(admin.TabularInline):
     model = TournamentDivision
 
+class TournamentDivisionAdmin(admin.ModelAdmin):
+    model = TournamentDivision
+
 class ClubFileInline(admin.TabularInline):
     model = ClubFile
 
@@ -100,6 +103,9 @@ class BeltExamMetaInline(admin.TabularInline):
 class BeltExamAdmin(admin.ModelAdmin):
     inlines = [BeltExamMetaInline]
 
+class FightAdmin(admin.ModelAdmin):
+    model = Fight
+
 admin.site.register(Club, ClubAdmin)
 admin.site.register(ClubGroup, ClubGroupAdmin)
 admin.site.register(PointSystem, PointSystemAdmin)
@@ -116,3 +122,5 @@ admin.site.register(Drill, DrillAdmin)
 admin.site.register(Attendance, AttendanceAdmin)
 admin.site.register(AttendanceType, AttendanceTypeAdmin)
 admin.site.register(BeltExam, BeltExamAdmin)
+admin.site.register(Fight, FightAdmin)
+admin.site.register(TournamentDivision, TournamentDivisionAdmin)

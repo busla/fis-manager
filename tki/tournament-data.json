@@ -1,0 +1,91 @@
+[
+{
+    "pk": 1,
+    "model": "taekwondo.pointsystem",
+    "fields": {
+        "title": "Bikarm\u00f3t",
+        "description": ""
+    }
+},
+{
+    "pk": 1,
+    "model": "taekwondo.tournamentcategoryitem",
+    "fields": {
+        "max_value": 8,
+        "category_type": 1,
+        "min_value": 6,
+        "title": "6-8 \u00e1ra"
+    }
+},
+{
+    "pk": 2,
+    "model": "taekwondo.tournamentcategoryitem",
+    "fields": {
+        "max_value": 30,
+        "category_type": 2,
+        "min_value": 25,
+        "title": "25 - 30kg"
+    }
+},
+{
+    "pk": 3,
+    "model": "taekwondo.tournamentcategoryitem",
+    "fields": {
+        "max_value": 5,
+        "category_type": 3,
+        "min_value": 10,
+        "title": "10. geup - 5. geup"
+    }
+},
+{
+    "pk": 1,
+    "model": "taekwondo.tournamentregistration",
+    "fields": {
+        "weight": 26,
+        "member": "0112012960",
+        "membership": 1,
+        "grade": 18,
+        "registration_date": "2014-07-28T21:01:13.324Z",
+        "club": 4,
+        "tournament": 1
+    }
+},
+{
+    "pk": 2,
+    "model": "taekwondo.tournamentregistration",
+    "fields": {
+        "weight": 34,
+        "member": "1109082290",
+        "membership": 723,
+        "grade": 19,
+        "registration_date": "2014-07-28T21:01:13.326Z",
+        "club": 3,
+        "tournament": 1
+    }
+},
+{
+    "pk": 3,
+    "model": "taekwondo.tournamentregistration",
+    "fields": {
+        "weight": 65,
+        "member": "1401012490",
+        "membership": 642,
+        "grade": 14,
+        "registration_date": "2014-07-28T21:01:13.333Z",
+        "club": 1,
+        "tournament": 1
+    }
+},
+{
+    "pk": 1,
+    "model": "taekwondo.tournament",
+    "fields": {
+        "title": "RIG 2014",
+        "slug": "rig-2014",
+        "description": "",
+        "date": "2014-07-28",
+        "image": "tournaments/images/2014/07/rig2014_port_1.jpg",
+        "point_system": 1
+    }
+}
+]

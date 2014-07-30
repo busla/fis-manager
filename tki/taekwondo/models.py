@@ -156,8 +156,8 @@ class PointSystemItem(models.Model):
 class TournamentCategoryItem(models.Model):
     category_type = models.IntegerField(choices=CATEGORY_CHOICES)
     title = models.CharField(max_length=200)
-    min_value = models.IntegerField()
-    max_value = models.IntegerField()
+    min_value = models.IntegerField(blank=True, null=True)
+    max_value = models.IntegerField(blank=True, null=True)
 
 
     def __str__(self):
@@ -168,9 +168,9 @@ class Tournament(models.Model):
     title = models.CharField(max_length=200)
     image = models.FileField(upload_to='tournaments/images/%Y/%m', max_length=100, blank=True)
     description = models.TextField(blank=True)
-    date = models.DateField()
+    date = models.DateField(blank=True, null=True)
     slug = models.SlugField()
-    point_system = models.ForeignKey(PointSystem)
+    point_system = models.ForeignKey(PointSystem, blank=True, null=True)
     competitors = models.ManyToManyField(Member, through='TournamentRegistration', related_name='competitors') 
     
 
@@ -199,7 +199,9 @@ class TournamentDivision(models.Model):
     weight = models.ForeignKey(TournamentCategoryItem, blank=True, null=True, related_name='weight')
     grade = models.ForeignKey(TournamentCategoryItem, blank=True, null=True, related_name='grade')
     gender = models.IntegerField(choices=GENDER_CHOICES)
-
+    
+    def __str__(self):
+            return '%s' % self.title
 
 class TournamentFile(models.Model):
     attachment = models.FileField(upload_to='tournaments/attachments/%Y/%m', max_length=100, blank=True)
@@ -257,9 +259,10 @@ class ResultRank(models.Model):
 
 
 class TournamentResult(models.Model):
-    registration = models.ForeignKey(TournamentRegistration)
-    rank = models.ForeignKey(ResultRank)
-    result = models.ForeignKey(PointSystemItem)
+    registration = models.ForeignKey(TournamentRegistration, blank=True, null=True) #possibly a legacy
+    division = models.ForeignKey(TournamentDivision)
+    rank = models.ForeignKey(ResultRank) #note: remove from templates and use the result field
+    result = models.ForeignKey(PointSystemItem) #note: add to templates instead of rank
 
     def __str__(self):
         return '%s - %s' % (self.registration, self.rank)
@@ -324,3 +327,13 @@ class BeltExamMeta(models.Model):
     belt_exam = models.ForeignKey(BeltExam)
     grade = models.IntegerField(blank=True, null=True, choices=GRADE_CHOICES)
     notes = models.TextField(blank=True, null=True)
+
+class Fight(models.Model):
+    fight_number = models.IntegerField(blank=True, null=True)
+    division = models.ForeignKey(TournamentDivision, blank=True, null=True)
+    blue_player = models.ForeignKey(TournamentRegistration, related_name='blue_player')
+    red_player = models.ForeignKey(TournamentRegistration, related_name='red_player')
+    blue_points = models.IntegerField(blank=True, null=True)
+    red_points = models.IntegerField(blank=True, null=True)
+    winner = models.ForeignKey(TournamentRegistration, related_name='winner')
+
