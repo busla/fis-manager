@@ -51,7 +51,7 @@ class Command(BaseCommand):
             'red_player': item[8],
             'blue_player': item[9],
             'red_points': item[10],
-            'blue_points': item[10],
+            'blue_points': item[11],
         }
         '''
         _tournament_name = item[0]
@@ -111,23 +111,72 @@ class Command(BaseCommand):
                 gender = 1
                 )
 
+            if not (fight_info.get('red_club')=='' or fight_info.get('red_club')==''):
+                
+                blue_club, created = Club.objects.get_or_create(
+                        slug=slugify(unidecode(fight_info.get('blue_club'))),
+                        defaults= {
+                            'name': fight_info.get('blue_club'),
+                            'short_name': fight_info.get('blue_club'),
+                        }
+                    )
+                print('Blue club: %s' % blue_club)
+                
+                red_club, created = Club.objects.get_or_create(
+                        slug=slugify(unidecode(fight_info.get('red_club'))),
+                        defaults= {
+                            'name': fight_info.get('red_club'),
+                            'short_name': fight_info.get('red_club'),
+                        }
+
+                    )
+
+
+                print('Red club: %s' % red_club)
+            
+            blue_player, created = Member.objects.get_or_create(
+                    name=fight_info.get('blue_player'),
+                    slug=slugify(unidecode(fight_info.get('blue_player'))),
+                )
+
+            red_player, created = Member.objects.get_or_create(
+                    name=fight_info.get('red_player'),
+                    slug=slugify(unidecode(fight_info.get('red_player'))),
+                )
+
+            blue_registration, created = TournamentRegistration.objects.get_or_create(
+                    member=blue_player,
+                    tournament=tournament_obj,
+                    #club=blue_club,
+                    #registration_date=datetime.now()
+                ) 
+
+            red_registration, created = TournamentRegistration.objects.get_or_create(
+                    member=red_player,
+                    tournament=tournament_obj,
+                    #club=red_club,
+                    #registration_date=datetime.now()
+                ) 
+
 
             
             fight, created = Fight.objects.get_or_create(
                     division = division,
                     fight_number=fight_info.get('fight_number'),
-                    blue_player=fight_info.get('blue_player'), 
-                    red_player=fight_info.get('red_player'),
+                    blue_player=blue_registration,
+                    red_player=red_registration,
                     blue_points=fight_info.get('blue_points'),
                     red_points=fight_info.get('red_points'),
                     )
-            
-
-                    
+                
 
         elif not tournament_exists:
             print('A tournament with the title "%s" does not exist, creating it now.... ' % fight_info.get('tournament_name'))
-            new_tournament = Tournament(title=fight_info.get('tournament_name'), date=datetime.now(), slug=slugify(unidecode(fight_info.get('tournament_name'))))
+            new_tournament = Tournament(
+                title=fight_info.get('tournament_name'), 
+                date=datetime.now(), 
+                slug=slugify(unidecode(fight_info.get('tournament_name')))
+                )
             new_tournament.save()
             
             

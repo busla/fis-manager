@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
-from taekwondo.models import Club, Member, Membership, Tournament, News, TournamentResult, TournamentRegistration
+from taekwondo.models import *
 from django.http import HttpResponse
 
 def index(request):
@@ -13,6 +13,10 @@ class ClubList(ListView):
 class ClubDetail(DetailView):
     queryset = Club.objects.select_related('members').all()
     context_object_name = 'club_detail'
+
+class FightList(ListView):
+    queryset = Fight.objects.all()
+    context_object_name = 'fight_list'
 
 class MemberList(ListView):
     model = Member

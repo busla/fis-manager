@@ -1,0 +1,69 @@
+{% extends "taekwondo/__l_right_sidebar.html" %}
+{% block main_col %}
+{% load staticfiles%}
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Bardagar</h2>
+
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Mót
+                </th>    
+                <th>
+                    Bardaganúmer
+                </th>        
+
+                <th>
+                    Blár
+                </th>        
+                <th>
+                    Rauður
+                </th>        
+                <th>
+                    Stig blár
+                </th>        
+                <th>
+                    Stig rauður
+                </th>        
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for fight in fight_list %}
+            <tr>
+                <td>
+                    <a href="#">{{ fight.division.tournament }}</a>
+                </td>
+                <td>
+                    <a href="#">{{ fight.fight_number }}</a>
+                </td>
+
+                <td>
+                    <a href="#">{{ fight.blue_player }}</a>
+                </td>
+                <td>
+                    <a href="#">{{ fight.red_player }}</a>
+                </td>
+
+                <td>
+                    {{ fight.blue_points}}
+                </td>
+
+                <td>
+                    {{ fight.red_points}}
+                </td>
+
+                <td>
+                    {{ result.registration.club }}
+                </td>
+
+            </tr>
+        </tbody>
+        {% endfor %}
+        </table>
+    </div>
+</div>    
+{% endblock main_col %}
+

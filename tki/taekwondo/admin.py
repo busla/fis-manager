@@ -105,6 +105,7 @@ class BeltExamAdmin(admin.ModelAdmin):
 
 class FightAdmin(admin.ModelAdmin):
     model = Fight
+    search_fields = ['red_player__member__name', 'blue_player__member__name']
 
 admin.site.register(Club, ClubAdmin)
 admin.site.register(ClubGroup, ClubGroupAdmin)

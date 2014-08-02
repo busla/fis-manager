@@ -43,7 +43,7 @@ GRADE_CHOICES = (
 class Member(models.Model):
     
     name = models.CharField(max_length=200)
-    ssn = models.CharField(max_length=11, primary_key=True)
+    ssn = models.CharField(max_length=11, blank=True, null=True)
     photo = models.ImageField(upload_to='members/photos', height_field=None, width_field=None, max_length=100, blank=True)
     slug = models.SlugField()
     gender = models.IntegerField(choices=GENDER_CHOICES, blank=True, null=True)
@@ -88,7 +88,7 @@ class Member(models.Model):
 
 
 class Club(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, blank=True, null=True)
     short_name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     logo = models.ImageField(upload_to='clubs/logos', height_field=None, width_field=None, max_length=100, blank=True)
@@ -241,13 +241,15 @@ class TournamentRegistration(models.Model):
     def age(self): # calculate age from member.ssn
         pass
 
+    '''
     def save(self):
         _membership = Membership.objects.get(pk = self.member.active_membership)
         self.membership = _membership
         super(TournamentRegistration, self).save()
-    
+    '''
+
     def __str__(self):
-        return '%s - %s' % (self.member, self.tournament)
+        return '%s' % (self.member)
 
 
 class ResultRank(models.Model):
@@ -335,5 +337,7 @@ class Fight(models.Model):
     red_player = models.ForeignKey(TournamentRegistration, related_name='red_player')
     blue_points = models.IntegerField(blank=True, null=True)
     red_points = models.IntegerField(blank=True, null=True)
-    winner = models.ForeignKey(TournamentRegistration, related_name='winner')
+    winner = models.ForeignKey(TournamentRegistration, blank=True, null=True, related_name='winner')
 
+    def __str__(self):
+        return '%s vs. %s (nr: %s)' % (self.red_player, self.blue_player, self.fight_number)

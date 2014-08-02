@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^felog/', include('taekwondo.urls.clubs')),
-
+    url(r'^bardagar/', include('taekwondo.urls.fights')),
     url(r'^mot/', include('taekwondo.urls.tournaments')),
     url(r'^idkendur/', include('taekwondo.urls.members')),
     url(r'^frettir/', include('zinnia.urls')),
