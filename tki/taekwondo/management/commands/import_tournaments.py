@@ -23,22 +23,7 @@ class Command(BaseCommand):
 
     ) 
 
-    def create_membership(self, m, c):
-        print('Trying to create membership using %s and %s' % (m.active_club, c.name))
-        
-        if str(m.active_club) == c.name:
-        #Membership.objects.filter(member=_member.pk, club__name=_member.active_club).exists():        
-            print(m.name + ' is already registered at ' + c.name)
-        else:
-            ms = Membership(member=m, club_id=int(c.id), date_joined=datetime.now())
-            ms.save()
-            print(m.name + ' is now a member of ' + c.name)
-
-    def fight_import(self, item):
-        #print(self.club_list)
-        tournament_list = list(Tournament.objects.all())
-        tournament_exists = False
-
+    def get_fight_info(self, item):
         fight_info =  {
             'tournament_name': item[0],
             'fight_number': item[1],
@@ -53,31 +38,27 @@ class Command(BaseCommand):
             'red_points': item[10],
             'blue_points': item[11],
         }
-        '''
-        _tournament_name = item[0]
-        _match_number = item[1]
-        _age_division = item[2]
-        _belt_group = item[3]
-        _weight_group = item[4]
-        _gender = item[5]
-        _red_club = item[6]
-        _blue_club = item[7]
-        _red_player = item[8]
-        _blue_player = item[9]
-        _red_points = item[10]
-        _blue_points = item[11]
-        '''
+
+        return fight_info
+
+    def get_winner(self, red, blue, red_points, blue_points):
+        if (int(blue_points) > int(red_points)):
+            return blue
+        else:
+            return red
+
+    def fight_import(self, item):
+        #print(self.club_list)
+        tournament_list = list(Tournament.objects.all())
+        tournament_exists = False
+
+        fight_info = self.get_fight_info(item)
+
         for listed_tournament in tournament_list:
             if listed_tournament.title in fight_info.get('tournament_name'):
                 tournament_exists = True
                 tournament_obj = listed_tournament
         
-
-        '''            
-        m = Match(pk=_felix_ssn, address=_address, name=_felix_member, slug=slugify(unidecode(_felix_member)))
-        m.save()
-        #self.stdout.write(m.name + ' active club is: ' + str(m.active_club))
-        '''
                 
 
         if tournament_exists:
@@ -167,8 +148,13 @@ class Command(BaseCommand):
                     red_player=red_registration,
                     blue_points=fight_info.get('blue_points'),
                     red_points=fight_info.get('red_points'),
-                    )
-                
+                    winner=self.get_winner(
+                        red_registration, 
+                        blue_registration, 
+                        fight_info.get('blue_points'), 
+                        fight_info.get('red_points'),
+                        )
+                )
 
         elif not tournament_exists:
             print('A tournament with the title "%s" does not exist, creating it now.... ' % fight_info.get('tournament_name'))
