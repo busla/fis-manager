@@ -340,4 +340,5 @@ class Fight(models.Model):
     winner = models.ForeignKey(TournamentRegistration, blank=True, null=True, related_name='winner')
 
     def __str__(self):
+        #return '%s vs. %s (nr: %s)' % (self.red_player, self.blue_player, self.fight_number)
         return '%s vs. %s (nr: %s)' % (self.red_player, self.blue_player, self.fight_number)

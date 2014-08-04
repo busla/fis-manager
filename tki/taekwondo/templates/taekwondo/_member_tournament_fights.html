@@ -29,16 +29,28 @@
             </tr>
         </thead>
         <tbody>
-        {% for result in member_detail.results %}
+        {% for fight in fight_list %}
             <tr>
                 <td>
-                    <a href="{% url 'tournament_detail' result.registration.tournament.slug %}">{{ result.registration.tournament }}</a>
+                    <a href="#">{{ fight.division.tournament }}</a>
                 </td>
                 <td>
-                    <a href="#">{{ result.rank.title }}</a>
+                    <a href="#">{{ fight.fight_number }}</a>
+                </td>
+
+                <td>
+                    <a href="#">{{ fight.blue_player }}</a>
                 </td>
                 <td>
-                    {{ result.rank.rank }}
+                    <a href="#">{{ fight.red_player }}</a>
+                </td>
+
+                <td>
+                    {{ fight.blue_points}}
+                </td>
+
+                <td>
+                    {{ fight.red_points}}
                 </td>
 
                 <td>
@@ -50,4 +62,5 @@
         {% endfor %}
         </table>
     </div>
-</div>
+</div>  
+
