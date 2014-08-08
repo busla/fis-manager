@@ -105,6 +105,7 @@ class BeltExamAdmin(admin.ModelAdmin):
 
 class FightAdmin(admin.ModelAdmin):
     model = Fight
+    list_display = ('fight_number', 'division', 'red_player', 'blue_player', 'red_points', 'blue_points', 'winner')
     search_fields = ['red_player__member__name', 'blue_player__member__name']
 
 admin.site.register(Club, ClubAdmin)

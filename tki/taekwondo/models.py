@@ -341,4 +341,4 @@ class Fight(models.Model):
 
     def __str__(self):
         #return '%s vs. %s (nr: %s)' % (self.red_player, self.blue_player, self.fight_number)
-        return '%s vs. %s (nr: %s)' % (self.red_player, self.blue_player, self.fight_number)
+        return '%s' % self.fight_number

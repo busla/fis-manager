@@ -33,7 +33,7 @@ class Command(BaseCommand):
         
 
     missing_clubs = set()
-    help = 'Imports Taekwondo members from a Felix CSV file.'
+    help = 'Sæki iðkendur úr FELIX csv skrá og bæti við í FIS'
     club_list = list(Club.objects.all())
     option_list = BaseCommand.option_list + (
         make_option(
@@ -52,22 +52,32 @@ class Command(BaseCommand):
     ) 
     
     def create_membership(self, m, c):
-        print('Trying to create membership using %s and %s' % (m.active_club, c.name))
+        print('Reyni að bæta við félagaskráningu, tengi "%s" við "%s"' % (m.active_club, c.name))
         
         if str(m.active_club) == c.name:
         #Membership.objects.filter(member=_member.pk, club__name=_member.active_club).exists():        
-            print(m.name + ' is already registered at ' + c.name)
+            print(m.name + ' er nú þegar skráð/ur í ' + c.name)
         else:
             ms = Membership(member=m, club_id=int(c.id), date_joined=datetime.now())
             ms.save()
-            print(m.name + ' is now a member of ' + c.name)
+            print(m.name + ' er nú meðlimur í ' + c.name)
 
     def felix_import(self, _felix_ssn, _felix_member, _felix_club, _address):
         #print(self.club_list)
         _club_list = list(Club.objects.all())
         club_exists = False
-        m = Member(pk=_felix_ssn, address=_address, name=_felix_member, slug=slugify(unidecode(_felix_member)))
-        m.save()
+
+        m, created = Member.objects.get_or_create(
+                ssn=_felix_ssn,
+                defaults= {
+                    'name': _felix_member.strip(),
+                    'address': _address,
+                    'slug': slugify(unidecode(_felix_member)),
+                }
+            )        
+
+        #m = Member(ssn=_felix_ssn, address=_address, name=_felix_member.strip(), slug=slugify(unidecode(_felix_member)))
+        #m.save()
         #self.stdout.write(m.name + ' active club is: ' + str(m.active_club))
         
         for item in _club_list:
@@ -76,14 +86,14 @@ class Command(BaseCommand):
                 
 
         if club_exists:
-            print('The club "%s" already exists, creating membership now... ' % _felix_club)
+            print('Félagið "%s" er nú þegar til, bæti við félagaskráningu núna... ' % _felix_club)
             for item in _club_list:
                 if item.name in _felix_club:
                     c = item
                     
 
         elif not club_exists:
-            print('The club "%s" does not exist, creating it now.... ' % _felix_club)
+            print('Félagið "%s" er ekki til, bæti því við núna.... ' % _felix_club)
             c = Club(name=_felix_club, slug=slugify(unidecode(_felix_club)))
             c.save()
             
@@ -140,6 +150,6 @@ class Command(BaseCommand):
             #m = Member(name = student[1], ssn=student[2], slug=slugify(student[1]))
             #m.save()
             
-        print('Successfully imported %s members from "%s"' % (i, options['filename']))
+        #print('Successfully imported %s members from "%s"' % (i, options['filename']))
 
 
