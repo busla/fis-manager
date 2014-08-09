@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'mptt',
     'zinnia',
     'zinnia_event',
+    'rest_framework',
 
     
 )
@@ -58,6 +59,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (

@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import permalink, Count
+from django.db.models import permalink, Count, Q
 
 MALE = 1
 FEMALE = 2
@@ -48,6 +48,15 @@ class Member(models.Model):
     slug = models.SlugField()
     gender = models.IntegerField(choices=GENDER_CHOICES, blank=True, null=True)
     address = models.CharField(max_length=200, blank=True, null=True)
+
+    def _get_fights(self):
+        fights = Fight.objects.filter(
+            Q(red_player__member=self) | 
+            Q(blue_player__member=self)
+        )
+        return fights
+
+    all_fights = property(_get_fights)
 
     def _get_active_club(self):
         try:
@@ -188,6 +197,12 @@ class Tournament(models.Model):
         res = TournamentResult.objects.filter(registration__tournament=self)
         return res
     results = property(_get_results)
+
+    def _get_fights(self):
+        fights = Fight.objects.filter(division__tournament=self)
+        return fights
+
+    fights = property(_get_fights)
 
     def __str__(self):
         return '%s' % self.title

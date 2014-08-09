@@ -4,12 +4,9 @@
         <h2>Bardagar</h2>
 
 
-        <table class="table table-striped">
+        <table class="table table-condensed">
         <thead>
-            <tr>
-                <th>
-                    Mót
-                </th>    
+            <tr>            
                 <th>
                     Bardaganúmer
                 </th>        
@@ -32,12 +29,11 @@
             </tr>
         </thead>
         <tbody>
+        
+        {% for fight in tournament_detail.fights %}
 
-        {% for fight in member_detail.all_fights %}
+
             <tr>
-                <td>
-                    <a href="{% url 'tournament_detail' fight.division.tournament.slug %}">{{ fight.division.tournament }}</a>
-                </td>
                 <td>
                     {{ fight.fight_number }}
                 </td>
@@ -62,8 +58,9 @@
                     {{ fight.winner }}
                 </td>
             </tr>
-        </tbody>
         {% endfor %}
+        </tbody>
+        
         </table>
     </div>
 </div>  

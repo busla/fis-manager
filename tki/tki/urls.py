@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^autocomplete/', include('autocomplete_light.urls')),
     url(r'^$', views.index, name='index'),
+    url(r'^api/', include('taekwondo.urls.api')),
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^felog/', include('taekwondo.urls.clubs')),
