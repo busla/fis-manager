@@ -1,5 +1,7 @@
 from django.db import models
 from django.db.models import permalink, Count, Q
+from django.core.exceptions import ObjectDoesNotExist
+from taekwondo import slug
 
 MALE = 1
 FEMALE = 2
@@ -43,9 +45,9 @@ GRADE_CHOICES = (
 class Member(models.Model):
     
     name = models.CharField(max_length=200)
-    ssn = models.CharField(max_length=11, blank=True, null=True)
+    ssn = models.CharField(max_length=11, blank=True, null=True, unique=True)
     photo = models.ImageField(upload_to='members/photos', height_field=None, width_field=None, max_length=100, blank=True)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     gender = models.IntegerField(choices=GENDER_CHOICES, blank=True, null=True)
     address = models.CharField(max_length=200, blank=True, null=True)
 
@@ -88,6 +90,12 @@ class Member(models.Model):
         if self.photo and hasattr(self.photo, 'url'):
             return self.photo.url
 
+    
+    def save(self, **kwargs):
+        slug.unique_slugify(self, self.slug)
+        super(Member, self).save()
+    
+    
     def __str__(self):
         return '%s' % self.name
 
@@ -104,7 +112,7 @@ class Club(models.Model):
     email = models.EmailField(max_length=254, blank=True)
     website = models.URLField(blank=True, null=True)
     members = models.ManyToManyField(Member, through='Membership', related_name='members')
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
 
 
     class Meta:
@@ -178,7 +186,7 @@ class Tournament(models.Model):
     image = models.FileField(upload_to='tournaments/images/%Y/%m', max_length=100, blank=True)
     description = models.TextField(blank=True)
     date = models.DateField(blank=True, null=True)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     point_system = models.ForeignKey(PointSystem, blank=True, null=True)
     competitors = models.ManyToManyField(Member, through='TournamentRegistration', related_name='competitors') 
     

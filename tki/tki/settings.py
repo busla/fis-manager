@@ -125,3 +125,9 @@ SUMMERNOTE_CONFIG = {
 
 ZINNIA_ENTRY_BASE_MODEL = 'zinnia_event.models.EntryEvent'
 ZINNIA_AUTO_CLOSE_COMMENTS_AFTER = 0
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    )
+}

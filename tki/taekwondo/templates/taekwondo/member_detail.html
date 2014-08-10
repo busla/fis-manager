@@ -3,13 +3,13 @@
 {% block main_col %}
 <div class="row">
     <div class="col-xs-12">
-        <img class="img-thumbnail" src="{{ member_detail.photo_url|default_if_none:'http://res.cloudinary.com/demo/image/upload/w_100,h_100,c_thumb,g_face,r_20,d_avatar.png/non_existing_id.png' }}" alt="Generic placeholder image">
+        <img class="img-thumbnail" src="{{ member_detail.photo_url|default_if_none:'/media/members/photos/avatar.jpg' }}" alt="Generic placeholder image">
         <h1>{{ member_detail.name }}</h1>
 
         <p>{{ member_detail.ssn }}  </p>
         <p>{{ member_detail.address }}</p>
         <p>{{ member_detail.active_club }}</p>
-        <p>{{ member_detail.all_fights.blue_player }}</p>
+        
 
         {% include 'taekwondo/_member_tournament_fights.html' %}
     </div>    

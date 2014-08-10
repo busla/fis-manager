@@ -1,6 +1,7 @@
 Django==1.6.5
 Fabric==1.9.0
 Pillow==2.4.0
+Pygments==1.6
 South==0.8.4
 Unidecode==0.04.16
 WebOb==1.4
@@ -23,6 +24,7 @@ django-tagging==0.3.2
 django-treenav==0.9.0
 django-webtest==1.7.7
 django-xmlrpc==0.1.5
+djangorestframework==2.3.14
 ecdsa==0.11
 paramiko==1.14.0
 pycrypto==2.6.1

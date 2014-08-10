@@ -4,12 +4,33 @@ from taekwondo.models import *
 from django.http import HttpResponse
 from django.db.models import Q
 
-
+# REST
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
+from taekwondo.serializers import *
+from rest_framework import status
+from rest_framework.views import APIView
+from rest_framework import generics
 
-from taekwondo.serializers import MemberSerializer
+# Browsable API
+from rest_framework import renderers
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.reverse import reverse
+
+from rest_framework import viewsets
+
+@api_view(('GET',))
+def api_root(request, format=None):
+    return Response({
+        'tournaments': reverse('tournament-list', request=request, format=format),
+        'members': reverse('member-list', request=request, format=format),
+        #'fights': reverse('fight-list', request=request, format=format),
+        'clubs': reverse('club-list', request=request, format=format),
+        
+    })
+
 
 class JSONResponse(HttpResponse):
     """
@@ -20,49 +41,72 @@ class JSONResponse(HttpResponse):
         kwargs['content_type'] = 'application/json'
         super(JSONResponse, self).__init__(content, **kwargs)
 
-@csrf_exempt
-def member_list(request):
+class ApiFightList(generics.ListCreateAPIView):
     """
-    List all code snippets, or create a new snippet.
+    Birta alla bardaga eða bæta við nýjum bardaga.
     """
-    if request.method == 'GET':
-        members = Member.objects.all()
-        serializer = MemberSerializer(members, many=True)
-        return JSONResponse(serializer.data)
+    queryset = Fight.objects.all()
+    serializer_class = FightSerializer
+    paginate_by = 100
+    paginate_by_param = 'page_size'
+    max_paginate_by = 100
 
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = MemberSerializer(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JSONResponse(serializer.data, status=201)
-        return JSONResponse(serializer.errors, status=400)        
-
-@csrf_exempt
-def member_detail(request, slug):
+class ApiFightDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve, update or delete a code snippet.
+    Sækja, uppfæra eða eyða móti.
     """
-    try:
-        member = Member.objects.get(slug=slug)
-    except Member.DoesNotExist:
-        return HttpResponse(status=404)
+    queryset = Fight.objects.all()
+    serializer_class = FightSerializer     
 
-    if request.method == 'GET':
-        serializer = MemberSerializer(member)
-        return JSONResponse(serializer.data)
 
-    elif request.method == 'PUT':
-        data = JSONParser().parse(request)
-        serializer = SnippetSerializer(member, data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JSONResponse(serializer.data)
-        return JSONResponse(serializer.errors, status=400)
+class ApiTournamentList(generics.ListCreateAPIView):
+    """
+    Birta öll mót eða bæta við nýju móti.
+    """
+    queryset = Tournament.objects.all()
+    serializer_class = TournamentSerializer
+    paginate_by = 100
+    paginate_by_param = 'page_size'
+    max_paginate_by = 100
 
-    elif request.method == 'DELETE':
-        member.delete()
-        return HttpResponse(status=204)
+class ApiTournamentDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Sækja, uppfæra eða eyða móti.
+    """
+    queryset = Tournament.objects.all()
+    serializer_class = TournamentSerializer     
+
+class ApiMemberList(generics.ListCreateAPIView):
+    """
+    Birta alla iðkendur eða bæta við nýjum iðkanda.
+    """
+    queryset = Member.objects.all()
+    serializer_class = MemberSerializer
+    paginate_by = 100
+    paginate_by_param = 'page_size'
+    max_paginate_by = 100
+
+class ApiMemberDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Sækja, uppfæra eða eyða iðkanda.
+    """
+    queryset = Member.objects.all()
+    serializer_class = MemberSerializer     
+
+class ApiClubList(generics.ListCreateAPIView):
+    """
+    Birta öll félög eða bæta við nýju félagi.
+    """
+    queryset = Club.objects.all()
+    serializer_class = ClubSerializer
+
+class ApiClubDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Sækja, uppfæra eða eyða félagi.
+    """
+    queryset = Club.objects.all()
+    serializer_class = ClubSerializer  
+
 
 def index(request):
     return HttpResponse("Hello, world. You're at the poll index.")
