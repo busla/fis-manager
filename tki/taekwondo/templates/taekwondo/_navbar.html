@@ -24,7 +24,7 @@
                     <div class="collapse navbar-collapse appiNav">
                         <ul class="nav navbar-nav {% if not categories %}no-{% endif %}categories">
                             {% get_categories "taekwondo/_navbar_menu_items.html" %}
-                    
+                            
                             <li class="{% active request club_list_active %}"><a href="{% url 'club_list' %}">Félög</a></li>
                             <li class="{% active request tournament_list_active %}"><a href="{% url 'tournament_list' %}">Mót</a></li>
                             <li class="{% active request member_list_active %}"><a href="{% url 'member_list' %}">Iðkendur</a></li>                            

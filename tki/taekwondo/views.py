@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 from taekwondo.models import *
 from django.http import HttpResponse
-from django.db.models import Q
+from django.db.models import Q, Count, Min, Sum, Avg
 
 # REST
 from django.views.decorators.csrf import csrf_exempt
@@ -138,13 +138,28 @@ class FightList(ListView):
 
     #queryset = Fight.objects.all()
     #context_object_name = 'fight_list'
-'''
-class FightList(ListView):
-    template_name = 'taekwondo/member_detail.html'
-    model = Fight
-    context_object_name = 'fight_list'
 
-'''
+
+class RankList(ListView):
+
+    template_name = 'taekwondo/rank_list.html'
+    def get_queryset(self):
+        self.rank_list = Member.all_fights()
+        
+        #self.fights = Fight.objects.filter(blue_player__member=self.member)
+        #self.fights = Fight.objects.all()
+        return self.rank_list
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(RankList, self).get_context_data(**kwargs)
+        # Add in the publisher
+        context['rank_list'] = self.rank_list
+        return context
+
+    #queryset = Fight.objects.all()
+    #context_object_name = 'fight_list'
+
 
 class MemberList(ListView):
     model = Member
