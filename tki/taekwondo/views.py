@@ -144,7 +144,7 @@ class RankList(ListView):
 
     template_name = 'taekwondo/rank_list.html'
     def get_queryset(self):
-        self.rank_list = Member.all_fights()
+        self.rank_list = Member.objects.annotate(player=Count('tournamentregistration__winner')).order_by('-player')
         
         #self.fights = Fight.objects.filter(blue_player__member=self.member)
         #self.fights = Fight.objects.all()

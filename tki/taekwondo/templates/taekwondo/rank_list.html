@@ -3,29 +3,24 @@
 {% load staticfiles%}
 <div class="row">
     <div class="col-xs-12">
-        <h2>Bardagar</h2>
+        <h2>Styrkleikalisti</h2>
 
         <table class="table table-striped">
         <thead>
             <tr>
                 <th>
-                    Mót
+                    Sæti
+                </th>    
+
+                <th>
+                    Nafn
                 </th>    
                 <th>
-                    Bardaganúmer
+                    Félag
                 </th>        
 
                 <th>
-                    Blár
-                </th>        
-                <th>
-                    Rauður
-                </th>        
-                <th>
-                    Stig blár
-                </th>        
-                <th>
-                    Stig rauður
+                    Unnir bardagar
                 </th>        
 
             </tr>
@@ -34,31 +29,20 @@
         {% for rank in rank_list %}
             <tr>
                 <td>
-                    <a href="#">{{ fight.division.tournament }}</a>
-                </td>
-                <td>
-                    <a href="#">{{ fight.fight_number }}</a>
+                    {{forloop.counter}}
                 </td>
 
                 <td>
-                    <a href="#">{{ fight.blue_player }}</a>
-                </td>
-                <td>
-                    <a href="#">{{ fight.red_player }}</a>
+                    <a href="{% url 'member_detail' rank.slug%}">{{ rank }}</a>
                 </td>
 
                 <td>
-                    {{ fight.blue_points}}
+                    {{ rank.active_club }}
                 </td>
 
                 <td>
-                    {{ fight.red_points}}
+                    <a href="#">{{ rank.player }}</a>
                 </td>
-
-                <td>
-                    {{ result.registration.club }}
-                </td>
-
             </tr>
         </tbody>
         {% endfor %}
