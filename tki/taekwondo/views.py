@@ -160,6 +160,25 @@ class RankList(ListView):
     #queryset = Fight.objects.all()
     #context_object_name = 'fight_list'
 
+class RankList2(ListView):
+
+    template_name = 'taekwondo/rank_list.html'
+    def get_queryset(self):
+        self.rank_list = Member.objects.annotate(player=Count('tournamentregistration__winner')).order_by('-player')
+        
+        #self.fights = Fight.objects.filter(blue_player__member=self.member)
+        #self.fights = Fight.objects.all()
+        return self.rank_list
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(RankList, self).get_context_data(**kwargs)
+        # Add in the publisher
+        context['rank_list'] = self.rank_list
+        return context
+
+    #queryset = Fight.objects.all()
+    #context_object_name = 'fight_list'
 
 class MemberList(ListView):
     model = Member
