@@ -1,184 +1,197 @@
 [
 {
-    "fields": {
-        "short_name": "Selfoss",
-        "slug": "selfoss",
-        "logo": "clubs/logos/selfoss_2.JPG",
-        "website": "",
-        "description": "",
-        "name": "Umf. Selfoss",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 1
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/selfoss_2.JPG",
+    "name": "Umf. Selfoss",
+    "short_name": "Selfoss",
+    "slug": "selfoss",
+    "email": "",
+    "description": ""
+  },
+  "pk": 1
 },
 {
-    "fields": {
-        "short_name": "\u00de\u00f3r",
-        "slug": "thor",
-        "logo": "clubs/logos/thorak_stort_2.jpg",
-        "website": "",
-        "description": "",
-        "name": "\u00cd\u00fer\u00f3ttaf\u00e9lagi\u00f0 \u00de\u00f3r",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 2
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/thorak_stort_2.jpg",
+    "name": "\u00cd\u00fer\u00f3ttaf\u00e9lagi\u00f0 \u00de\u00f3r",
+    "short_name": "\u00de\u00f3r",
+    "slug": "thor",
+    "email": "",
+    "description": ""
+  },
+  "pk": 2
 },
 {
-    "fields": {
-        "short_name": "Bj\u00f6rk",
-        "slug": "bjork",
-        "logo": "clubs/logos/dummy_2.jpg",
-        "website": "",
-        "description": "",
-        "name": "Fimleikaf\u00e9lagi\u00f0 Bj\u00f6rk",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 3
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/bjork.jpg",
+    "name": "Fimleikaf\u00e9lagi\u00f0 Bj\u00f6rk",
+    "short_name": "Bj\u00f6rk",
+    "slug": "bjork",
+    "email": "",
+    "description": ""
+  },
+  "pk": 3
 },
 {
-    "fields": {
-        "short_name": "Keflav\u00edk",
-        "slug": "keflavik",
-        "logo": "clubs/logos/kef_2.jpg",
-        "website": "",
-        "description": "",
-        "name": "Keflav\u00edk \u00ed\u00fer\u00f3tta- og ungmennaf\u00e9lag",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 4
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/kef_2.jpg",
+    "name": "Keflav\u00edk \u00ed\u00fer\u00f3tta- og ungmennaf\u00e9lag",
+    "short_name": "Keflav\u00edk",
+    "slug": "keflavik",
+    "email": "",
+    "description": ""
+  },
+  "pk": 4
 },
 {
-    "fields": {
-        "short_name": "\u00c1rmann",
-        "slug": "armann",
-        "logo": "clubs/logos/armann_2.jpg",
-        "website": "",
-        "description": "",
-        "name": "Gl\u00edmuf\u00e9lagi\u00f0 \u00c1rmann",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 5
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/armann_2.jpg",
+    "name": "Gl\u00edmuf\u00e9lagi\u00f0 \u00c1rmann",
+    "short_name": "\u00c1rmann",
+    "slug": "armann",
+    "email": "",
+    "description": ""
+  },
+  "pk": 5
 },
 {
-    "fields": {
-        "short_name": "Einherjar",
-        "slug": "einherjar",
-        "logo": "clubs/logos/sporttkd_2.jpg",
-        "website": "",
-        "description": "",
-        "name": "\u00cd\u00fer\u00f3ttaf\u00e9lagi\u00f0 Einherjar",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 6
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/sporttkd_2.jpg",
+    "name": "\u00cd\u00fer\u00f3ttaf\u00e9lagi\u00f0 Einherjar",
+    "short_name": "Einherjar",
+    "slug": "einherjar",
+    "email": "",
+    "description": ""
+  },
+  "pk": 6
 },
 {
-    "fields": {
-        "short_name": "\u00cdR",
-        "slug": "ir",
-        "logo": "clubs/logos/ir_2.jpg",
-        "website": "",
-        "description": "",
-        "name": "\u00cd\u00fer\u00f3ttaf\u00e9lag Reykjav\u00edkur",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 7
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/ir_2.jpg",
+    "name": "\u00cd\u00fer\u00f3ttaf\u00e9lag Reykjav\u00edkur",
+    "short_name": "\u00cdR",
+    "slug": "ir",
+    "email": "",
+    "description": ""
+  },
+  "pk": 7
 },
 {
-    "fields": {
-        "short_name": "Fram",
-        "slug": "fram",
-        "logo": "clubs/logos/framlogo_2.jpg",
-        "website": "",
-        "description": "",
-        "name": "Knattspyrnuf\u00e9lagi\u00f0 Fram",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 8
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/framlogo_2.jpg",
+    "name": "Knattspyrnuf\u00e9lagi\u00f0 Fram",
+    "short_name": "Fram",
+    "slug": "fram",
+    "email": "",
+    "description": ""
+  },
+  "pk": 8
 },
 {
-    "fields": {
-        "short_name": "Grindav\u00edk",
-        "slug": "grindavik",
-        "logo": "clubs/logos/grindavik_2.png",
-        "website": "",
-        "description": "",
-        "name": "Umf. Grindav\u00edkur",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 9
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/grindavik_2.png",
+    "name": "Umf. Grindav\u00edkur",
+    "short_name": "Grindav\u00edk",
+    "slug": "grindavik",
+    "email": "",
+    "description": ""
+  },
+  "pk": 9
 },
 {
-    "fields": {
-        "short_name": "H\u00f6ttur",
-        "slug": "hottur",
-        "logo": "clubs/logos/hottur_2.jpeg",
-        "website": "",
-        "description": "",
-        "name": "\u00cd\u00fer\u00f3ttaf\u00e9lagi\u00f0 H\u00f6ttur",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 10
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/hottur_2.jpeg",
+    "name": "\u00cd\u00fer\u00f3ttaf\u00e9lagi\u00f0 H\u00f6ttur",
+    "short_name": "H\u00f6ttur",
+    "slug": "hottur",
+    "email": "",
+    "description": ""
+  },
+  "pk": 10
 },
 {
-    "fields": {
-        "short_name": "\u00der\u00f3ttur",
-        "slug": "throttur",
-        "logo": "",
-        "website": "",
-        "description": "",
-        "name": "\u00cd\u00fer\u00f3ttaf\u00e9lagi\u00f0 \u00der\u00f3ttur",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 11
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/throttur.jpg",
+    "name": "\u00cd\u00fer\u00f3ttaf\u00e9lagi\u00f0 \u00der\u00f3ttur",
+    "short_name": "\u00der\u00f3ttur",
+    "slug": "throttur",
+    "email": "",
+    "description": ""
+  },
+  "pk": 11
 },
 {
-    "fields": {
-        "short_name": "HK",
-        "slug": "hk",
-        "logo": "clubs/logos/hk_2.jpg",
-        "website": "",
-        "description": "",
-        "name": "Handknattleiksf\u00e9lag K\u00f3pavogs",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 12
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/hk_2.jpg",
+    "name": "Handknattleiksf\u00e9lag K\u00f3pavogs",
+    "short_name": "HK",
+    "slug": "hk",
+    "email": "",
+    "description": ""
+  },
+  "pk": 12
 },
 {
-    "fields": {
-        "short_name": "Brei\u00f0ablik",
-        "slug": "breidablik",
-        "logo": "clubs/logos/breidablik_2.jpg",
-        "website": "",
-        "description": "",
-        "name": "Umf.Brei\u00f0ablik",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 13
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/breidablik_2.jpg",
+    "name": "Umf.Brei\u00f0ablik",
+    "short_name": "Brei\u00f0ablik",
+    "slug": "breidablik",
+    "email": "",
+    "description": ""
+  },
+  "pk": 13
 },
 {
-    "fields": {
-        "short_name": "Afturelding",
-        "slug": "afturelding",
-        "logo": "clubs/logos/afturelding_2.jpg",
-        "website": "",
-        "description": "",
-        "name": "Ungmennaf\u00e9lagi\u00f0 Afturelding",
-        "email": ""
-    },
-    "model": "taekwondo.club",
-    "pk": 14
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/afturelding_2.jpg",
+    "name": "Ungmennaf\u00e9lagi\u00f0 Afturelding",
+    "short_name": "Afturelding",
+    "slug": "afturelding",
+    "email": "",
+    "description": ""
+  },
+  "pk": 14
+},
+{
+  "model": "taekwondo.club",
+  "fields": {
+    "website": "",
+    "logo": "clubs/logos/Basket_Reykjavik_logo.png",
+    "name": "KR",
+    "short_name": "KR",
+    "slug": "kr",
+    "email": "",
+    "description": ""
+  },
+  "pk": 15
 }
 ]
