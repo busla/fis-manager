@@ -62,8 +62,11 @@ class TournamentAdmin(admin.ModelAdmin):
     inlines = [TournamentFileInline, TournamentRegistrationInline, TournamentDivisionInline]
     prepopulated_fields = {"slug": ("title",)}
 
+class CoachMetaInline(admin.TabularInline):
+    model = CoachMeta
+
 class ClubAdmin(SummernoteModelAdmin):
-    inlines = [ClubFileInline]
+    inlines = [ClubFileInline, CoachMetaInline]
     prepopulated_fields = {"slug": ("name",)}
     #filter_horizontal = ['groups']
     #list_display = ('name', 'felix_members')
