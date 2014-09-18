@@ -113,7 +113,7 @@ class Club(models.Model):
     website = models.URLField(blank=True, null=True)
     members = models.ManyToManyField(Member, through='Membership', related_name='members')
     slug = models.SlugField(unique=True)
-
+    coaches = models.ManyToManyField(Member, through='CoachMeta')
 
     class Meta:
         ordering = ["name"]
@@ -133,6 +133,13 @@ class Club(models.Model):
     def __str__(self):
         return '%s' % self.name
 
+# Coach joined date to club
+class CoachMeta(models.Model):
+    club = models.ForeignKey(Club)
+    member = models.ForeignKey(Member)    
+    joined = models.DateField(blank=True, null=True)
+
+# Training groups within clubs
 class ClubGroup(models.Model):
     title = models.CharField(max_length=200)
     age_min = models.IntegerField(blank=True, null=True)
