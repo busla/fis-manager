@@ -3,6 +3,7 @@ from django.contrib.comments import Comment
 from django_summernote.admin import SummernoteModelAdmin
 from taekwondo.models import *
 
+
 class ClubGroupAdmin(admin.ModelAdmin):
     model = ClubGroup
 
@@ -111,6 +112,16 @@ class FightAdmin(admin.ModelAdmin):
     list_display = ('fight_number', 'division', 'red_player', 'blue_player', 'red_points', 'blue_points', 'winner')
     search_fields = ['red_player__member__name', 'blue_player__member__name']
 
+class GradeRequirementInline(admin.TabularInline):
+    model = GradeRequirementVideo
+
+
+class GradeRequirementAdmin(admin.ModelAdmin):
+    model = GradeRequirement
+    inlines = [GradeRequirementInline]
+    prepopulated_fields = {"slug": ("title",)}
+
+
 admin.site.register(Club, ClubAdmin)
 admin.site.register(ClubGroup, ClubGroupAdmin)
 admin.site.register(PointSystem, PointSystemAdmin)
@@ -129,3 +140,4 @@ admin.site.register(AttendanceType, AttendanceTypeAdmin)
 admin.site.register(BeltExam, BeltExamAdmin)
 admin.site.register(Fight, FightAdmin)
 admin.site.register(TournamentDivision, TournamentDivisionAdmin)
+admin.site.register(GradeRequirement, GradeRequirementAdmin)
