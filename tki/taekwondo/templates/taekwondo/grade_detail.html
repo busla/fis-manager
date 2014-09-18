@@ -1,0 +1,28 @@
+{% extends "taekwondo/__l_right_sidebar.html" %}
+{% load embed_video_tags %}
+
+{% block main_col %}
+    <div class="col-xs-12">
+        <h1>{{ grade_detail.title }}</h1>
+            <p>
+                {{ grade_detail.description|safe }}    
+                {{ grade_detail.videos.grade }}    
+            </p>
+            {% for item in grade_detail.videos %}
+
+                {% video item.video %}
+
+            {% endfor %}
+
+        <div class="row">
+        
+               
+            
+        </div>    
+    </div>
+{% endblock main_col %}
+    
+{% block side_col %}
+
+    
+{% endblock side_col %}

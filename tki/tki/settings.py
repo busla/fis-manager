@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'zinnia',
     'zinnia_event',
     'rest_framework',
+    'embed_video',
 
     
 )
@@ -67,6 +68,7 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
   'django.core.context_processors.i18n',
   'django.core.context_processors.request',
   'zinnia.context_processors.version',  # Optional
+  
 )
 
 ROOT_URLCONF = 'tki.urls'
@@ -131,3 +133,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     )
 }
+
+AUTH_USER_MODEL = 'taekwondo.TaekwondoUser'

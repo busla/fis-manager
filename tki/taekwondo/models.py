@@ -2,6 +2,8 @@ from django.db import models
 from django.db.models import permalink, Count, Q
 from django.core.exceptions import ObjectDoesNotExist
 from taekwondo import slug
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from embed_video.fields import EmbedVideoField
 
 MALE = 1
 FEMALE = 2
@@ -41,6 +43,71 @@ GRADE_CHOICES = (
     (3,  '8. dan'),
     (2,  '9. dan'),
     )
+
+class TaekwondoUserManager(BaseUserManager):
+    def create_user(self, email, ssn, password=None):
+        if not email:
+            raise ValueError('Users must have an email address')
+ 
+        if not ssn:
+            raise ValueError('Users must have a social security number')
+
+        user = self.model(
+            email=TaekwondoUserManager.normalize_email(email),
+            ssn=ssn,
+        )
+ 
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+ 
+    def create_superuser(self, email, ssn, password):
+        user = self.create_user(email,
+            password=password,
+            ssn=ssn
+        )
+        user.is_admin = True
+        user.save(using=self._db)
+        return user    
+
+ 
+class TaekwondoUser(AbstractBaseUser):
+    username = models.CharField(max_length=40, unique=True, db_index=True)
+    email = models.EmailField(max_length=254, unique=True)
+    ssn = models.CharField(max_length=11, unique=True)
+    
+    is_active = models.BooleanField(default=True)
+    is_admin = models.BooleanField(default=False)
+
+    objects = TaekwondoUserManager()
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['ssn']
+
+    def get_full_name(self):
+        # For this case we return email. Could also be User.first_name User.last_name if you have these fields
+        return self.email
+ 
+    def get_short_name(self):
+        # For this case we return email. Could also be User.first_name if you have this field
+        return self.email
+ 
+    def __unicode__(self):
+        return self.email
+ 
+    def has_perm(self, perm, obj=None):
+        # Handle whether the user has a specific permission?"
+        return True
+ 
+    def has_module_perms(self, app_label):
+        # Handle whether the user has permissions to view the app `app_label`?"
+        return True
+ 
+    @property
+    def is_staff(self):
+        # Handle whether the user is a member of staff?"
+        return self.is_admin
+    
 
 class Member(models.Model):
     
@@ -359,6 +426,30 @@ class BeltExamMeta(models.Model):
     belt_exam = models.ForeignKey(BeltExam)
     grade = models.IntegerField(blank=True, null=True, choices=GRADE_CHOICES)
     notes = models.TextField(blank=True, null=True)
+
+class GradeRequirement(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(blank=True, null=True)
+    slug = models.SlugField(unique=True)
+
+    def _get_videos(self):
+        q_video = GradeRequirementVideo.objects.filter(grade=self)
+        return q_video
+    
+    videos = property(_get_videos)
+
+    def __str__(self):
+        return '%s' % self.title
+
+
+class GradeRequirementPhoto(models.Model):
+    grade = models.ForeignKey(GradeRequirement, blank=True, null=True)
+    photo = models.ImageField(upload_to='grade_requirements/photos', height_field=None, width_field=None, max_length=100, blank=True)
+    photo_description = models.TextField(blank=True, null=True)
+
+class GradeRequirementVideo(models.Model):
+    grade = models.ForeignKey(GradeRequirement, blank=True, null=True)
+    video = EmbedVideoField()
 
 class Fight(models.Model):
     fight_number = models.IntegerField(blank=True, null=True)

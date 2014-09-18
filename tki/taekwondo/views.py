@@ -111,6 +111,17 @@ class ApiClubDetail(generics.RetrieveUpdateDestroyAPIView):
 def index(request):
     return HttpResponse("Hello, world. You're at the poll index.")
 
+class GradeList(ListView):
+    template_name = 'taekwondo/grade_list.html'
+    model = GradeRequirement
+    context_object_name = 'grade_list'
+
+class GradeDetail(DetailView):
+    template_name = 'taekwondo/grade_detail.html'
+    queryset = GradeRequirement.objects.all()
+    context_object_name = 'grade_detail'
+
+
 class ClubList(ListView):
     model = Club
     context_object_name = 'club_list'

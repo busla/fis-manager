@@ -1,0 +1,22 @@
+{% extends "taekwondo/__l_right_sidebar.html" %}
+{% load embed_video_tags %}
+{% block main_col %}
+    <div class="col-xs-12">
+        <div class="row">
+        {% block content_title %}
+            <h1 class="sectionTitle">Beltagráður</h1>
+        {% endblock content_title %}
+
+         {% for grade in grade_list %}
+        
+            <div class="col-xs-12">
+                
+                    <p><a href="{% url 'grade_detail' grade.slug %}" >{{ grade.title }}</a></p>
+                
+            </div>
+
+        {% endfor %}
+        </div>
+    </div>    
+{% endblock main_col %}
+
