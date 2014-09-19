@@ -435,6 +435,12 @@ class GradeRequirement(models.Model):
     description = models.TextField(blank=True, null=True)
     slug = models.SlugField(unique=True)
 
+    def _get_items(self):
+            q = GradeRequirementItem.objects.all().prefetch_related('video')
+            return q
+        
+    items = property(_get_items)
+
     def __str__(self):
         return '%s' % self.title
 
@@ -465,11 +471,6 @@ class GradeRequirementItem(models.Model):
     def __str__(self):
         return '%s' % self.title
 
-    def _get_videos(self):
-        q_video = GradeRequirementVideo.objects.filter(grade=self)
-        return q_video
-    
-    videos = property(_get_videos)
 
 class Fight(models.Model):
     fight_number = models.IntegerField(blank=True, null=True)
