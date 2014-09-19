@@ -429,27 +429,44 @@ class BeltExamMeta(models.Model):
 
 class GradeRequirement(models.Model):
     title = models.CharField(max_length=200)
+    club = models.ForeignKey(Club, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     slug = models.SlugField(unique=True)
-
-    def _get_videos(self):
-        q_video = GradeRequirementVideo.objects.filter(grade=self)
-        return q_video
-    
-    videos = property(_get_videos)
 
     def __str__(self):
         return '%s' % self.title
 
 
 class GradeRequirementPhoto(models.Model):
-    grade = models.ForeignKey(GradeRequirement, blank=True, null=True)
+    title = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='grade_requirements/photos', height_field=None, width_field=None, max_length=100, blank=True)
     photo_description = models.TextField(blank=True, null=True)
 
+    def __str__(self):
+        return '%s' % self.title
+
 class GradeRequirementVideo(models.Model):
-    grade = models.ForeignKey(GradeRequirement, blank=True, null=True)
+    title = models.CharField(max_length=200)
     video = EmbedVideoField()
+    photo_description = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return '%s' % self.title
+
+class GradeRequirementItem(models.Model):
+    title = models.CharField(max_length=200)
+    grade = models.ForeignKey(GradeRequirement)
+    photo = models.ManyToManyField(GradeRequirementPhoto, related_name='grade_photo')
+    video = models.ManyToManyField(GradeRequirementVideo, related_name='grade_video')
+
+    def __str__(self):
+        return '%s' % self.title
+
+    def _get_videos(self):
+        q_video = GradeRequirementVideo.objects.filter(grade=self)
+        return q_video
+    
+    videos = property(_get_videos)
 
 class Fight(models.Model):
     fight_number = models.IntegerField(blank=True, null=True)

@@ -112,14 +112,31 @@ class FightAdmin(admin.ModelAdmin):
     list_display = ('fight_number', 'division', 'red_player', 'blue_player', 'red_points', 'blue_points', 'winner')
     search_fields = ['red_player__member__name', 'blue_player__member__name']
 
-class GradeRequirementInline(admin.TabularInline):
+
+class GradeRequirementVideoInline(admin.TabularInline):
     model = GradeRequirementVideo
+
+class GradeRequirementPhotoInline(admin.TabularInline):
+    model = GradeRequirementPhoto
+
+class GradeRequirementVideoAdmin(admin.ModelAdmin):
+    model =  GradeRequirementVideo
+
+class GradeRequirementPhotoAdmin(admin.ModelAdmin):
+    model =  GradeRequirementPhoto
+
+class GradeRequirementItemAdmin(admin.ModelAdmin):
+    model = GradeRequirementItem
+
+class GradeRequirementItemInline(admin.TabularInline):
+    model = GradeRequirementItem
 
 
 class GradeRequirementAdmin(admin.ModelAdmin):
     model = GradeRequirement
-    inlines = [GradeRequirementInline]
+    inlines = [GradeRequirementItemInline]
     prepopulated_fields = {"slug": ("title",)}
+
 
 
 admin.site.register(Club, ClubAdmin)
@@ -140,4 +157,7 @@ admin.site.register(AttendanceType, AttendanceTypeAdmin)
 admin.site.register(BeltExam, BeltExamAdmin)
 admin.site.register(Fight, FightAdmin)
 admin.site.register(TournamentDivision, TournamentDivisionAdmin)
+admin.site.register(GradeRequirementItem, GradeRequirementItemAdmin)
 admin.site.register(GradeRequirement, GradeRequirementAdmin)
+admin.site.register(GradeRequirementVideo, GradeRequirementVideoAdmin)
+admin.site.register(GradeRequirementPhoto, GradeRequirementPhotoAdmin)
