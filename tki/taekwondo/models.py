@@ -436,7 +436,7 @@ class GradeRequirement(models.Model):
     slug = models.SlugField(unique=True)
 
     def _get_items(self):
-            q = GradeRequirementItem.objects.all().prefetch_related('video')
+            q = GradeRequirementItem.objects.all()
             return q
         
     items = property(_get_items)
@@ -449,6 +449,11 @@ class GradeRequirementPhoto(models.Model):
     title = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='grade_requirements/photos', height_field=None, width_field=None, max_length=100, blank=True)
     photo_description = models.TextField(blank=True, null=True)
+
+    @property
+    def photo_url(self):
+        if self.photo and hasattr(self.photo, 'url'):
+            return self.photo.url        
 
     def __str__(self):
         return '%s' % self.title
