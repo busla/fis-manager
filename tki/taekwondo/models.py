@@ -4,6 +4,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from taekwondo import slug
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from embed_video.fields import EmbedVideoField
+from taggit.managers import TaggableManager
 
 MALE = 1
 FEMALE = 2
@@ -429,7 +430,8 @@ class BeltExamMeta(models.Model):
 
 class GradeRequirement(models.Model):
     title = models.CharField(max_length=200)
-    club = models.ForeignKey(Club, blank=True, null=True)
+    belt_image = models.ImageField(upload_to='grade_requirements/belts/photos', height_field=None, width_field=None, max_length=100, blank=True)
+    club = models.ManyToManyField(Club, related_name='club_requirements')
     description = models.TextField(blank=True, null=True)
     slug = models.SlugField(unique=True)
 
@@ -456,8 +458,9 @@ class GradeRequirementVideo(models.Model):
 class GradeRequirementItem(models.Model):
     title = models.CharField(max_length=200)
     grade = models.ForeignKey(GradeRequirement)
-    photo = models.ManyToManyField(GradeRequirementPhoto, related_name='grade_photo')
-    video = models.ManyToManyField(GradeRequirementVideo, related_name='grade_video')
+    photo = models.ManyToManyField(GradeRequirementPhoto, blank=True, null=True, related_name='grade_photo')
+    video = models.ManyToManyField(GradeRequirementVideo, blank=True, null=True, related_name='grade_video')
+    tags = TaggableManager()
 
     def __str__(self):
         return '%s' % self.title

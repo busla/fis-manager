@@ -49,6 +49,7 @@ INSTALLED_APPS = (
     'zinnia_event',
     'rest_framework',
     'embed_video',
+    'taggit',
 
     
 )
@@ -68,7 +69,7 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
   'django.core.context_processors.i18n',
   'django.core.context_processors.request',
   'zinnia.context_processors.version',  # Optional
-  
+
 )
 
 ROOT_URLCONF = 'tki.urls'
