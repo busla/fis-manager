@@ -12,4 +12,5 @@ urlpatterns = patterns('',
     url(r'^$', MemberList.as_view(), name='member_list'),
     url(r'^(?P<slug>[-_\w]+)/$', MemberDetail.as_view(), name='member_detail'),
     url(r'^(?P<slug>[-_\w]+)/bardagar/$', FightList.as_view(), name='fight_list'),
+    
 )

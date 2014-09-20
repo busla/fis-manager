@@ -3,6 +3,8 @@ from django.views.generic import ListView, DetailView
 from taekwondo.models import *
 from django.http import HttpResponse
 from django.db.models import Q, Count, Min, Sum, Avg
+import time
+from datetime import date
 
 # REST
 from django.views.decorators.csrf import csrf_exempt
@@ -110,6 +112,33 @@ class ApiClubDetail(generics.RetrieveUpdateDestroyAPIView):
 
 def index(request):
     return HttpResponse("Hello, world. You're at the poll index.")
+
+def member_statistics(request):
+
+    def calculate_age(born):
+        today = date.today()
+        return today.year - born['year'] - ((today.month, today.day) < (born['month'], born['day']))
+
+    born = {}
+    age_list = []
+    ssn_list = Member.objects.values('ssn')
+
+    
+    for ssn in ssn_list:
+        if len(ssn.items()) == 10:
+            born['date'] = ssn[0:1]
+            born['month'] = ssn[2:3]
+            born['year'] = ssn[4:5]
+
+            dob = date(int(born['year']), int(born['month']), int(born['date']))
+            #dob = time.strptime("born['date'] born['month'] born['year']", "%d %m %y")
+            #dob = time.strptime("19 08 81", "%d %m %y")
+            age_list.append(ssn['ssn'])
+    
+    
+    return HttpResponse(ssn_list[5].items())
+
+
 
 class GradeList(ListView):
     template_name = 'taekwondo/grade_list.html'
