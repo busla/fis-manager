@@ -8,34 +8,50 @@
                 {{ grade_detail.description|safe }} 
             </p>
             
-            
-            {% for item in grade_detail.items.all %}    
-                <p>
-                    {{ item.title }}
-                    {% for video in item.video.all%}
-                        {% video video.video as grade_video%}
-                            <a href="{{grade_video.url}}" title="{{ grade_video.photo_description }}" class="html5lightbox"><i class="fa fa-youtube-play"></i></a>
-                            
-                        {% endvideo %}
-                    
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <thead>
+                        <th>
+                            Tækni
+                        </th>
+                        <th>
+                            Vídjó
+                        </th>
+                        <th>
+                            Myndir
+                        </th>
+                    </thead>
+                        {% for item in grade_detail.items.all %}    
+                            <tr>
+                                <td>
+                                    {{ item.title }}
+                                </td>
+                                <td>
+                                    {% for video in item.video.all%}
+                                        {% video video.video as grade_video%}
+                                            <a href="{{grade_video.url}}" title="{{ video.photo_description }}" class="html5lightbox"><i class="fa fa-youtube-play"></i></a>
+                                            
+                                            
+                                        {% endvideo %}
+                                    
+                                        
+                                    {% endfor %}
+                                </td>
+                                <td>
+                                    {% for photo in item.photo.all%}
+                                            
+                                    <a href="{{ photo.photo_url }}" title="{{ photo.photo_description}}" class="html5lightbox"><i class="fa fa-picture-o"></i></a>
+
+                                    {% endfor %}
+                                </td>
+                            </tr> 
                         
-                    {% endfor %}
-                    {% for photo in item.photo.all%}
-                            
-                    <a href="{{ photo.photo_url }}" title="{{ photo.photo_description}}" class="html5lightbox"><i class="fa fa-picture-o"></i></a>
+                        {% endfor %}
+                    
+                </table>
+            </div>
 
-                    {% endfor %}
 
-                </p> 
-            
-            {% endfor %}
-
-            
-
-            {% for item in grade_detail.items.video %}
-                {% video item.video %}
-
-            {% endfor %}
 
 <!-- Button trigger modal -->
 
