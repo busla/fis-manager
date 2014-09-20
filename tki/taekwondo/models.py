@@ -468,6 +468,7 @@ class GradeRequirementVideo(models.Model):
 
 class GradeRequirementItem(models.Model):
     title = models.CharField(max_length=200)
+    title_translated = models.CharField(max_length=200)
     grade = models.ForeignKey(GradeRequirement)
     photo = models.ManyToManyField(GradeRequirementPhoto, blank=True, null=True, related_name='grade_photo')
     video = models.ManyToManyField(GradeRequirementVideo, blank=True, null=True, related_name='grade_video')

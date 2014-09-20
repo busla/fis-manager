@@ -12,7 +12,11 @@
                 <table class="table table-condensed table-hover">
                     <thead>
                         <th>
-                            Tækni
+                            Íslenska
+                        </th>
+
+                        <th>
+                            Kóreska
                         </th>
                         <th>
                             Vídjó
@@ -20,12 +24,21 @@
                         <th>
                             Myndir
                         </th>
+                        <th>
+                            Tögg
+                        </th>
+
                     </thead>
+
                         {% for item in grade_detail.items.all %}    
                             <tr>
                                 <td>
                                     {{ item.title }}
                                 </td>
+                                <td>
+                                    {{ item.title_translated }}
+                                </td>
+
                                 <td>
                                     {% for video in item.video.all%}
                                         {% video video.video as grade_video%}
@@ -44,6 +57,13 @@
 
                                     {% endfor %}
                                 </td>
+                                <td>
+                                    {% for tag in item.tags.all%}
+                                        <span class="label label-success">{{ tag.name }}</span>
+                                    {% endfor %}
+
+                                </td>
+
                             </tr> 
                         
                         {% endfor %}
