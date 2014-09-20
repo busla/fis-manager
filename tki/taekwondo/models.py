@@ -436,7 +436,7 @@ class GradeRequirement(models.Model):
     slug = models.SlugField(unique=True)
 
     def _get_items(self):
-            q = GradeRequirementItem.objects.all()
+            q = GradeRequirementItem.objects.filter(grade=self)
             return q
         
     items = property(_get_items)
