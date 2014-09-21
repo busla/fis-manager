@@ -117,18 +117,28 @@ def member_statistics(request):
 
     def calculate_age(born):
         today = date.today()
-        return today.year - born['year'] - ((today.month, today.day) < (born['month'], born['day']))
+        return today.year - born.tm_year - ((today.month, today.tm_mon) < (born.tm_mon, born.tm_mday))
 
     born = {}
     age_list = []
-    members = Member.objects.all()
+    members_ssn = Member.objects.values('ssn')
 
     
-    for member in members:
+    for ssn in members_ssn:
         #print(member.ssn)
-        age_list.append(member.ssn)
+        if ssn['ssn']:
+            if (len(ssn['ssn']) == 10):
 
-        '''
+                dob_from_ssn = ssn['ssn'][0:2] + '-' + ssn['ssn'][2:4] + '-' + ssn['ssn'][4:6]
+
+                dob = time.strptime(dob_from_ssn, "%d-%m-%y")
+                age_list.append(calculate_age(dob))
+        '''    
+        if ssn['ssn']:
+            if (len(ssn['ssn']) == 10):
+                dob = date(int(ssn['ssn'][4:6]), int(ssn['ssn'][2:4]), int(ssn['ssn'][0:2])) 
+
+
         if len(ssn == 10):
             born['date'] = member.ssn[0:1]
             born['month'] = member.ssn[2:3]
@@ -140,7 +150,7 @@ def member_statistics(request):
             age_list.append(ssn['ssn'])
         '''
     
-    return HttpResponse(age_list)
+    return HttpResponse(dob.tm_year)
 
 
 
