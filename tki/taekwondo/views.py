@@ -121,22 +121,26 @@ def member_statistics(request):
 
     born = {}
     age_list = []
-    ssn_list = Member.objects.values('ssn')
+    members = Member.objects.all()
 
     
-    for ssn in ssn_list:
-        if len(ssn.items()) == 10:
-            born['date'] = ssn[0:1]
-            born['month'] = ssn[2:3]
-            born['year'] = ssn[4:5]
+    for member in members:
+        #print(member.ssn)
+        age_list.append(member.ssn)
+
+        '''
+        if len(ssn == 10):
+            born['date'] = member.ssn[0:1]
+            born['month'] = member.ssn[2:3]
+            born['year'] = member.ssn[4:5]
 
             dob = date(int(born['year']), int(born['month']), int(born['date']))
             #dob = time.strptime("born['date'] born['month'] born['year']", "%d %m %y")
             #dob = time.strptime("19 08 81", "%d %m %y")
             age_list.append(ssn['ssn'])
+        '''
     
-    
-    return HttpResponse(ssn_list[5].items())
+    return HttpResponse(age_list)
 
 
 
