@@ -1,4 +1,4 @@
-{% extends "taekwondo/__l_right_sidebar.html" %}
+{% extends "taekwondo/__l_no_sidebar.html" %}
 {% block main_col %}
     <div class="col-xs-12">
         <div class="row">
@@ -6,24 +6,10 @@
             <h1 class="sectionTitle">Félög</h1>
         {% endblock content_title %}
 
-         {% for club in club_list %}
-        
-            <div class="col-xs-4">
-                <div class="thumbnail">
-                  <img class="logo" src="{{ club.logo_url|default_if_none:'#' }}" alt="Do you have a logo for us?">
-                  <div class="caption">
-                    <h2>{{ club.short_name }}</h2>
-                    <p>
-                        <a href="{% url 'club_detail' club.slug %}" class="btn btn-primary" role="button">Meira</a>
-                    </p>
-                  </div>
-                </div>            
-            </div>
-            {% if forloop.counter|divisibleby:3 %}
-                        </div>
-                        <div class="row">
-            {% endif %}
-        {% endfor %}
+        {% block club_content %}
+            {% include "taekwondo/_club_profile.html" %}
+        {% endblock club_content %}
+
         </div>
     </div>    
 {% endblock main_col %}

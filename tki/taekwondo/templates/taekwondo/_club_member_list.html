@@ -1,26 +1,33 @@
 {% load staticfiles%}
-{% for member in club_detail.members.all %}
-    <div class="col-xs-4">
-        <div class="thumbnail">
-            <div class="row">
-                <div class="col-xs-12">
-                    
-                        <img class="img-thumbnail" src="{% static 'taekwondo/images//avatar.png' %}" alt="Generic placeholder image">
-                    
+{% block club_content %}
+<div class="tab-content">
+    <div class="tab-pane active" id="idkendur">
+
+    {% for member in club_detail.members.all %}
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <div class="row">
+                    <div class="col-xs-12">
+                        
+                            <img class="img-thumbnail" src="{% static 'taekwondo/images/avatar.png' %}" alt="Generic placeholder image">
+                        
+                    </div>
                 </div>
-            </div>
-          
-            <div class="caption">
-            <p>{{ member.name }}</p>
-            
-            <p>
-                <a class="btn btn-primary" href="{% url 'member_detail' member.slug%}" role="button">Meira &raquo;</a>
-            </p>
-            </div>
-        </div>            
-    </div>
-    {% if forloop.counter|divisibleby:3 %}
+              
+                <div class="caption">
+                <p>{{ member.name }}</p>
+                
+                <p>
+                    <a class="btn btn-primary" href="{% url 'member_detail' member.slug%}" role="button">Meira &raquo;</a>
+                </p>
+                </div>
+            </div>            
         </div>
-        <div class="row">
-    {% endif %}
-{% endfor %}
+        {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+{% endblock club_content %}

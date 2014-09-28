@@ -1,26 +1,44 @@
-{% extends "taekwondo/__l_right_sidebar.html" %}
+{% extends "taekwondo/__l_club.html" %}
+    
 
-{% block main_col %}
-    <div class="col-xs-12">
-        <h1>{{ club_detail.name }}</h1>
-            <p>
-                {{ club_detail.description|safe }}    
-            </p>
-
-        <div class="row">
         
-                {% include "taekwondo/_club_member_list.html" %}
-            
-        </div>    
-    </div>
-{% endblock main_col %}
-    
-{% block side_col %}
-
-    <div class="row">
+    {% block club_content %}
         <div class="col-xs-12">
-            <img class="img-responsive logo" src="{{ club_detail.logo_url|default_if_none:'#' }}" />    
-        </div>
-    </div>
+
+
+        </div>    
+            
+        <div class="tab-content">
+          
+            <div class="tab-pane active" id="beltakrofur">
+                <div class="row">        
+                    
+                    {% for grades in club_detail %}
+                        {% for grade in grades.grade_requirements %}
+                            <div class="col-xs-12">
+                                    {{ grade }}</a></p>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+          
+            <div class="tab-pane" id="idkendur">
+                <div class="row">        
+                    
+                    {% for members in club_detail %}
+                        {% for member in members.members.all %}
+                            <div class="col-xs-12">
+                                    {{ member }}</a></p>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+
+            </div>
+
+        </div>            
+            
+
+    {% endblock club_content %}
     
-{% endblock side_col %}

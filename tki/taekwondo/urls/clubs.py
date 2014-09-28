@@ -11,4 +11,7 @@ urlpatterns = patterns('',
     #url(r'^(?P<slug>[-_\w]+)/$', ClubDetail.as_view(), name='club-detail'),
     url(r'^$', ClubList.as_view(), name='club_list'),
     url(r'^(?P<slug>[-_\w]+)/$', ClubDetail.as_view(), name='club_detail'),
+    #url(r'^(?P<slug>[-_\w]+)/beltakrofur/$', GradeList.as_view(), name='grade_list'),
+    #url(r'^(?P<slug>[-_\w]+)/beltakrofur/(?P<grade>[-_\w]+)/$', GradeDetail.as_view(), name='grade_detail'),
+    
 )

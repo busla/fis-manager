@@ -23,6 +23,7 @@ django-mptt==0.6.1
 django-suit==0.2.9
 django-summernote==0.5.12
 django-tagging==0.3.2
+django-taggit==0.12.1
 django-treenav==0.9.0
 django-webtest==1.7.7
 django-xmlrpc==0.1.5

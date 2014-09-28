@@ -111,7 +111,7 @@ class ApiClubDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the poll index.")
+    return HttpResponse('Enn að vinna í forsíðunni :-P Smelltu <a href="/felog">hér</a> til að skoða vefinn')
 
 def member_statistics(request):
 
@@ -153,25 +153,85 @@ def member_statistics(request):
     return HttpResponse(dob.tm_year)
 
 
-
 class GradeList(ListView):
     template_name = 'taekwondo/grade_list.html'
-    model = GradeRequirement
-    context_object_name = 'grade_list'
+    def get_queryset(self):
+        self.club = get_object_or_404(Club, slug=self.kwargs['slug'])
+        self.grade_list = GradeRequirement.objects.filter(club=self.club)
+        
+        #self.fights = Fight.objects.filter(blue_player__member=self.member)
+        #self.fights = Fight.objects.all()
+        return self.grade_list
 
-class GradeDetail(DetailView):
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(GradeList, self).get_context_data(**kwargs)
+        # Add in the publisher
+        context['grade_list'] = self.grade_list
+        context['club_detail'] = self.club
+        return context
+
+
+class ClubDetail(DetailView):
+    '''
+    
     template_name = 'taekwondo/grade_detail.html'
-    queryset = GradeRequirement.objects.all()
+    model = GradeRequirement
+    slug_field = 'slug'
+    slug_url_kwarg = 'grade'
     context_object_name = 'grade_detail'
+    '''
+
+    template_name = 'taekwondo/club_detail.html'
+    def get_queryset(self):
+        self.club = Club.objects.filter(slug=self.kwargs['slug'])
+        #self.grades = GradeRequirement.objects.filter(club=self.club)
+        #self.grade_items = self.grades.objects.all()
+        
+        #self.fights = Fight.objects.filter(blue_player__member=self.member)
+        #self.fights = Fight.objects.all()
+        return self.club
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(ClubDetail, self).get_context_data(**kwargs)
+        # Add in the publisher
+        #context['grade_detail'] = self.grade_items
+        context['club_detail'] = self.club
+        return context
+
+
 
 
 class ClubList(ListView):
     model = Club
     context_object_name = 'club_list'
 
+'''
 class ClubDetail(DetailView):
     queryset = Club.objects.select_related('members').all()
     context_object_name = 'club_detail'
+'''
+
+class FightList(ListView):
+
+    template_name = 'taekwondo/member_detail.html'
+    def get_queryset(self):
+        self.member = get_object_or_404(Member, slug=self.kwargs['slug'])
+        self.fights = Fight.objects.filter(Q(red_player__member=self.member) | Q(blue_player__member=self.member))
+        #self.fights = Fight.objects.filter(blue_player__member=self.member)
+        #self.fights = Fight.objects.all()
+        return self.fights
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(FightList, self).get_context_data(**kwargs)
+        # Add in the publisher
+        context['fight_list'] = self.fights
+        return context
+
+    #queryset = Fight.objects.all()
+    #context_object_name = 'fight_list'
 
 class FightList(ListView):
 

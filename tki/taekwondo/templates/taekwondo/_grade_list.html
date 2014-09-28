@@ -1,0 +1,20 @@
+{% load embed_video_tags %}
+
+    <div class="col-xs-12">
+        <div class="row">        
+        {% block main_col %}
+            {% for grade in grade_list %}
+            
+                <div class="col-xs-12">
+                    
+                        <p><a href="{% url 'grade_detail' grade.slug %}" >{{ grade.title }}</a></p>
+                    
+                </div>
+                
+
+            {% endfor %}
+        {% endblock main_col %}
+        </div>
+    </div>    
+
+

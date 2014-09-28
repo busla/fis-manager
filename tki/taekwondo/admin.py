@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.contrib.comments import Comment
 from django_summernote.admin import SummernoteModelAdmin
 from taekwondo.models import *
+from suit.admin import SortableStackedInline
+from django.forms import ModelForm, TextInput
 
 
 class ClubGroupAdmin(admin.ModelAdmin):
@@ -125,17 +127,23 @@ class GradeRequirementVideoAdmin(admin.ModelAdmin):
 class GradeRequirementPhotoAdmin(admin.ModelAdmin):
     model =  GradeRequirementPhoto
 
+
+
 class GradeRequirementItemAdmin(admin.ModelAdmin):
     model = GradeRequirementItem
 
-class GradeRequirementItemInline(admin.TabularInline):
-    model = GradeRequirementItem
 
+class GradeRequirementItemInline(SortableStackedInline):
+    model = GradeRequirementItem
+    sortable = 'order'
+     
 
 class GradeRequirementAdmin(admin.ModelAdmin):
     model = GradeRequirement
+    
     inlines = [GradeRequirementItemInline]
     prepopulated_fields = {"slug": ("title",)}
+
 
 
 

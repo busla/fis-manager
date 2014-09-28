@@ -2,11 +2,11 @@
 {% load zinnia_tags i18n %}
 {% load tkd_tags %}
 
-{% url 'club_list' as club_list_active %}
+{% url 'club_ list' as club_list_active %}
 {% url 'tournament_list' as tournament_list_active %}
 {% url 'member_list' as member_list_active %}
 {% url 'rank_list' as rank_list_active %}
-{% url 'grade_list' as grade_list_active %}
+
 
             <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                     <map name="ribbon">
@@ -35,8 +35,7 @@
                             <li class="{% active request club_list_active %}"><a href="{% url 'club_list' %}">Félög</a></li>
                             <li class="{% active request tournament_list_active %}"><a href="{% url 'tournament_list' %}">Mót</a></li>
                             <li class="{% active request member_list_active %}"><a href="{% url 'member_list' %}">Iðkendur</a></li>
-                            <li class="{% active request rank_list_active %}"><a href="{% url 'rank_list' %}">Styrkleikalisti</a>
-                                <li class="{% active request grade_list_active %}"><a href="{% url 'grade_list' %}">Beltakröfur</a>
+
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
