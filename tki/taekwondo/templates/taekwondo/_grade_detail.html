@@ -1,16 +1,16 @@
 
 {% load embed_video_tags %}
                             <div class="col-xs-12">
-                                <div class="panel-group" id="accordion">
+                                <div class="panel-group" id="grade-accordion">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#grade-{{forloop.counter}}">
+                                                <a data-toggle="collapse" data-parent="#grade-accordion" href="#grade-{{forloop.counter}}">
                                                     <p>{{ grade.title }}</a></p>
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="grade-{{forloop.counter}}" class="panel-collapse collapse in">
+                                        <div id="grade-{{forloop.counter}}" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                     <div class="col-xs-12">
                                                         <h1>{{ grade.title }}</h1>

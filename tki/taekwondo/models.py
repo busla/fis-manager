@@ -45,7 +45,7 @@ GRADE_CHOICES = (
     (2,  '9. dan'),
     )
 
-    
+
 
 class Member(models.Model):    
     name = models.CharField(max_length=200)
@@ -377,12 +377,16 @@ class GradeRequirement(models.Model):
     description = models.TextField(blank=True, null=True)
     slug = models.SlugField(unique=True)
 
+    class Meta:
+        ordering = ['title']
+
     def _get_items(self):
             q = GradeRequirementItem.objects.filter(grade=self)
             return q
         
     items = property(_get_items)
-
+    
+    
     def __str__(self):
         return '%s' % self.title
 

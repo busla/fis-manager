@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Styrkleikalisti</h2>
+
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Sæti
+                </th>    
+
+                <th>
+                    Nafn
+                </th>    
+                <th>
+                    Félag
+                </th>        
+
+                <th>
+                    Unnir bardagar
+                </th>        
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for rank in rank_list %}
+            <tr>
+                <td>
+                    {{forloop.counter}}
+                </td>
+
+                <td>
+                    <a href="{% url 'member_detail' rank.slug%}">{{ rank }}</a>
+                </td>
+
+                <td>
+                    {{ rank.active_club }}
+                </td>
+
+                <td>
+                    <a href="#">{{ rank.player }}</a>
+                </td>
+            </tr>
+        </tbody>
+        {% endfor %}
+        </table>
+    </div>
+</div>    
+

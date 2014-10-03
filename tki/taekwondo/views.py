@@ -117,7 +117,7 @@ class ApiGradeRequirementDetail(generics.RetrieveUpdateDestroyAPIView):
     
     serializer_class = GradeRequirementSerializer  
 
-
+ 
 class ApiGradeRequirementList(generics.ListCreateAPIView):
     """
     Birta allar beltagráður eða bæta við.
@@ -211,6 +211,8 @@ class ClubDetail(DetailView):
     template_name = 'taekwondo/club_detail.html'
     def get_queryset(self):
         self.club = Club.objects.filter(slug=self.kwargs['slug'])
+        self.members = Member.objects.filter(membership__club=self.club)
+        self.rank_list = self.members.annotate(player=Count('tournamentregistration__winner')).order_by('-player')
         #self.grades = GradeRequirement.objects.filter(club=self.club)
         #self.grade_items = self.grades.objects.all()
         
@@ -224,6 +226,7 @@ class ClubDetail(DetailView):
         # Add in the publisher
         #context['grade_detail'] = self.grade_items
         context['club_detail'] = self.club
+        context['rank_list'] = self.rank_list
         return context
 
 
