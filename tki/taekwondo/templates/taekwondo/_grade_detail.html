@@ -1,0 +1,88 @@
+
+{% load embed_video_tags %}
+                            <div class="col-xs-12">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#grade-{{forloop.counter}}">
+                                                    <p>{{ grade.title }}</a></p>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="grade-{{forloop.counter}}" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                    <div class="col-xs-12">
+                                                        <h1>{{ grade.title }}</h1>
+                                                            <p>
+                                                                {{ grade.description|safe }} 
+                                                            </p>
+                                                            
+                                                            <div class="table-responsive">
+                                                                <table class="table table-condensed table-hover">
+                                                                    <thead>
+                                                                        <th>
+                                                                            Íslenska
+                                                                        </th>
+
+                                                                        <th>
+                                                                            Kóreska
+                                                                        </th>
+                                                                        <th>
+                                                                            Vídjó
+                                                                        </th>
+                                                                        <th>
+                                                                            Myndir
+                                                                        </th>
+                                                                        <th>
+                                                                            Tögg
+                                                                        </th>
+
+                                                                    </thead>
+
+                                                                        {% for item in grade.items.all %}    
+                                                                            <tr>
+                                                                                <td>
+                                                                                    {{ item.title }}
+                                                                                </td>
+                                                                                <td>
+                                                                                    {{ item.title_translated }}
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    {% for video in item.video.all%}
+                                                                                        {% video video.video as grade_video%}
+                                                                                            <a href="{{grade_video.url}}" title="{{ video.photo_description }}" class="html5lightbox"><i class="fa fa-youtube-play"></i></a>
+                                                                                            
+                                                                                            
+                                                                                        {% endvideo %}
+                                                                                    
+                                                                                        
+                                                                                    {% endfor %}
+                                                                                </td>
+                                                                                <td>
+                                                                                    {% for photo in item.photo.all%}
+                                                                                            
+                                                                                    <a href="{{ photo.photo_url }}" title="{{ photo.photo_description}}" class="html5lightbox"><i class="fa fa-picture-o"></i></a>
+
+                                                                                    {% endfor %}
+                                                                                </td>
+                                                                                <td>
+                                                                                    {% for tag in item.tags.all%}
+                                                                                        <span class="label label-success">{{ tag.name }}</span>
+                                                                                    {% endfor %}
+
+                                                                                </td>
+
+                                                                            </tr> 
+                                                                        
+                                                                        {% endfor %}
+                                                                    
+                                                                </table>
+                                                            </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                                                  
+                            </div>
