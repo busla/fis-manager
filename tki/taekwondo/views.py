@@ -95,6 +95,13 @@ class ApiMemberDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Member.objects.all()
     serializer_class = MemberSerializer     
 
+class ApiClubDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Sækja, uppfæra eða eyða félagi.
+    """
+    queryset = Club.objects.all()
+    serializer_class = ClubSerializer  
+
 class ApiClubList(generics.ListCreateAPIView):
     """
     Birta öll félög eða bæta við nýju félagi.
@@ -102,12 +109,31 @@ class ApiClubList(generics.ListCreateAPIView):
     queryset = Club.objects.all()
     serializer_class = ClubSerializer
 
-class ApiClubDetail(generics.RetrieveUpdateDestroyAPIView):
+
+class ApiGradeRequirementDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Sækja, uppfæra eða eyða félagi.
     """
-    queryset = Club.objects.all()
-    serializer_class = ClubSerializer  
+    
+    serializer_class = GradeRequirementSerializer  
+
+
+class ApiGradeRequirementList(generics.ListCreateAPIView):
+    """
+    Birta allar beltagráður eða bæta við.
+    """
+    queryset = GradeRequirement.objects.all()
+    serializer_class = GradeRequirementSerializer
+
+class ApiGradeRequirementItemDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Sækja, uppfæra eða eyða beltakröfu
+    """
+    serializer_class = GradeRequirementItemSerializer
+    
+    def get_queryset(self):
+        grade = GradeRequirement.object.filter(pk=self.kwargs['pk'])
+        return GradeRequirementItem.objects.filter(grade=grade)
 
 
 def index(request):

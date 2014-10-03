@@ -24,4 +24,7 @@ urlpatterns = patterns('taekwondo.views',
     url(r'^bardagar/(?P<pk>[0-9]+)/$', ApiFightDetail.as_view(), name='fight-detail'),
     url(r'^felog/$', ApiClubList.as_view(), name='club-list'),
     url(r'^felog/(?P<pk>[0-9]+)/$', ApiClubDetail.as_view(), name='club-detail'),
+    url(r'^beltagradur/$', ApiGradeRequirementList.as_view(), name='graderequirement-list'),
+    url(r'^beltagradur/(?P<pk>[0-9]+)/$', ApiGradeRequirementDetail.as_view(), name='graderequirement-detail'),
+    #url(r'^beltagradur/(?P<pk>[0-9]+)/(?P<grade>[0-9]+)/$', ApiGradeRequirementItemDetail.as_view(), name='graderequirementitem-detail'),
 )
