@@ -44,8 +44,11 @@ GRADE_CHOICES = (
     (3,  '8. dan'),
     (2,  '9. dan'),
     )
-
-
+'''
+class MemberManager(models.Manager):
+    def club_membership(self, club):
+        return Membership.objects.filter(club=club)
+'''
 
 class Member(models.Model):    
     name = models.CharField(max_length=200)
@@ -54,6 +57,7 @@ class Member(models.Model):
     slug = models.SlugField(unique=True)
     gender = models.IntegerField(choices=GENDER_CHOICES, blank=True, null=True)
     address = models.CharField(max_length=200, blank=True, null=True)
+    #objects = MemberManager()
 
     def _get_fights(self):
         fights = Fight.objects.filter(
@@ -98,7 +102,12 @@ class Member(models.Model):
     def save(self, **kwargs):
         slug.unique_slugify(self, self.slug)
         super(Member, self).save()
-    
+
+    def _felix_members(self):
+        q = Member.objects.count()
+        return q
+
+    felix_members = property(_felix_members)    
     
     def __str__(self):
         return '%s' % self.name

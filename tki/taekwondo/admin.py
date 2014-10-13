@@ -60,7 +60,8 @@ class MembershipInline(admin.TabularInline):
 
 class MembershipAdmin(admin.ModelAdmin):
     list_display = ('member', 'club', 'date_joined', 'date_left')
-    
+    search_fields = ['member__name']
+
 class TournamentAdmin(admin.ModelAdmin):
     inlines = [TournamentFileInline, TournamentRegistrationInline, TournamentDivisionInline]
     prepopulated_fields = {"slug": ("title",)}

@@ -5,12 +5,12 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#grade-accordion" href="#grade-{{forloop.counter}}">
+                                                <a data-toggle="collapse" data-parent="#grade-accordion" href="#grade-{{ grade.slug }}">
                                                     <p>{{ grade.title }}</a></p>
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="grade-{{forloop.counter}}" class="panel-collapse collapse">
+                                        <div id="grade-{{ grade.slug }}" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                     <div class="col-xs-12">
                                                         <h1>{{ grade.title }}</h1>

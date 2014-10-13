@@ -7,6 +7,7 @@
                       <img class="logo" src="{{ club.logo_url|default_if_none:'#' }}" alt="Do you have a logo for us?">
                       <div class="caption">
                         <h2>{{ club.short_name }}</h2>
+                        {{ club.felix_members }}
                         <p>
                             <a href="{% url 'club_detail' club.slug %}" class="btn btn-primary" role="button">Meira</a>
                         </p>

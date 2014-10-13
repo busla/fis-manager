@@ -211,7 +211,21 @@ class ClubDetail(DetailView):
     template_name = 'taekwondo/club_detail.html'
     def get_queryset(self):
         self.club = Club.objects.filter(slug=self.kwargs['slug'])
-        self.members = Member.objects.filter(membership__club=self.club)
+        #self.memberships = Membership.objects.filter(club=self.club)
+        #self.members = self.memberships.member.all()
+        ms = Membership.objects.filter(club=self.club)
+
+        
+        for membership in ms:
+            if membership.club is not self.club:
+               ms.exclude(pk = membership.id)
+        
+        self.members = Member.objects.filter(membership=ms)
+        
+        #self.members = Member.objects.filter(membership=ms)
+        #self.members = self.members.filter(club=self.club)
+        
+
         self.rank_list = self.members.annotate(player=Count('tournamentregistration__winner')).order_by('-player')
         #self.grades = GradeRequirement.objects.filter(club=self.club)
         #self.grade_items = self.grades.objects.all()
