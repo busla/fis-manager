@@ -6,11 +6,9 @@
                     <div class="thumbnail">
                       <img class="logo" src="{{ club.logo_url|default_if_none:'#' }}" alt="Do you have a logo for us?">
                       <div class="caption">
-                        <h2>{{ club.short_name }}</h2>
-                            <ul class="list-inline">
-                              <li><a href="{% url 'club_detail' club.slug %}" class="btn btn-primary" role="button">Meira</a></li>  
-                              <li>Fjöldi iðkenda: <span class="badge">{{ club.members.count }}</span></li>
-                            </ul>                        
+                        <h3>{{ club.short_name }}</h3>
+                        <p>Fjöldi iðkenda: <span class="badge">{{ club.members.count }}</span></p>
+                        <p><a href="{% url 'club_detail' club.slug %}" class="btn btn-primary" role="button">Meira</a></p>                              
                         
                       </div>
                     </div>            
