@@ -1,10 +1,10 @@
-tki
+FIS - Manager
 ===
 
-Member management system for the Icelandic Taekwondo Association (TKI)
+Member management system for Taekwondo clubs.
 
-The main purpose of this application is to administrate clubs, members, tournaments and competitor results. Members can be imported from a FELIX csv file.
+The main purpose of this application is to administrate clubs, members, tournaments and competitor results. Members can be imported from Excel documents.
 
-Tournament registration and management is currently being handled by a set of programmed Excel documents that is able to export a csv with all matches and related data (competitor, points, match number, et.c.). Our web application has a tournament importer that adds all match results to existing members.
+Our web application has a tournament importer that adds all match results to existing members. The administrator can also add scores to competitors manually to update the ranking list.
 
 An API is also being actively developed and first steps have been taking in iOS/Android app development.
